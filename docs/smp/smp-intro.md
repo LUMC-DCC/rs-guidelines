@@ -1,16 +1,16 @@
 # SMP introduction
 
-_____________________________________________________________________________________________________________________
+___
 
 ## What is SMP
 
-A Software Management Plan (SMP) is a living document that outlines how research software will be developed, maintained, shared, and preserved throughout its lifecycle. 
-It covers key aspects such as technical decisions, roles and responsibilities, licensing, documentation, and long-term sustainability. 
-As the project evolves, the SMP can be updated to reflect changes in goals, technologies, or team members. 
-By creating and maintaining an SMP, researchers can ensure that their software is well-organized, easily accessible, and adaptable for future use, 
+A Software Management Plan (SMP) is a *living document* that outlines how research software will be developed, maintained, shared, and preserved throughout its lifecycle.
+It covers key aspects such as technical decisions, roles and responsibilities, licensing, documentation, and long-term sustainability.
+As the project evolves, the SMP can be updated to reflect changes in goals, technologies, or team members.
+By creating and maintaining an SMP, researchers can ensure that their software is well-organized, easily accessible, and adaptable for future use,
 contributing to its long-term impact and alignment with best practices, including the FAIR principles.
 
-_____________________________________________________________________________________________________________________
+___
 
 ## Why write it
 
@@ -37,7 +37,21 @@ Additionally, an SMP is immensely helpful in aligning your software with the FAI
 
 Read more about the reasons, motivations, and considerations associated with writing and using a software management plan [here](https://www.software.ac.uk/guide/writing-and-using-software-management-plan).
 
-_____________________________________________________________________________________________________________________
+___
+
+## When you need an SMP
+
+Write an SMP if your software is at least one of:
+
+* used by someone other than the original author;
+* producing research results, figures, models, or publications that will be reported;
+* expected to outlive the current student, postdoc, or grant;
+* shared outside the immediate team;
+* subject to funder, journal, institutional, or regulatory expectations.
+
+You probably don't need one for one-line scripts, throwaway exploratory notebooks, or personal utilities you will never share. A practical test: if a future colleague would reasonably need instructions to understand, rerun, or maintain it, an SMP is warranted.
+
+___
 
 ## SMP resources
 

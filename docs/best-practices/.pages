@@ -1,6 +1,12 @@
-title: "FAIR4RS, Best Practices for RS, and SMP"
+title: "Research Software best practices"
 nav:
-  - overview-best-practices-fair4rs.md
-  - software-examples.md
-  - smp-intro.md
-  - details-best-practices-smp.md
+  - overview.md
+  - identity.md
+  - motivation-scope.md
+  - risks.md
+  - planning.md
+  - sharing-licensing.md
+  - documentation-community.md
+  - interoperability.md
+  - testing-quality.md
+  - versioning-releases.md
