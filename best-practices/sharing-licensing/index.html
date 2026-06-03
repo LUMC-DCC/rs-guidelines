@@ -1,0 +1,1156 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lumc-dcc.github.io/rs-guidelines/best-practices/sharing-licensing/">
+      
+      
+        <link rel="prev" href="../planning/">
+      
+      
+        <link rel="next" href="../documentation-community/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Sharing & licensing - Research Software Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"PT Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sharing-licensing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Research Software Guidelines" class="md-header__button md-logo" aria-label="Research Software Guidelines" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Research Software Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sharing &amp; licensing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/LUMC-DCC/rs-guidelines" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rs-guidelines
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Research Software Guidelines" class="md-nav__button md-logo" aria-label="Research Software Guidelines" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Research Software Guidelines
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/LUMC-DCC/rs-guidelines" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rs-guidelines
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    README
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    What is reserach software?
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            What is reserach software?
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rs/definitions-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Definitions &amp; examples of RS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rs/is-developing-rs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are you developing RS?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software Management Plans
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Software Management Plans
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smp/smp-intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SMP introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smp/sciwiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Management Plan in SciWiz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Research Software best practices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Research Software best practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview: FAIR4RS &amp; FOSS principles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../identity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project identity &amp; people
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../motivation-scope/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Motivation &amp; scope
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Risks &amp; mitigation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Planning &amp; sustainability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sharing &amp; licensing
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Sharing &amp; licensing
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persistent-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Persistent identifiers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Citation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software license
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software license">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which license?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      License compatibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation-community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation &amp; community
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interoperability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interoperability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing-quality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing &amp; quality assurance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versioning-releases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Versioning &amp; releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/organizations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relevant organizations for RS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persistent-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Persistent identifiers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Citation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software license
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software license">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which license?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      License compatibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="sharing-licensing">Sharing &amp; licensing</h1>
+<p>Sharing research software properly is about more than uploading it somewhere. It is the chain of small decisions: a repository, a registry entry, a persistent identifier, a citation file, a license. The deicions you make makes your work findable, retrievable, citable, and legally reusable.</p>
+<p>The LUMC default for openness is <strong>"as open as possible, as closed as necessary"</strong>. Closed-source can be the right answer when GDPR, IP, MDR, or contractual constraints apply, but the burden of justification is on closed-source, not on open.</p>
+<h2 id="repository">Repository</h2>
+<p>Every non-trivial project belongs in version control, from the first commit. The choice of forge depends on what the software is for.</p>
+<ul>
+<li><strong>LUMC GitLab</strong> (<code>gitlab.lumc.nl</code>) is the right home for internal tools, sensitive content, software with patient-data adjacencies, and anything not yet ready for the open world.</li>
+<li><strong>GitHub</strong> is the right home for open-source projects intended for community use. Most of the research-software ecosystem (Zenodo integration, GitHub Actions for CI, well-trodden release workflows) sits there.</li>
+<li><strong>Public GitLab</strong>, <strong>Codeberg</strong>, or other forges are reasonable when there is a specific governance, license, or platform reason.</li>
+</ul>
+<p>What is <em>not</em> an acceptable place for research code:</p>
+<ul>
+<li>A laptop only (one disk failure away from no code at all).</li>
+<li>A shared drive (no history, no diffs, no review).</li>
+<li>A <em>personal</em> GitHub or GitLab account (when the person leaves, so does the project).</li>
+</ul>
+<p>If a repository must be <strong>private</strong> for legitimate reasons (GDPR, IP, MDR/IVDR, security through obscurity for a small subset of components, contractual obligations), write the reason down in the SMP. <em>"Private for now"</em> is fine if there is a plan to open it later; <em>"private indefinitely with no documented reason"</em> is not.</p>
+<blockquote>
+<p><strong>In the SMP:</strong> record the repository URL, whether it is publicly accessible, and (if not) the specific reason. Plan to revisit the openness decision at every major release.</p>
+</blockquote>
+<h2 id="registries">Registries</h2>
+<p>A <em>registry</em> is a metadata catalogue that helps people discover software in a community. It is distinct from a <em>package repository</em> (PyPI, conda-forge, Docker Hub, CRAN), which hosts installable artefacts. Registry entries are about discoverability and citation; package entries are about distribution. You usually want both.</p>
+<p>Useful registries depend on the audience:</p>
+<ul>
+<li><strong><a href="https://bio.tools/">bio.tools</a></strong> - for life-science software; tightly integrated with ELIXIR.</li>
+<li><strong><a href="https://research-software-directory.org/">Research Software Directory</a></strong> - Dutch-academic-flavoured registry; LUMC and other UMCs have entries here.</li>
+<li><strong><a href="https://zenodo.org/">Zenodo</a></strong> - strictly speaking a deposit/archive, but it issues DOIs and is searchable.</li>
+<li><strong><a href="https://www.softwareheritage.org/">Software Heritage</a></strong> - universal archive; assigns a SWHID identifier that resolves to a specific commit, even if the original repository disappears.</li>
+</ul>
+<p>Multiple registries are encouraged: different communities use different ones, and registering in two or three costs an evening once.</p>
+<p>For a long, curated, audience-specific list, see <a href="https://github.com/NLeSC/awesome-research-software-registries">Awesome Research Software Registries</a>: the registries index, organised by country, organisation, language, and domain.</p>
+<blockquote>
+<p><strong>In the SMP:</strong> for each registry, capture the name and the URL or ID of your entry.</p>
+</blockquote>
+<h2 id="persistent-identifiers">Persistent identifiers</h2>
+<p>A persistent identifier (PID) is a stable, resolvable URL that survives platform migrations and renames. For research software, the canonical PID is a <strong>DOI minted by Zenodo</strong> when you archive a tagged release.</p>
+<p>The recommended workflow is short:</p>
+<ol>
+<li>Connect your GitHub or GitLab repository to <a href="https://zenodo.org/account/settings/github/">Zenodo</a>.</li>
+<li>Tag and push a release in the repository.</li>
+<li>Create a GitHub/GitLab Release for that tag.</li>
+<li>Zenodo mints a <strong>version DOI</strong> (specific to that release) and a <strong>concept DOI</strong> (always resolves to the latest archived version).</li>
+<li>Add the DOI badge to your README and the DOI to your <code>CITATION.cff</code>.</li>
+</ol>
+<p>The concept DOI is the one you usually want to share in papers and slides - it never goes stale. The version DOI is the one to cite when reproducibility requires exact identity.</p>
+<p>For finer-grained provenance, <a href="https://www.softwareheritage.org/">Software Heritage</a> assigns a <strong>SWHID</strong> to specific commits, trees, or blobs. This is useful when you need to refer to a precise state of the code rather than a release.</p>
+<p>Useful resources on identifiers themselves:</p>
+<ul>
+<li><a href="https://www.doi.org/">The DOI System</a> - the canonical reference.</li>
+<li><a href="https://datacite.org/">DataCite</a> - the registrar behind most research DOIs, including Zenodo's.</li>
+</ul>
+<blockquote>
+<p><strong>In the SMP:</strong> record the identifier type (DOI, SWHID, bio.tools ID), the identifier, and which version of the software it corresponds to. For the concept DOI, write <code>concept</code> in the version field.</p>
+</blockquote>
+<h2 id="citation">Citation</h2>
+<p>A <code>CITATION.cff</code> file in the repository root is the modern way to make software citable. It is plain YAML, machine-readable, and recognised natively by GitHub, GitLab, and Zenodo. When a Zenodo release is created, the <code>CITATION.cff</code> is read automatically and used to populate the deposit's authors and metadata.</p>
+<p>A minimal <code>CITATION.cff</code> includes:</p>
+<ul>
+<li>the <strong>software title</strong>;</li>
+<li><strong>authors</strong> with ORCID IDs where possible;</li>
+<li>the <strong>version</strong>;</li>
+<li>the <strong>release date</strong>;</li>
+<li>the <strong>DOI</strong> for that version (or the concept DOI);</li>
+<li>a <strong>preferred-citation message</strong>, especially if a method paper exists.</li>
+</ul>
+<p>The <a href="https://citation-file-format.github.io/cff-initializer-javascript/">CFF INIT</a> tool generates a valid file from a web form - useful when you are not yet comfortable with YAML.</p>
+<p>If a methods paper exists for the software, be explicit in the citation: <em>cite the paper for the method and cite the software DOI for the exact implementation/version</em>.</p>
+<p>A practical reference on the whole workflow: <a href="https://book.the-turing-way.org/communication/citable/citable-cff.html">The Turing Way - Software Citation with <code>CITATION.cff</code></a>.</p>
+<blockquote>
+<p><strong>In the SMP:</strong> the Publications question captures the paper(s) that describe the method, with their DOI/PMID/PMCID. The software DOI lives under Persistent identifiers. Keeping these separate is intentional. A piece of software can outlive its methods paper, or vice versa.</p>
+</blockquote>
+<h2 id="software-license">Software license</h2>
+<p>Without a license, code is "all rights reserved" by default - even if it is publicly visible on GitHub. <strong>"Public on GitHub" is not the same as "open source".</strong> Without a license, no one (sometimes including you, depending on your contract) can legally reuse, fork, modify, or build on your code. Even compiling or running the software can constitute a violation in some jurisdictions.</p>
+<p><a href="https://choosealicense.com/no-permission/">Choose A License - No License</a> explains the implications in plain English.</p>
+<h3 id="which-license">Which license?</h3>
+<p>The LUMC default is <strong>"as open as possible, as closed as necessary"</strong>. Concretely, the recommended default is the <a href="https://www.apache.org/licenses/LICENSE-2.0"><strong>Apache License 2.0</strong></a>. It is permissive (compatible with most other open licenses, including commercial use), includes an explicit patent grant (a real practical advantage over MIT or BSD-3-Clause for software that might touch patentable methods), and is widely understood.</p>
+<p>If you have a specific reason to prefer something else:</p>
+<ul>
+<li><strong>MIT</strong> or <strong>BSD-3-Clause</strong> - even simpler permissive licenses; lack the explicit patent grant.</li>
+<li><strong>GPL-3.0</strong> or <strong>AGPL-3.0</strong> - copyleft. Forces downstream users to keep their derivatives open under the same terms. Choose deliberately; copyleft is a real constraint on adopters.</li>
+<li><strong>CC-BY 4.0</strong> - usually for <em>data and documentation</em>, not code. Avoid licensing code under a Creative Commons license, they were not designed for that.</li>
+</ul>
+<p>Always use the <a href="https://spdx.org/licenses/">SPDX identifier</a> (<code>Apache-2.0</code>, not "Apache 2.0"). It is machine-readable and recognised by package registries, GitHub, and most other tooling.</p>
+<p>Useful references:</p>
+<ul>
+<li><a href="https://choosealicense.com/">Choose A License</a> - a quick licenses walk-through.</li>
+<li><a href="https://www.tldrlegal.com/">tl;dr Legal</a> - plain-English summaries of common licenses.</li>
+<li><a href="http://ufal.github.io/public-license-selector/">Public License Selector</a> - a quiz for choosing a license.</li>
+<li><a href="https://www.fsf.org/licensing/">Free Software Foundation - Licensing &amp; Compliance</a> - FSF's licensing recommendations and FAQ.</li>
+<li><a href="https://book.the-turing-way.org/reproducible-research/licensing">The Turing Way - Licensing chapter</a> - broader treatment with legal and ethical context.</li>
+<li><a href="https://esciencecenter-digital-skills.github.io/research-software-support/modules/licenses/how_to_share">eScience Center - How to share software</a> - practical guide.</li>
+</ul>
+<p>The repository should contain a <code>LICENSE</code> file (the full license text) at the root. Most forges create one for you when you initialise the repository or run a "Choose a license" wizard.</p>
+<blockquote>
+<p><strong>In the SMP:</strong> the License question uses the SPDX identifier list (an integrated search via the SciWiz form). If the software is unreleased and you have not yet chosen a license, write down <em>which</em> license you intend to use.</p>
+</blockquote>
+<h2 id="license-compatibility">License compatibility</h2>
+<p>If your software depends on or includes code under other licenses, your license must be compatible with theirs. Incompatible licenses can:</p>
+<ul>
+<li>block you from distributing the combined software;</li>
+<li>force you to adopt a more restrictive license;</li>
+<li>create real legal exposure if your code is widely used downstream.</li>
+</ul>
+<p>A few practical guidelines:</p>
+<ul>
+<li><strong>Permissive licenses</strong> (Apache-2.0, MIT, BSD-3-Clause) compose easily with each other and with copyleft licenses, but the result is often constrained by the most restrictive component.</li>
+<li><strong>GPL</strong> in a dependency forces the rest of the <em>distributable combined work</em> to be GPL or compatible.</li>
+<li><strong>CC-BY-NC</strong> (non-commercial) dependencies are usually a problem for shared research software. Avoid them in distributable code.</li>
+<li>For commercial dependencies, <strong>read the license carefully</strong> before assuming it allows redistribution.</li>
+</ul>
+<p>Tooling can do most of the work:</p>
+<ul>
+<li><strong>Python</strong>: <a href="https://github.com/FHPythonUtilities/licensecheck"><code>licensecheck</code></a>, <a href="https://github.com/raimon49/pip-licenses"><code>pip-licenses</code></a>.</li>
+<li><strong>Rust</strong>: <a href="https://github.com/EmbarkStudios/cargo-deny"><code>cargo-deny</code></a>.</li>
+<li><strong>Node</strong>: <a href="https://github.com/davglass/license-checker"><code>license-checker</code></a>.</li>
+<li><strong>Cross-language</strong>: <a href="https://fossa.com/">FOSSA</a>, <a href="https://snyk.io/">Snyk</a>, and <strong>GitHub Advanced Security</strong> (the dependency graph + license alerts).</li>
+</ul>
+<p>For Level A, a manual check of direct dependencies before public release is acceptable. For Level B/C, automate it in CI so a problematic license added in a dependency update fails the build.</p>
+<p>References:</p>
+<ul>
+<li><a href="https://book.the-turing-way.org/reproducible-research/licensing/licensing-compatibility.html">The Turing Way - License Compatibility</a> - clear treatment with a compatibility matrix.</li>
+<li><a href="https://www.cisa.gov/sbom">SBOM (Software Bill of Materials)</a> - for Level C: a formal inventory of components and licenses, generated with tools like <a href="https://github.com/anchore/syft">Syft</a> or <a href="https://cyclonedx.org/">CycloneDX</a>.</li>
+</ul>
+<blockquote>
+<p><strong>In the SMP:</strong> the question asks whether you check dependency-license compatibility, and how. Automated tooling is preferred; manual checks are acceptable for small projects but fragile.</p>
+</blockquote>
+<h2 id="publications">Publications</h2>
+<p>If a methods paper, preprint, or application-note exists for your software, link it. Capture the <strong>DOI</strong> (preferred), and where applicable also <strong>PMID</strong> and <strong>PMCID</strong> for PubMed-indexed work. Note which version of the software the paper describes.</p>
+<blockquote>
+<p><strong>In the SMP:</strong> the Publications list is open-ended. If exists, list at least the foundational methods paper (cited with software in <code>CITATION.cff</code>).</p>
+</blockquote>
+<h2 id="further-reading">Further reading</h2>
+<ul>
+<li><a href="https://choosealicense.com/">Choose A License</a> - license picker.</li>
+<li><a href="https://spdx.org/licenses/">SPDX</a> - canonical machine-readable license identifiers.</li>
+<li><a href="https://book.the-turing-way.org/communication/citable/">The Turing Way - Software Citation</a> and <a href="https://book.the-turing-way.org/reproducible-research/licensing">Licensing</a> - broader treatment.</li>
+<li><a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content">Zenodo–GitHub integration guide</a> - official walk-through of the recommended workflow.</li>
+<li><a href="https://github.com/NLeSC/awesome-research-software-registries">Awesome Research Software Registries</a> - registry directory.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>

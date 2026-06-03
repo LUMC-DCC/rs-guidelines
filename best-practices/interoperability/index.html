@@ -1,0 +1,1118 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lumc-dcc.github.io/rs-guidelines/best-practices/interoperability/">
+      
+      
+        <link rel="prev" href="../documentation-community/">
+      
+      
+        <link rel="next" href="../testing-quality/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Interoperability - Research Software Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"PT Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#interoperability" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Research Software Guidelines" class="md-header__button md-logo" aria-label="Research Software Guidelines" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Research Software Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Interoperability
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/LUMC-DCC/rs-guidelines" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rs-guidelines
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Research Software Guidelines" class="md-nav__button md-logo" aria-label="Research Software Guidelines" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Research Software Guidelines
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/LUMC-DCC/rs-guidelines" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rs-guidelines
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    README
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    What is reserach software?
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            What is reserach software?
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rs/definitions-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Definitions &amp; examples of RS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rs/is-developing-rs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are you developing RS?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software Management Plans
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Software Management Plans
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smp/smp-intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SMP introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smp/sciwiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Management Plan in SciWiz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Research Software best practices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Research Software best practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview: FAIR4RS &amp; FOSS principles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../identity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project identity &amp; people
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../motivation-scope/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Motivation &amp; scope
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Risks &amp; mitigation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Planning &amp; sustainability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sharing-licensing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing &amp; licensing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation-community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation &amp; community
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Interoperability
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Interoperability
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#programming-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming languages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-and-output-data-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input and output data formats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input and output data formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edam" class="md-nav__link">
+    <span class="md-ellipsis">
+      EDAM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions / operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apis-and-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      APIs and interfaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-platform-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-platform compatibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containerisation-and-environment-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containerisation and environment specification
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing-quality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing &amp; quality assurance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versioning-releases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Versioning &amp; releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/organizations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relevant organizations for RS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#programming-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming languages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-and-output-data-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input and output data formats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input and output data formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edam" class="md-nav__link">
+    <span class="md-ellipsis">
+      EDAM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions / operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apis-and-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      APIs and interfaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-platform-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-platform compatibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containerisation-and-environment-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containerisation and environment specification
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="interoperability">Interoperability</h1>
+<p>Interoperability is about how your software <em>talks to the rest of the world</em>: which languages it is written in, which data formats it reads and writes, what platforms it runs on, and how reproducibly someone else can stand up the same environment you have. The aim is <strong>machine-actionable, reusable information</strong> - both for humans coming to your project, and for tools (registries, CI systems, package managers) that need to do something useful with it.</p>
+<h2 id="programming-languages">Programming languages</h2>
+<p>List the languages actually used in the project, with version constraints where they matter. This includes more than the primary language, anywhere non-trivial logic lives counts.</p>
+<p>A reasonable inventory covers:</p>
+<ul>
+<li>The <strong>primary language</strong> of the package, library, or executable.</li>
+<li><strong>Workflow languages</strong> if any logic lives there: Snakemake, Nextflow, CWL, WDL.</li>
+<li><strong>Build / glue languages</strong> with non-trivial logic: Make, CMake, Bash scripts that orchestrate the pipeline.</li>
+<li><strong>Frontend / backend split</strong>, if applicable.</li>
+<li><strong>Compiled cores with language bindings</strong> - for example, a Rust core exposed through Python via PyO3, or a C++ core wrapped in R.</li>
+</ul>
+<p>For each entry, capture:</p>
+<ul>
+<li><strong>Language name</strong> as commonly known (e.g., "Python", "Rust", "R").</li>
+<li><strong>Version constraint</strong> - <code>"3.14.2"</code>, <code>"&gt;=3.11"</code>, <code>"&gt;=1.78,&lt;1.85"</code>. Constraints belong in your project manifest (<code>pyproject.toml</code>, <code>Cargo.toml</code>, <code>DESCRIPTION</code>).</li>
+<li><strong>Role in the project</strong> - <code>"primary library + CLI"</code>, <code>"workflow definitions in workflows/"</code>, <code>"glue scripts only, no scientific logic"</code>.</li>
+</ul>
+<p>A real-world example:</p>
+<pre><code class="language-text">Python &gt;=3.11,&lt;3.13 - primary package and CLI
+Snakemake &gt;=8 - workflow definitions
+Bash - small helper scripts only, no scientific logic
+Rust &gt;=1.78 - performance-critical parser, exposed through Python bindings
+</code></pre>
+<blockquote>
+<p><strong>In the SMP:</strong> the Programming languages list captures language, version constraint, and role.</p>
+</blockquote>
+<h2 id="input-and-output-data-formats">Input and output data formats</h2>
+<p>Listing formats is the easy half. The harder half is communicating what <em>inside</em> a given format your tool expects, because format alone is sometimes not enough. CSV, JSON, XML, HDF5, and Parquet are <em>containers</em>, what makes data interoperable is the <strong>schema</strong> inside.</p>
+<p>For each input and output format, capture:</p>
+<ul>
+<li><strong>Format name.</strong> Prefer controlled <strong>EDAM Format</strong> terms where available (the SMP integrates with <a href="https://edamontology.org/">EDAM</a> - start typing and pick from the dropdown). Common entries: <code>BAM</code>, <code>FASTQ</code>, <code>VCF</code>, <code>DICOM</code>, <code>NIfTI</code>, <code>BIDS</code>, <code>TSV</code>, <code>JSON</code>, <code>Parquet</code>, <code>NetCDF</code>.</li>
+<li><strong>Format version / profile</strong> if it matters: <code>VCF &gt;=4.2</code>, <code>DICOM SR</code>, <code>BIDS 1.8</code>.</li>
+<li><strong>Schema or expected columns/fields</strong>, especially for generic containers. For a CSV, "columns: <code>subject_id, age_at_scan, group</code>" is the actual contract. Link to a schema file if one exists (JSON Schema, XSD, BIDS specification).</li>
+<li><strong>Constraints</strong> that matter for interoperability - e.g., "only ASCII filenames", "no compressed inputs", "must be sorted by chromosome".</li>
+<li><strong>A sample or example file URL</strong>, ideally checked into the repository under <code>examples/</code> or <code>tests/data/</code>.</li>
+</ul>
+<p><strong>Never commit real patient data, even as a test fixture.</strong> Use synthetic or thoroughly de-identified data, and have it reviewed before committing if in any doubt.</p>
+<h3 id="edam">EDAM</h3>
+<p>EDAM is excellent for common bioinformatics formats and operations and increasingly used in clinical-data contexts. If your input is something exotic (a custom binary log from a piece of lab equipment, or a project-internal TSV layout), there will be no EDAM term. In that case, use a clear descriptive name and provide the schema. Do not force-fit an EDAM term that does not really apply.</p>
+<blockquote>
+<p><strong>In the SMP:</strong> Input and Output format lists each capture format name (EDAM where possible), version constraint, schema or constraints, and a sample-file URL. Skip the section entirely if the software does not consume or emit external data.</p>
+</blockquote>
+<h2 id="functions-operations">Functions / operations</h2>
+<p>For tools that expose multiple operations (a CLI with several subcommands, an API with several endpoints, a library with distinct entry points), the SMP can capture each operation with:</p>
+<ul>
+<li>the <strong>input format</strong> it consumes;</li>
+<li>the <strong>operation</strong> it performs (preferably an <strong>EDAM Operation</strong> term, e.g., <code>Variant calling</code>, <code>Sequence alignment</code>, <code>Image segmentation</code>);</li>
+<li>the <strong>command</strong> or command-line fragment that triggers it;</li>
+<li>the <strong>output format</strong> it produces;</li>
+<li>a <strong>note</strong> clarifying anything unusual about the operation.</li>
+</ul>
+<p>This is the same metadata that tools like <a href="https://bio.tools/">bio.tools</a> and Galaxy use to describe what software does.</p>
+<blockquote>
+<p><strong>In the SMP:</strong> the Functions list is only needed when the software exposes one or multiple distinct operations.</p>
+</blockquote>
+<h2 id="apis-and-interfaces">APIs and interfaces</h2>
+<p>If your software exposes interfaces beyond a single CLI, document them. Common interface types:</p>
+<ul>
+<li><strong>Command-line interface.</strong> Usable subcommands; flags; standard streams.</li>
+<li><strong>Language API</strong> - Python, R, JavaScript, Rust. Public functions and their stability guarantees.</li>
+<li><strong>REST or GraphQL API</strong>, with <a href="https://www.openapis.org/">OpenAPI</a> or <a href="https://graphql.org/learn/schema/">GraphQL schema</a> where possible.</li>
+<li><strong>Plugin system</strong> - extension points, plugin lifecycle, plugin discovery.</li>
+<li><strong>Web interface</strong> - for clinicians or end-users.</li>
+<li><strong>Database schema</strong> - if your software reads or writes a structured database, the schema is part of the interface.</li>
+<li><strong>File-based workflow interface</strong> - e.g., a Snakemake module that consumes and produces specific file layouts.</li>
+</ul>
+<p>For each interface, state whether it is <strong>stable</strong>, <strong>experimental</strong>, or <strong>internal</strong>. Users who depend on an "experimental" API have been warned; users who depend on an "internal" API are on their own. This is the contract.</p>
+<p>For REST APIs in particular, provide an OpenAPI specification, most modern frameworks (FastAPI, Spring Boot, Express + swagger-jsdoc) generate one from the code. The spec then drives client generation, documentation tools like <a href="https://redocly.com/redoc/">Redoc</a> and <a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a>, and contract testing.</p>
+<h2 id="cross-platform-compatibility">Cross-platform compatibility</h2>
+<p>State which operating systems and architectures the software <em>officially supports</em>. There is a real distinction worth respecting:</p>
+<ul>
+<li><strong>Supported</strong> - CI-tested, advertised in the README, bugs accepted and triaged.</li>
+<li><strong>Expected to work</strong> - used by maintainers in practice, but no CI; bugs may not be prioritised.</li>
+<li><strong>Untested</strong> - silence is the right answer; do not claim what you do not verify.</li>
+</ul>
+<p>Pure-runtime languages (Python, R, Java, JavaScript without native dependencies) usually work on Linux, macOS, and Windows alike. Anything compiled, anything that calls system libraries, anything that depends on a specific filesystem semantics, anything that uses GPU acceleration, those have real platform constraints worth being explicit about.</p>
+<p>For Level B/C, run CI on at least Linux, plus macOS. Windows is genuinely harder for many scientific stacks; "supported under WSL" is a common compromise.</p>
+<blockquote>
+<p><strong>In the SMP:</strong> the Cross-platform compatibility question is a multi-select. Tick only the platforms you actually support. "Linux" is the safe default; pick more deliberately.</p>
+</blockquote>
+<h2 id="resource-requirements">Resource requirements</h2>
+<p>Describe typical and worst-case hardware resources required to run the software. Users planning compute allocations or deploying to clinical infrastructure need this.</p>
+<p>A useful structure:</p>
+<pre><code class="language-text">Memory     : ~1 GB typical, up to 16 GB for whole-genome inputs
+Storage    : ~200 MB code; ~5 GB for a representative input dataset
+Compute    : 1–8 CPU cores typical; scales linearly to 32 in batch mode
+GPU        : NVIDIA, ≥ 12 GB VRAM, CUDA ≥ 11.8 (segmentation step only)
+Wall clock : ~5 min/subject; ~3 h for a 100-subject cohort on 8 cores
+</code></pre>
+<p>If resource use depends strongly on input characteristics, name the driving factor (number of subjects, file size, image dimensions, model parameter count )rather than giving a single point estimate.</p>
+<blockquote>
+<p><strong>In the SMP:</strong> the Resource requirements field is free-text. Even a few lines following the structure above is useful.</p>
+</blockquote>
+<h2 id="containerisation-and-environment-specification">Containerisation and environment specification</h2>
+<p>Beyond your language-level dependency manifest (<code>pyproject.toml</code>, <code>requirements.txt</code>, <code>environment.yml</code>, <code>Cargo.lock</code>, <code>renv.lock</code>, etc., which live in the repository), three patterns of environment specification offer increasing levels of reproducibility:</p>
+<ol>
+<li><strong>Lock-file plus README narrative.</strong> The manifest pins dependency versions; the README explains the supported platform, language version, and installation command. Acceptable for Level A and for smaller Level B projects.</li>
+<li><strong>Container image</strong> - a <code>Dockerfile</code> or an Apptainer / Singularity recipe. The container <em>is</em> executable documentation: it captures the OS, system libraries, language runtime, and all dependencies in a form that anyone can run. This is the practical gold standard.</li>
+<li><strong>Whole-environment specification.</strong> Bit-for-bit reproducibility, including system-library versions. Worth the cost for software that <em>must</em> produce the same numbers across machines, or for clinical-grade reproducibility.</li>
+</ol>
+<p>Useful options:</p>
+<ul>
+<li><a href="https://www.docker.com/"><strong>Docker</strong></a> and <a href="https://podman.io/"><strong>Podman</strong></a> - general containers. Podman is daemonless and rootless by default, which matters in some institutional contexts.</li>
+<li><a href="https://apptainer.org/"><strong>Apptainer</strong></a> (formerly <strong>Singularity</strong>) - for HPC environments where Docker is not available.</li>
+<li><a href="https://nixos.org/"><strong>Nix</strong></a> / <a href="https://guix.gnu.org/"><strong>Guix</strong></a> - rigorous whole-environment reproducibility, including system libraries.</li>
+<li><a href="https://pixi.sh/"><strong>Pixi</strong></a> and <a href="https://github.com/conda/conda-lock"><code>conda-lock</code></a> - multi-platform environment locks, lightweight compared to full containers.</li>
+</ul>
+<p>A container by itself is not automatically reproducible. Practical hygiene:</p>
+<ul>
+<li><strong>Pin base images and dependency versions.</strong> <code>FROM python:3.11</code> will drift over time as the upstream Python image is rebuilt. <code>FROM python:3.11.7-slim-bookworm</code> is much closer to reproducible.</li>
+<li><strong>Document build commands</strong> in the README or developer documentation.</li>
+<li><strong>Publish tagged images</strong> rather than relying on <code>latest</code>.</li>
+<li><strong>Build for the right runtime.</strong> HPC clusters almost always need Apptainer images - you can build an Apptainer image from a Docker image with <code>apptainer build my.sif docker://...</code>.</li>
+</ul>
+<p><a href="https://book.the-turing-way.org/reproducible-research/renv/renv-options.html">The Turing Way - Containers</a> covers the trade-offs in more depth.</p>
+<blockquote>
+<p><strong>In the SMP:</strong> the Containerisation question offers four states - <em>Full environment spec</em>, <em>Dockerfile or equivalent</em>, <em>Lock-file only</em>, <em>No</em>. Pick the strongest pattern that is genuinely in place.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>
