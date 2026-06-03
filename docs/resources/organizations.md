@@ -17,5 +17,5 @@
 | [Open Science NL](https://www.openscience.nl/)                             | A Dutch organization that promotes open science practices in the Netherlands.                                       |
 | [The Carpentries](https://carpentries.org/)                                | An international community that teaches foundational coding and data science skills to researchers.                 |
 | [Code Refinery](https://coderefinery.org/)                                 | An international project that provides training in RS development.                                                  |
-
+| [DReaMS](https://dreams-community.github.io/)                              | DReaMS (Dutch Research and Medical Software) is a collaboration between DCCs of the Dutch UMCs, eScience Center, Elixir-NL, Health-RI, and TDCC-LSH. |
 
