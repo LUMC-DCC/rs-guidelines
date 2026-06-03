@@ -1,8 +1,8 @@
 # README
 
-Research software (RS) plays an important role in the transparency and reproducibility of research and research outcomes. 
+Research software (RS) plays an important role in the transparency and reproducibility of research and research outcomes.
 Following best practices in software development can help enhance quality, maintainability and usability of research software. Additionally, FAIR Principles for Research Software ([FAIR4RS]) provide guidelines to increase its findability, accessibility, interoperability, and reusability (FAIR).
-A Software Management Plan (SMP) integrates these guidelines and practices by describing how software is developed, maintained, shared, and used throughout its lifecycle, from initial planning to long-term preservation. 
+A Software Management Plan (SMP) integrates these guidelines and practices by describing how software is developed, maintained, shared, and used throughout its lifecycle, from initial planning to long-term preservation.
 Given the diverse nature of research software, this guide provides practical recommendations for writing an SMP to plan the development of research software that will serve as an integral part of the research cycle.
 
 [FAIR4RS]: https://doi.org/10.15497/RDA00068
@@ -22,16 +22,16 @@ The scope of research software is broad and can include scripts, libraries, (sim
 Research software can be developed by researchers or software engineers.
 In the following, we will refer to them as research software developers.
 
-For more information and to understand whether you are developing research software, see 
+For more information and to understand whether you are developing research software, see
 [definitions and examples of RS](rs/definitions-examples.md).
 
 ## Scope and limitations of this guide
 
-This guide focuses on the role of research software in supporting reproducible and reusable research outcomes. 
+This guide focuses on the role of research software in supporting reproducible and reusable research outcomes.
 Within this context, it applies to a broad range of research software: from small, single-use scripts to more complex applications integral to research outcomes.
 
-**IMPORTANT:** In some cases, additional regulations may apply that are not covered in this guide.
-Please make sure to check for additional guidelines or regulations related to, e.g., clinical research, [software as a medical device], processing of potentially personally identifiable information, software security, or security of (cloud) computing environments.
+> **IMPORTANT:** In some cases, additional regulations may apply that are not covered in this guide.
+> Please make sure to check for additional guidelines or regulations related to, e.g., clinical research, [software as a medical device], processing of potentially personally identifiable information, software security, or security of (cloud) computing environments.
 
 [software as a medical device]: https://www.albinusnet.nl/en/products-and-services/research/research-facilities/research-with-medical-devices/?
 
@@ -43,12 +43,11 @@ If you are not familiar with Git, you can enroll in the [LUMC's Git course](http
 
 ## Guide organization & usage
 
-This guide is organized to provide a navigable approach to managing and developing research software (RS). 
-It begins with introduction, covering RS definitions and determining if your work qualifies as RS. 
-It is followed by the section outlining FAIR4RS principles and best practices RS and introduces software management plans (SMPs).
-Additionally, it includes links to relevant resources for following said principles and best practices.
-Finally, it also lists real-world exemplary RS projects. 
-The last section of the guide includes additional resources: key organizations and communities supporting RS development, 
+This guide is organized to provide a navigable approach to managing and developing research software (RS).
+It begins with introduction, covering RS definitions and determining if your work qualifies as RS.
+It is followed by the section outlining FAIR4RS principles and best practices.
+Then we introduce the software management plans (SMPs).
+Additionally, the guide includes additional resources: key organizations and communities supporting RS development,
 offering tools and guidance for continued learning.
 
 ## License
