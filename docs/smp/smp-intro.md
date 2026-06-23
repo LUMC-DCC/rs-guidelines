@@ -1,7 +1,7 @@
 # SMP introduction
 
 
-## What is SMP
+## What is an SMP
 
 A Software Management Plan (SMP) is a *living document* that outlines how research software will be developed, maintained, shared, and preserved throughout its lifecycle.
 It covers key aspects such as technical decisions, roles and responsibilities, licensing, documentation, and long-term sustainability.
@@ -33,7 +33,7 @@ Additionally, an SMP is immensely helpful in aligning your software with the FAI
 * Planning for clear documentation, proper licensing, and explaining how the software can be used or adapted ensures that others can build on your work in future projects.
 → **Reusability:** *Your software will be easier to modify, extend, and apply in different contexts.*
 
-Read more about the reasons, motivations, and considerations associated with writing and using a software management plan [here](https://www.software.ac.uk/guide/writing-and-using-software-management-plan).
+Read more about the reasons, motivations, and considerations in the *Software Sustainability Institute* article [Writing and using a software management plan](https://www.software.ac.uk/guide/writing-and-using-software-management-plan).
 
 
 ## When you need an SMP
