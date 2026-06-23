@@ -11,7 +11,7 @@ interactive online form. You can log in, create a project, and step through the 
     - Go to [sciwiz.lumc.nl]((https://sciwiz.lumc.nl/)). 
     - Log in or create an account using your LUMC email address.
 2. Create a new project
-    - Once logged in, In the left-hand navigation bar, click **Projects**.
+    - Once logged in, in the left-hand navigation bar, click **Projects**.
     - Click **Create** (top right).
     - Enter the name of your software project.
     - Select the following Knowledge Model: “LUMC-DCC Software Management Plan”.
@@ -19,11 +19,11 @@ interactive online form. You can log in, create a project, and step through the 
     - Click **Create** to start.
 3. Write the SMP by answering questions. You can save your progress at any time and return later to complete it. You can also invite collaborators.
 
-The **Best practices** section of this guideline roughly maps onto the questions in the SMP and is designed to help you think about your project and fill out the questions efficiently.
+The **Research Software best practices** section of this guideline roughly maps onto the questions in the SMP and is designed to help you think about your project and fill out the questions efficiently.
 
 ## Management levels
 
-The SMP uses three management levels. Pick the highest level that honestly fits.
+The SMP uses three management levels—A, B and C—to adjust the questions according to management needs, with A being the lowest level and C the highest.
 
 | Level | Typical software | Expected rigour |
 |---|---|---|
@@ -31,9 +31,9 @@ The SMP uses three management levels. Pick the highest level that honestly fits.
 | **B — project / shared** | A reusable pipeline, package, workflow or tool used by a group | Documentation, testing, citation, packaging, dependency management, maintenance plan |
 | **C — critical / institutional** | Software used in production, by external users, or in clinical/institutional contexts | Full governance, monitoring, security, auditability, support contracts, robust continuity |
 
-When creating a project in SciWiz, you can hover over a management level tag to see its description/applicability.
+When creating a project in SciWiz, you can hover over a management level tag to see its description and applicability.
 
-Starting low is risky: the project may grow before the basics are in place. Starting high may cost a little extra time, but it usually prevents worse work later. In SciWiz (the platform that hosts the SMP), the level you choose acts as a filter on the question set; you will only see questions tagged for your level and below. The level is not changeable later, so pick deliberately. If you are unsure, default upward.
+Starting too low is risky: the project may grow before the basics are in place. Starting higher than needed may cost a little extra time, but it usually prevents worse work later. In SciWiz (the platform that hosts the SMP), the level you choose acts as a filter on the question set; you will only see questions tagged for your level and below. The level cannot be changed later, so choose carefully. If you are unsure, select the higher level.
 
 ## Phases and tense
 
