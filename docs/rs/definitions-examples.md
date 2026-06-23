@@ -22,7 +22,7 @@ To learn more about the definition of research software, see
 
 ## Roles & examples of RS
 
-Here we provide examples of RS, with categories based on the role of the software in the research process
+Here, we provide examples of RS. The categories are based on the role of the software in the research process
 (inspired by [Defining the roles of research software (2023) by Nieuwpoort and Katz](https://doi.org/10.54900/9akm9y5-5ject5y)).
 
 **Data collection & instrumentation:**
@@ -73,9 +73,9 @@ Here we provide examples of RS, with categories based on the role of the softwar
 * Data storage and retrieval systems
 
 
-## Place in Research Lifecycle
+## RS in the Research Data Lifecycle
 
-RS is used at various stages of the research lifecycle.
+RS is used at various stages of the research data lifecycle (RDL).
 For each stage, we provide the aforementioned roles of the software that can be used.
 
 | RDL stage                   | RS roles in the stage             |
