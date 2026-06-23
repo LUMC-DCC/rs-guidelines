@@ -8,7 +8,7 @@ interactive online form. You can log in, create a project, and step through the 
 ## How to create an SMP
 
 1. Access [SciWiz](https://sciwiz.lumc.nl/).
-    - Go to [sciwiz.lumc.nl]((https://sciwiz.lumc.nl/)). Note it is only accessible via the LUMC network.
+    - Go to [sciwiz.lumc.nl]((https://sciwiz.lumc.nl/)). 
     - Log in or create an account using your LUMC email address.
 2. Create a new project
     - Once logged in, In the left-hand navigation bar, click **Projects**.
