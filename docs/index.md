@@ -53,4 +53,4 @@ offering tools and guidance for continued learning.
 
 ## License
 
-This work is licensed under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
+The Research Software Guide by LUMC DCC is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
