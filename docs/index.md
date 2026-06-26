@@ -28,9 +28,9 @@ For more information and to understand whether you are developing research softw
 ## Scope and limitations of this guide
 
 This guide focuses on the role of research software in supporting reproducible and reusable research outcomes.
-Within this context, it applies to a broad range of research software: from small, single-use scripts to more complex applications integral to research outcomes.
+Within this context, it applies to a broad range of research software: from small, single-use scripts to more complex applications serving as research infrastructure.
 
-> **IMPORTANT:** In some cases, additional regulations may apply that are not covered in this guide.
+> **IMPORTANT:** In some cases, additional regulations may apply that are not covered by this guide.
 > Please make sure to check for additional guidelines or regulations related to, e.g., clinical research, [software as a medical device], processing of potentially personally identifiable information, software security, or security of (cloud) computing environments.
 
 [software as a medical device]: https://www.albinusnet.nl/en/products-and-services/research/research-facilities/research-with-medical-devices/?
@@ -40,16 +40,17 @@ Within this context, it applies to a broad range of research software: from smal
 This guide assumes that you have a basic understanding of software development and research practices.
 Additionally, it is helpful if you are familiar with Git.
 If you are not familiar with Git, you can enroll in the [LUMC's Git course](https://git.lumc.nl/courses/gitcourse).
+You can find more training on our [LUMC FAIR Research Software Training website](https://lumc-dcc.github.io/research_software_training/).
 
 ## Guide organization & usage
 
 This guide is organized to provide a navigable approach to managing and developing research software (RS).
-It begins with introduction, covering RS definitions and determining if your work qualifies as RS.
-It is followed by the section outlining FAIR4RS principles and best practices.
-Then we introduce the software management plans (SMPs).
-Additionally, the guide includes additional resources: key organizations and communities supporting RS development,
+The first section covers RS definitions and helps you determine whether your work qualifies as RS.
+The section on software management plans (SMPs) explains what an SMP is, how it can benefit your work and how to write an SMP using our supporting tool SciWiz.
+The section on best practices outlines FAIR4RS principles and provides detailed guidance on different aspects of RS management.
+Additionally, the guide includes an overview of key organizations and communities supporting RS development,
 offering tools and guidance for continued learning.
 
 ## License
 
-This work is licensed under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
+The Research Software Guide by LUMC DCC is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).

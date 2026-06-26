@@ -1,12 +1,13 @@
 # Sharing & licensing
 
-Sharing research software properly is about more than uploading it somewhere. It is the chain of small decisions: a repository, a registry entry, a persistent identifier, a citation file, a license. The deicions you make makes your work findable, retrievable, citable, and legally reusable.
+Properly sharing research software involves more than just uploading it somewhere. It involves a series of small decisions: choosing a repository, creating a registry entry, assigning a persistent identifier, adding a citation file, and selecting a license. These decisions make your work findable, retrievable, citable, and legally reusable.
 
-The LUMC default for openness is **"as open as possible, as closed as necessary"**. Closed-source can be the right answer when GDPR, IP, MDR, or contractual constraints apply, but the burden of justification is on closed-source, not on open.
+LUMC supports the [Open Science](https://www.openscience.nl/en/what-is-open-science) principle of being **"as open as possible, as closed as necessary"**. In line with its [strategic](https://www.lumc.nl/en/about-lumc/maatschappelijke-rol/strategy-202428/) commitment to making research outputs such as datasets, code, and models broadly accessible, openness is the default.
+Choosing a closed-source approach can be appropriate in cases involving GDPR, intellectual property, medical device regulations, or contractual obligations, but such restrictions require clear justification.
 
 ## Repository
 
-Every non-trivial project belongs in version control, from the first commit. The choice of forge depends on what the software is for.
+Any project beyond a quick, one-off script should be kept in version control from the start (e.g., using Git). It should be hosted on a *forge*—a platform that combines version control with collaboration features (such as GitHub or GitLab). The choice of forge depends on the intended use of the software.
 
 - **LUMC GitLab** (`gitlab.lumc.nl`) is the right home for internal tools, sensitive content, software with patient-data adjacencies, and anything not yet ready for the open world.
 - **GitHub** is the right home for open-source projects intended for community use. Most of the research-software ecosystem (Zenodo integration, GitHub Actions for CI, well-trodden release workflows) sits there.
@@ -24,31 +25,33 @@ If a repository must be **private** for legitimate reasons (GDPR, IP, MDR/IVDR, 
 
 ## Registries
 
-A *registry* is a metadata catalogue that helps people discover software in a community. It is distinct from a *package repository* (PyPI, conda-forge, Docker Hub, CRAN), which hosts installable artefacts. Registry entries are about discoverability and citation; package entries are about distribution. You usually want both.
+A *registry* is a structured metadata catalog that describes, indexes, and helps discover software. It is distinct from a *package repository* (PyPI, conda-forge, Docker Hub, CRAN), which hosts installable artefacts. Registry entries primarily support discoverability and citation, while package entries primarily support distribution and installation. You usually want both.
 
 Useful registries depend on the audience:
 
 - **[bio.tools](https://bio.tools/)** - for life-science software; tightly integrated with ELIXIR.
 - **[Research Software Directory](https://research-software-directory.org/)** - Dutch-academic-flavoured registry; LUMC and other UMCs have entries here.
+- **[WorkflowHub](https://workflowhub.eu/)** - A registry for describing, sharing and publishing scientific computational workflows
 - **[Zenodo](https://zenodo.org/)** - strictly speaking a deposit/archive, but it issues DOIs and is searchable.
 - **[Software Heritage](https://www.softwareheritage.org/)** - universal archive; assigns a SWHID identifier that resolves to a specific commit, even if the original repository disappears.
 
-Multiple registries are encouraged: different communities use different ones, and registering in two or three costs an evening once.
+Using multiple registries is encouraged, as different communities rely on different platforms. Registering in several involves only limited one-time effort.
 
-For a long, curated, audience-specific list, see [Awesome Research Software Registries](https://github.com/NLeSC/awesome-research-software-registries): the registries index, organised by country, organisation, language, and domain.
+For a curated, audience-specific overview, see [Awesome Research Software Registries](https://github.com/NLeSC/awesome-research-software-registries), a registry index organised by country, organisation, language, and domain.
 
 > **In the SMP:** for each registry, capture the name and the URL or ID of your entry.
 
 ## Persistent identifiers
 
-A persistent identifier (PID) is a stable, resolvable URL that survives platform migrations and renames. For research software, the canonical PID is a **DOI minted by Zenodo** when you archive a tagged release.
+A persistent identifier (PID) is a long-lasting, resolvable identifier that remains stable even if the location or metadata of the resource changes.
+For research software, a common practice is to use a **DOI**, e.g., minted via Zenodo when archiving a tagged release.
 
 The recommended workflow is short:
 
 1. Connect your GitHub or GitLab repository to [Zenodo](https://zenodo.org/account/settings/github/).
 2. Tag and push a release in the repository.
 3. Create a GitHub/GitLab Release for that tag.
-4. Zenodo mints a **version DOI** (specific to that release) and a **concept DOI** (always resolves to the latest archived version).
+4. Zenodo mints a [**version DOI**](https://support.zenodo.org/help/en-gb/1-upload-deposit/97-what-is-doi-versioning) (specific to that release) and a **concept DOI** (always resolves to the latest archived version).
 5. Add the DOI badge to your README and the DOI to your `CITATION.cff`.
 
 The concept DOI is the one you usually want to share in papers and slides - it never goes stale. The version DOI is the one to cite when reproducibility requires exact identity.
@@ -85,9 +88,9 @@ A practical reference on the whole workflow: [The Turing Way - Software Citation
 
 ## Software license
 
-Without a license, code is "all rights reserved" by default - even if it is publicly visible on GitHub. **"Public on GitHub" is not the same as "open source".** Without a license, no one (sometimes including you, depending on your contract) can legally reuse, fork, modify, or build on your code. Even compiling or running the software can constitute a violation in some jurisdictions.
+Without a license, code is "all rights reserved" by default - even if it is publicly visible on GitHub. **"Public on GitHub" is not the same as "open source".** Without a license, no one (sometimes not even you, depending on your contract) can legally reuse, fork, modify, or build on your code. Even compiling or running the software can constitute a violation in some jurisdictions.
 
-[Choose A License - No License](https://choosealicense.com/no-permission/) explains the implications in plain English.
+[Choose A License - No License](https://choosealicense.com/no-permission/) explains the implications.
 
 ### Which license?
 
@@ -103,6 +106,7 @@ Always use the [SPDX identifier](https://spdx.org/licenses/) (`Apache-2.0`, not 
 
 Useful references:
 
+- [OSI Approved Licenses](https://opensource.org/licenses) - Open source licenses approved by open source initiative
 - [Choose A License](https://choosealicense.com/) - a quick licenses walk-through.
 - [tl;dr Legal](https://www.tldrlegal.com/) - plain-English summaries of common licenses.
 - [Public License Selector](http://ufal.github.io/public-license-selector/) - a quiz for choosing a license.
@@ -116,11 +120,11 @@ The repository should contain a `LICENSE` file (the full license text) at the ro
 
 ## License compatibility
 
-If your software depends on or includes code under other licenses, your license must be compatible with theirs. Incompatible licenses can:
+If your software depends on or includes code under other licenses, your license must be compatible with them. Incompatible licenses can:
 
-- block you from distributing the combined software;
-- force you to adopt a more restrictive license;
-- create real legal exposure if your code is widely used downstream.
+- prevent you from distributing the combined software;
+- require you to adopt a more restrictive license;
+- create real legal risks if your code is widely used downstream.
 
 A few practical guidelines:
 
@@ -149,7 +153,7 @@ References:
 
 If a methods paper, preprint, or application-note exists for your software, link it. Capture the **DOI** (preferred), and where applicable also **PMID** and **PMCID** for PubMed-indexed work. Note which version of the software the paper describes.
 
-> **In the SMP:** the Publications list is open-ended. If exists, list at least the foundational methods paper (cited with software in `CITATION.cff`).
+> **In the SMP:** the Publications list is open-ended. If one exists, list at least the foundational methods paper cited with the software in `CITATION.cff`.
 
 ## Further reading
 
