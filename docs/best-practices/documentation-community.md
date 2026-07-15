@@ -1,8 +1,8 @@
 # Documentation & community
 
-Documentation is consistently the most cited reason that research software stops being usable. The code keeps working; the knowledge of *how to use it* dissipates the moment the original author moves on.
+A lack of documentation is the most frequently cited reason for research software becoming unsable. The code keeps working; the knowledge of *how to use it* dissipates the moment the original author moves on.
 
-This chapter is about the writing and the social structures around the code: what users need to know, what the next developer needs to know, and how the community around the project organises itself.
+This chapter is about the documentation and the social structures around the code: what users need to know, what the next developer needs to know, and how the community around the project organises itself.
 
 ## Three audiences
 
@@ -25,7 +25,7 @@ Every project, regardless of level, needs a `README` that answers, preferably, a
 5. **Where are the full docs?** A link to the documentation site, if there is one.
 6. **How do I cite it?** A reference to `CITATION.cff` or a citation block.
 7. **What is the license?** A pointer to `LICENSE`.
-8. **Where do I get help?** Issue tracker, email, mailing list, helpdesk.
+8. **Where do I get help?** Issue tracker, email, mailing list, helpdesk, or community Q&A forums.
 
 For Level B and C, a README is often not enough. Add a proper documentation site once the README starts being more than a single screen. Common, well-supported choices:
 
@@ -58,7 +58,7 @@ Deployment documentation tells someone how to install, configure, and run the so
 A useful deployment section covers:
 
 - **Supported platforms** - OS, architecture, language version constraints.
-- **Install command** - exact, copy-pasteable. Multiple paths if the audience needs them (pip vs conda; Docker vs source).
+- **Install command** - exact, copy-pasteable. Multiple paths if the audience needs them (pip vs. conda; Docker vs. source).
 - **Required configuration** - environment variables, config files, paths.
 - **Test command** - how to verify the install worked.
 - **Known setup problems** - common pitfalls and their fixes.
@@ -72,14 +72,14 @@ The *machine-readable* part of deployment (`pyproject.toml`, `requirements.txt`,
 Developer documentation helps the next person change the code safely. A minimal developer guide covers:
 
 - **Repository layout** - what is in which directory, and why.
-- **How to create a development environment** - exact commands, not a vague reference to `requirements.txt`.
+- **How to create a development environment** - provide exact commands, not just a vague reference to `requirements.txt`.
 - **How to run the tests** - the command, plus any setup quirks.
 - **How to add a feature** - a worked example or a pointer to "good first issues".
-- **Code style and linting** - which tools, which rules, run when (see [Testing & quality](testing-quality.md)).
-- **Release process** - who can cut a release, what checks must pass, how the tag is made (see [Versioning & releases](versioning-releases.md)).
+- **Code style and linting** - which tools and rules are used, and when to run them (see [Testing & quality](testing-quality.md)).
+- **Release process** - who can cut a release, which checks must pass, and how the tag is created (see [Versioning & releases](versioning-releases.md)).
 - **Architecture notes** - short rationale for non-obvious design decisions.
 
-For libraries, generated API reference can count as developer documentation, but only if it is complete enough to help a new contributor. A wall of auto-generated function signatures with one-line docstrings is not really developer documentation.
+For libraries, generated API reference can count as developer documentation, but only if it is complete enough to help a new contributor. A wall of auto-generated function signatures with one-line docstrings is not sufficient developer documentation.
 
 ### Contributing guidelines
 
@@ -88,7 +88,7 @@ A `CONTRIBUTING.md` file explains how outsiders (and forgetful insiders) should 
 - how to open an issue (link to templates);
 - how to set up a development environment;
 - how to run tests;
-- branch and PR expectations (branch naming, target branch, commit-message conventions);
+- branch and pull request (PR) expectations (branch naming, target branch, commit-message conventions);
 - review process and timelines;
 - coding style and linting;
 - whether external contributions require a CLA, DCO, or attribution.

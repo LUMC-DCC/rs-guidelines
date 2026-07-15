@@ -1,8 +1,9 @@
 # Planning & sustainability
 
-Most research software has phases, and it is worth thinking about them at the start. Treating the whole life cycle as visible, rather than just the bit that produces a paper, is significant for how well the code ages.
+The development of research software involves multiple phases that should be considered from the outset.
+Taking the whole software life cycle into account, rather than only the part leading to a publication, is essential for long-term code sustainability.
 
-Estimates are fine in all of this. The goal is to make resource needs explicit so that shortfalls are visible early, when they can still be planned around.
+Estimates are perfectly adeqaute in this context. The goal is to make resource needs explicit so that shortfalls are identified early, when they can still be addressed.
 
 ## Infrastructure & hardware
 
@@ -64,7 +65,8 @@ Include the hidden work. For software that is meant to be used by others, **docu
 
 ## Updates & maintenance
 
-Once active development winds down, what level of maintenance can the project actually deliver? Be honest. Promising more than you can deliver is worse than promising less.
+What level of maintenance can realistically be provided once the project transitions out of active development?
+Provide a realistic assessment and avoid overpromising.
 
 Useful categories:
 
@@ -134,15 +136,15 @@ Write the conditions down *before* they happen. Projects without retirement crit
 
 If retired software remains accessible, specify how:
 
-- **Archive location**: Zenodo, Software Heritage, an institutional repository, or a GitHub/GitLab archive flag on the repository.
-- **Persistent identifier**: a DOI or other PID if available (a concept DOI from Zenodo is ideal - it always points to the latest archived version; see [Sharing & licensing](sharing-licensing.md)).
+- **Archive location**: [Zenodo](https://help.zenodo.org/docs/github/archive-software/), [Software Heritage](https://docs.softwareheritage.org/#landing-preserve), an institutional repository, or a GitHub/GitLab archive flag on the repository.
+- **Persistent identifier**: a DOI or other PID if available (a [Concept DOI from Zenodo](https://support.zenodo.org/help/en-gb/1-upload-deposit/97-what-is-doi-versioning) is ideal - it always points to the latest archived version; see [Sharing & licensing](sharing-licensing.md)).
 - **Retention period**: 5 years, 10 years, indefinite, or "until superseded".
 - **Successor project**, if any, with a link.
 - **User notice**: a README banner, a release-note announcement, and (for active user bases) an email.
 
 If software *cannot* remain accessible, explain why. Valid reasons include sensitive data, contractual restrictions, or legal/regulatory constraints. "Lack of time" is a weak reason, a metadata-only archive (a Zenodo deposit with just the documentation and CITATION) is almost always feasible.
 
-> **In the SMP:** In earlier stages on the project, rite down what you *would* do. It is much easier to think about retirement when the project is hypothetical than when it is overdue.
+> **In the SMP:** In early stages of the project, write down how you *would* handle its retirement. It is much easier to plan for end-of-life when the project is still hypothetical than when it is already overdue.
 
 ## Further reading
 

@@ -1,10 +1,10 @@
 # Interoperability
 
-Interoperability is about how your software *talks to the rest of the world*: which languages it is written in, which data formats it reads and writes, what platforms it runs on, and how reproducibly someone else can stand up the same environment you have. The aim is **machine-actionable, reusable information** - both for humans coming to your project, and for tools (registries, CI systems, package managers) that need to do something useful with it.
+Interoperability is about how your software *talks to the rest of the world*: which languages it is written in, which data formats it reads and writes, what platforms it runs on, and how reproducibly others can recreate your computational environment. The aim is **machine-actionable, reusable information** - both for humans coming to your project, and for tools (registries, CI systems, package managers) that need to do something useful with it.
 
 ## Programming languages
 
-List the languages actually used in the project, with version constraints where they matter. This includes more than the primary language, anywhere non-trivial logic lives counts.
+List the languages actually used in the project, with version constraints where they matter. This includes more than the primary language: list any language used for non-trivial logic within the project.
 
 A reasonable inventory covers:
 
@@ -33,7 +33,8 @@ Rust >=1.78 - performance-critical parser, exposed through Python bindings
 
 ## Input and output data formats
 
-Listing formats is the easy half. The harder half is communicating what *inside* a given format your tool expects, because format alone is sometimes not enough. CSV, JSON, XML, HDF5, and Parquet are *containers*, what makes data interoperable is the **schema** inside.
+Listing formats is the easy part. The harder part is describing what your tool expects *within* those formats, because the format itself often does not capture all necessary structure or assumptions.
+CSV, JSON, XML, HDF5, and Parquet are *containers*, what makes data interoperable is the **schema** inside.
 
 For each input and output format, capture:
 
@@ -109,7 +110,7 @@ GPU        : NVIDIA, ≥ 12 GB VRAM, CUDA ≥ 11.8 (segmentation step only)
 Wall clock : ~5 min/subject; ~3 h for a 100-subject cohort on 8 cores
 ```
 
-If resource use depends strongly on input characteristics, name the driving factor (number of subjects, file size, image dimensions, model parameter count )rather than giving a single point estimate.
+If resource use depends strongly on input characteristics, name the driving factor (number of subjects, file size, image dimensions, model parameter count) rather than giving a single point estimate.
 
 > **In the SMP:** the Resource requirements field is free-text. Even a few lines following the structure above is useful.
 

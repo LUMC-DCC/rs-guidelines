@@ -1,8 +1,9 @@
 # Overview: FAIR4RS & FOSS principles
 
-Below you can find an overview of the FAIR4RS principles alongside best practices in research software development. 
-We present four tables corresponding to each of the FAIR principles -- Findable, Accessible, Interoperable, and Reusable. 
-In these tables, the columns list the relevant FAIR4RS sub-principles, and the rows list best practices for free and open-source software (FOSS) development. 
+Below you can find an overview of the FAIR for Research Software (FAIR4RS) principles alongside best practices in research software development. 
+This section contains four overview tables, each corresponding to one of the FAIR dimensions -- Findable, Accessible, Interoperable, and Reusable.
+The tables show how FAIR4RS principles relate to practical sofwtare development.
+In each table, the columns list the relevant FAIR4RS principles (e.g., F1), and the rows list best practices for free and open-source software (FOSS) development. 
 A checkmark in the intersecting cells indicates alignment between a best practice and a FAIR4RS principle. 
 While ideally, both the FAIR4RS principles and FOSS best practices should be integrated into research software development, 
 the extent of their application may vary based on the software's complexity and other factors.

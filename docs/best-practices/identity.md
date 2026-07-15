@@ -20,9 +20,9 @@ Common pitfalls worth avoiding:
 
 If the project might in the future be renamed (this happens), keep the *name* and *identifier* layers separate: the GitHub repo URL, the package name, the documentation site, and the DOI on Zenodo are all things that can be migrated cleanly if the title is the only fixed point.
 
-> **In the SMP:** the Title field expects the final public name as you would write it on a paper or slide.
+> **In the SMP:** the Title field should contain the final public name as it would appear in publications or presentations.
 
-## Authors vs maintainers
+## Authors vs. maintainers
 
 In research software, two roles get conflated and then confused. The SMP separates them deliberately.
 

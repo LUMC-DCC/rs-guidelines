@@ -16,13 +16,13 @@ Research software can be developed by researchers, software engineers, or a comb
 
 To learn more about the definition of research software, see
 
-* [Defining Research Software: a controversial discussion (2021) by Morane et al.](https://doi.org/10.5281/zenodo.5504016)
-* [The Research Software Encyclopedia: A Community Framework to Define Research Software (2022) by Sochat et al.](https://doi.org/10.5334/jors.359)
+* [Defining Research Software: a controversial discussion (2021) by Gruenpeter *et al.*](https://doi.org/10.5281/zenodo.5504016)
+* [The Research Software Encyclopedia: A Community Framework to Define Research Software (2022) by Sochat *et al.*](https://doi.org/10.5334/jors.359)
 
 
 ## Roles & examples of RS
 
-Here we provide examples of RS, with categories based on the role of the software in the research process
+Here, we provide examples of RS. The categories are based on the role of the software in the research process
 (inspired by [Defining the roles of research software (2023) by Nieuwpoort and Katz](https://doi.org/10.54900/9akm9y5-5ject5y)).
 
 **Data collection & instrumentation:**
@@ -73,9 +73,9 @@ Here we provide examples of RS, with categories based on the role of the softwar
 * Data storage and retrieval systems
 
 
-## Place in Research Lifecycle
+## RS in the Research Data Lifecycle
 
-RS is used at various stages of the research lifecycle.
+RS is used at various stages of the research data lifecycle (RDL).
 For each stage, we provide the aforementioned roles of the software that can be used.
 
 | RDL stage                   | RS roles in the stage             |

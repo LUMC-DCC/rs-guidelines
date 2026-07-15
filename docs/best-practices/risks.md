@@ -24,18 +24,20 @@ Three things:
 
 ### What to do when the answer is *User-supplied only*
 
-Your software did not invite the data in, but it should make it hard to accidentally leak. Document the design choices that prevent that:
+Your software may not control whether users provide sensitive data, but it should still be designed to minimize the risk of accidental data leakage.
+Document the design choices that prevent that:
 
 - No telemetry by default (and certainly no telemetry that includes user data).
 - No silent caching of inputs to disk in unspecified locations.
 - Logs scrubbed of inputs unless explicitly enabled (and even then, with a warning).
 - Clear, prominent user-facing guidance to anonymise upstream or run in a controlled environment when sensitive data is in play.
 
-For libraries used in clinical or research workflows, these design choices are doing the work of mitigation. Write them down.
+For libraries used in clinical or research workflows, these design choices are a key part of risk mitigation. Document them clearly.
 
 ### What "No" really means
 
-"No" is correct only if there is no personal data, no clinical data, no patient-derived data, no contact data for identifiable people, and no data covered by an institutional sensitivity policy in the software's normal workflow. If the software might in the future be applied to such data by a downstream user, that's covered under *User-supplied only*, so pick that instead.
+"No" is correct only if there is no personal data, clinical data, patient-derived data, contact data for identifiable individuals, or any data covered by an institutional sensitivity policy in the software's normal workflow. 
+If the software could be used with such data by downstream users, it should be classified as *User‑supplied only*.
 
 > **In the SMP:** the answer triggers the right follow-up questions and warnings. For *Yes*, the SMP expects a DMP reference, data categories, and a mitigation; for *User-supplied only*, only the mitigation; for *No*, nothing further.
 
