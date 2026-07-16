@@ -12,7 +12,8 @@ contributing to its long-term impact and alignment with best practices, includin
 
 ## Why write it
 
-An SMP may sound like an extra administrative task, but it is a powerful tool for planning, organizing, and future-proofing your research software.
+An SMP is a tool for planning, organizing, and future-proofing your research software, not just a form to be filled in.
+The document is the by-product; the value is in the thoughts it encourages, and in having the answers written down where your future self and your colleagues can find them.
 Here's why:
 
 * **Avoid future headaches:** Plan early for software maintenance and updates, so you’re not caught off guard when environments or dependencies change.
@@ -47,6 +48,8 @@ Write an SMP if your software is at least one of:
 * subject to funder, journal, institutional, or regulatory expectations.
 
 You probably don't need one for one-line scripts, throwaway exploratory notebooks, or personal utilities you will never share. A practical test: if a future colleague would reasonably need instructions to understand, rerun, or maintain it, an SMP is warranted.
+
+That test tells you whether to *write* an SMP — not whether the SMP is worth your attention. The questions it asks are simply good research software management practice: who maintains this, how is it licensed, where does it live, how would someone else rerun it. They are worth answering for any project, even one that never gets a plan of its own. Today's throwaway script is also tomorrow's shared tool more often than anyone expects, and the projects that age well are usually the ones whose authors had thought about these questions early.
 
 ___
 
