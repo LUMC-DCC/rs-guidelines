@@ -14,7 +14,7 @@ interactive online form. You can log in, create a project, and step through the 
     - Once logged in, in the left-hand navigation bar, click **Projects**.
     - Click **Create** (top right).
     - Enter the name of your software project.
-    - Select the following Knowledge Model: “LUMC-DCC Software Management Plan”.
+    - Select the following Knowledge Model: “LUMC-DCC Software Management Plan”, choosing its latest available version.
     - When prompted to select Question Tags, you can filter questions according to your project’s complexity, see [Management levels](#management-levels) for more details.
     - Click **Create** to start.
 3. Write the SMP by answering questions. You can save your progress at any time and return later to complete it. You can also invite collaborators.
