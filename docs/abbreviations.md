@@ -4,8 +4,6 @@ This page lists the abbreviations used throughout the guide.
 It is also the source of the tooltips you see elsewhere: any abbreviation in this table is shown with a dotted underline on every page, and its meaning appears when you hover over it.
 If you add an abbreviation to the guide, add it here and the tooltip follows automatically.
 
-File formats, licence identifiers, and product names are deliberately left out: spelling them out does not help you read the sentence they appear in.
-
 | Abbreviation | Meaning |
 |---|---|
 | API | application programming interface |
