@@ -8,21 +8,23 @@ This chapter complements, it does **not** replace, the [LUMC Data Management Pla
 
 When a question asks "does the software handle personal data?", there are three useful answers, not just yes or no. The distinction matters because it changes both the obligations and the mitigations.
 
-- **Yes - directly handles.** The software reads, stores, transmits, logs, or processes personal or otherwise sensitive data as part of its normal operation. Examples: a Castor extraction script, a clinical decision-support API, an imaging pipeline that ingests DICOM files from the hospital PACS.
-- **User-supplied only.** The software is a generic library, CLI, or tool that *could* be used with personal data if the user feeds it that data. The software itself does not see, store, or relate to such data. Examples: a statistical analysis library, a plotting tool, a deduplication algorithm.
-- **No.** The software is not expected to handle such data. Examples: a synthetic-data generator, a build-tool plugin, a tool that operates only on simulated inputs.
+- **Yes, directly handles personal data.** The software is designed to read, store, transmit, log, or process personal or otherwise sensitive data as part of its normal operation, it expects such data to be present. Examples: a Castor extraction script that pulls records including dates of birth, a clinical decision-support API, an imaging pipeline that ingests DICOM files from the hospital PACS. If you are unsure what counts as personal data, see [LUMC Data Stewardship](https://www.albinusnet.nl/actueel/themas/datastewardship/) (internal).
+- **Yes, but user-supplied data only.** The software is a generic library, CLI, or tool that does not itself expect or require personal data, but a user *could* feed it such data. The software has no special relationship to the data: it does not depend on the data being personal, and does not see, store, or relate to it beyond the immediate operation. Examples: a statistical analysis library, a plotting tool, a deduplication algorithm.
+- **No, does not handle personal data.** The software is not expected to handle such data at all. Examples: a synthetic-data generator, a build-tool plugin, a tool that operates only on simulated inputs.
 
-A common confusion: *"my tool can be used with patient data"* sounds like the first case but is usually the second. You are not the data controller for data that someone else feeds your tool. But you are still responsible for not making it easy to leak.
+The difference between the first two is *intent and design*: the first is built around real personal data, the second only permits it. A common confusion: *"my tool can be used with patient data"* sounds like the first case but is usually the second. You are not the data controller for data that someone else feeds your tool, but you are still responsible for not making it easy to leak.
 
-### What to do when the answer is *Yes - directly handles*
+Synthetic or simulated data that only *resembles* personal data, with no link to real individuals, is not itself personal data, so a tool that produces or uses only such data falls under **No, does not handle personal data**. Two cautions: generating synthetic data *from* real personal data is itself processing personal data (that step is the first case); and if individuals could be re-identified from the synthetic data, it may still count as personal. When in doubt, confirm with LUMC Data Stewardship.
+
+### What to do when the answer is *Yes, directly handles personal data*
 
 Three things:
 
 1. **Make sure a DMP exists for the project.** Confirm with your division's privacy officer; see [LUMC Data Stewardship](https://www.albinusnet.nl/actueel/themas/datastewardship/) (internal). Link the DMP in the Software Management Plan (SMP).
 2. **Document where the sensitive data lives, who has access, and how access is logged.** Even if the SMP itself stays high-level, your developer documentation should describe approved storage (Research Drive, sFTP, Vault, controlled-access HPC), the authentication path, and the access-review cadence.
-3. **Decide and document the mitigation for the failure modes you can actually imagine.** Mitigations do not need to be elaborate. *"All access is via institutional SSO; access is reviewed annually; logs are written to `<X>` and retained for `<Y>` years; a suspected breach is reported through the LUMC data-breach procedure"* is a strong answer. Every LUMC employee is responsible for reporting a suspected data breach without delay, through the LUMC data-breach reporting procedure (internal: [info page](https://www.albinusnet.nl/en/products-and-services/juridische-zaken/privacy/reporting-a-data-breach/), [QMS document](https://lumc.zenya.work/QC/65-NR-78)), which routes to the LUMC Data Protection Officer (Functionaris Gegevensbescherming).
+3. **Decide and document the mitigation for the failure modes you can actually imagine.** Mitigations do not need to be elaborate. *"All access is via institutional SSO; access is reviewed annually; logs are written to `<X>` and retained for `<Y>` years; a suspected breach is reported through the LUMC data-breach procedure"* is a strong answer. Every LUMC employee is responsible for reporting a suspected data breach without delay, through the LUMC data-breach reporting procedure (internal: [info page](https://www.albinusnet.nl/en/products-and-services/juridische-zaken/privacy/reporting-a-data-breach/), [QMS document](https://lumc.zenya.work/QC/65-NR-78)).
 
-### What to do when the answer is *User-supplied only*
+### What to do when the answer is *Yes, user-supplied data only*
 
 Your software may not control whether users provide sensitive data, but it should still be designed to minimize the risk of accidental data leakage.
 Document the design choices that prevent that:
@@ -34,12 +36,12 @@ Document the design choices that prevent that:
 
 For libraries used in clinical or research workflows, these design choices are a key part of risk mitigation. Document them clearly.
 
-### What "No" really means
+### What *No* means
 
-"No" is correct only if there is no personal data, clinical data, patient-derived data, contact data for identifiable individuals, or any data covered by an institutional sensitivity policy in the software's normal workflow. 
-If the software could be used with such data by downstream users, it should be classified as *User‑supplied only*.
+"No" is correct only if there is no personal data, clinical data, patient-derived data, contact data for identifiable individuals, or any data covered by an institutional sensitivity policy in the software's normal workflow.
+If the software could be used with such data by downstream users, it should be classified as *Yes, user-supplied data only*.
 
-> **In the SMP:** the answer triggers the right follow-up questions and warnings. For *Yes*, the SMP expects a DMP reference, data categories, and a mitigation; for *User-supplied only*, only the mitigation; for *No*, nothing further.
+> **In the SMP:** the answer triggers the right follow-up questions and warnings. For *directly handles*, the SMP expects a DMP reference, data categories, and a mitigation; for *user-supplied data only*, only the mitigation; for *No*, nothing further.
 
 ## Security & access control
 
