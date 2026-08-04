@@ -38,7 +38,7 @@ CSV, JSON, XML, HDF5, and Parquet are *containers*, what makes data interoperabl
 
 For each input and output format, capture:
 
-- **Format name.** Prefer controlled **EDAM Format** terms where available (the SMP integrates with [EDAM](https://edamontology.org/) - start typing and pick from the dropdown). Common entries: `BAM`, `FASTQ`, `VCF`, `DICOM`, `NIfTI`, `BIDS`, `TSV`, `JSON`, `Parquet`, `NetCDF`.
+- **Format name.** Prefer controlled **EDAM Format** terms where available (the SMP integrates with [EDAM](https://edamontology.org/) - start typing and pick from the dropdown). Common entries: `BAM`, `FASTQ`, `VCF`, `DICOM`, `NIfTI`, `BIDS`, `TSV`, `JSON`, `Parquet`, `NetCDF`. Alternatively, you can choose a machine-readable [IANA media type](https://www.iana.org/assignments/media-types/) (MIME type, e.g., `text/csv`, `application/json`).
 - **Format version / profile** if it matters: `VCF >=4.2`, `DICOM SR`, `BIDS 1.8`.
 - **Schema or expected columns/fields**, especially for generic containers. For a CSV, "columns: `subject_id, age_at_scan, group`" is the actual contract. Link to a schema file if one exists (JSON Schema, XSD, BIDS specification).
 - **Constraints** that matter for interoperability - e.g., "only ASCII filenames", "no compressed inputs", "must be sorted by chromosome".
