@@ -96,7 +96,7 @@ Without a license, code is "all rights reserved" by default - even if it is publ
 
 ### Which license?
 
-The LUMC default is **"as open as possible, as closed as necessary"**. Concretely, the recommended default is the [**Apache License 2.0**](https://www.apache.org/licenses/LICENSE-2.0). It is permissive (compatible with most other open licenses, including commercial use), includes an explicit patent grant (a real practical advantage over MIT or BSD-3-Clause for software that might touch patentable methods), and is widely understood.
+In practice, the [**Apache License 2.0**](https://www.apache.org/licenses/LICENSE-2.0) is a common and sensible default for research software: it is permissive (compatible with most other open licenses, including commercial use), includes an explicit patent grant (advantage over MIT or BSD-3-Clause for software that might touch patentable methods), and is widely understood. Note that this is guidance as there is no official LUMC-wide software license recommendation. If you are unsure which licence fits your project, contact the [LUMC Research Support Desk (RSD)](https://www.albinusnet.nl/en/products-and-services/research/research-facilities/research-support-desk/) (internal).
 
 If you have a specific reason to prefer something else:
 
@@ -115,6 +115,7 @@ Useful references:
 - [Free Software Foundation - Licensing & Compliance](https://www.fsf.org/licensing/) - FSF's licensing recommendations and FAQ.
 - [The Turing Way - Licensing chapter](https://book.the-turing-way.org/reproducible-research/licensing) - broader treatment with legal and ethical context.
 - [eScience Center - How to share software](https://esciencecenter-digital-skills.github.io/research-software-support/modules/licenses/how_to_share) - practical guide.
+- [LUMC data-publication licence flowchart](https://www.albinusnet.nl/siteassets/weten-en-regelen/bestanden/onderzoek/20230131_flowchart_data-publication-licences.pdf) (internal) - a decision aid for licensing published *data* (e.g., Creative Commons); note that software uses different licenses.
 
 The repository should contain a `LICENSE` file (the full license text) at the root. Most forges create one for you when you initialise the repository or run a "Choose a license" wizard.
 
