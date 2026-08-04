@@ -6,7 +6,7 @@ This chapter complements, it does **not** replace, the [LUMC Data Management Pla
 
 ## Personal and sensitive data
 
-When a question asks "does the software handle personal data?", three answers are useful, not two. The distinction matters because it changes both the obligations and the mitigations.
+When a question asks "does the software handle personal data?", there are three useful answers, not just yes or no. The distinction matters because it changes both the obligations and the mitigations.
 
 - **Yes - directly handles.** The software reads, stores, transmits, logs, or processes personal or otherwise sensitive data as part of its normal operation. Examples: a Castor extraction script, a clinical decision-support API, an imaging pipeline that ingests DICOM files from the hospital PACS.
 - **User-supplied only.** The software is a generic library, CLI, or tool that *could* be used with personal data if the user feeds it that data. The software itself does not see, store, or relate to such data. Examples: a statistical analysis library, a plotting tool, a deduplication algorithm.
