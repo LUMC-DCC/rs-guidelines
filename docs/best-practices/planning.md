@@ -26,7 +26,7 @@ For each item, capture:
 - **Requirement** - what you need;
 - **Details** - capacity, access constraints, funding source.
 
-> **In the Software Management Plan (SMP):** the Infrastructure list is open-ended. Be specific enough that a hand-over to a new team would not require guessing. "GPU access" is not enough; "2× NVIDIA A100 80GB on Shark, allocation under PI <X>, valid until end of 2027" is.
+> **In the Software Management Plan (SMP):** the Infrastructure list is open-ended. Be specific enough that a hand-over to a new team would not require guessing. "GPU access" is not enough; "2× NVIDIA A100 80GB on Shark, allocation under PI `<X>`, valid until end of 2027" is.
 
 ## External services
 

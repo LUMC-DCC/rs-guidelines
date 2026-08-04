@@ -57,7 +57,7 @@ Do not answer with terms such as **"planned"** or **"not yet implemented"**. Ins
 The SMP is **not** a substitute for the regulatory documentation that must be produced for medical device or in vitro diagnostic software.
 While it can complement such documentation,it cannot replace the artefacts required for Software as a Medical Device (SaMD), in vitro diagnostic (IVD) software, clinical decision-support tools, or software developed under a formal quality-management system (ISO 13485, IEC 62304, ISO 14971, MDR, IVDR, etc.).
 
-If your software produces or influences a clinical recommendation, triages patients, is embedded in a regulated device, or is otherwise covered by a sectoral regime, flag this in the General chapter and contact <LUMC legal> early. For guidance on recognising regulated software, see [Regulated software](../best-practices/identity.md#regulated-software). Treat the SMP as a high-level overview that complements, not replaces, your regulated documentation.
+If your software produces or influences a clinical recommendation, triages patients, is embedded in a regulated device, or is otherwise covered by a sectoral regime, flag this in the General chapter and contact `<LUMC legal>` early. For guidance on recognising regulated software, see [Regulated software](../best-practices/identity.md#regulated-software). Treat the SMP as a high-level overview that complements, not replaces, your regulated documentation.
 
 ## A note on data: the SMP does not replace the DMP
 

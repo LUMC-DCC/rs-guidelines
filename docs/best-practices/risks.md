@@ -20,7 +20,7 @@ Three things:
 
 1. **Make sure a DMP exists for the project.** Confirm with your division's privacy officer; see [LUMC Data Stewardship](https://www.albinusnet.nl/actueel/themas/datastewardship/). Link the DMP in the Software Management Plan (SMP).
 2. **Document where the sensitive data lives, who has access, and how access is logged.** Even if the SMP itself stays high-level, your developer documentation should describe approved storage (Research Drive, sFTP, Vault, controlled-access HPC), the authentication path, and the access-review cadence.
-3. **Decide and document the mitigation for the failure modes you can actually imagine.** Mitigations do not need to be elaborate. *"All access is via institutional SSO; access is reviewed annually; logs are written to <X> and retained for <Y> years; in the event of suspected compromise, the contact route is <ISMS@lumc.nl>"* is a strong answer.
+3. **Decide and document the mitigation for the failure modes you can actually imagine.** Mitigations do not need to be elaborate. *"All access is via institutional SSO; access is reviewed annually; logs are written to `<X>` and retained for `<Y>` years; in the event of suspected compromise, the contact route is `<ISMS@lumc.nl>`"* is a strong answer.
 
 ### What to do when the answer is *User-supplied only*
 
@@ -73,7 +73,7 @@ Compliance is broader than "does this software face legal rules". Tick this if t
 
 For each that applies, state which requirements it triggers, who is responsible for satisfying them, and where the corresponding documentation lives (often outside the SMP - in a DMP, an SOP, a contract, a quality-management system).
 
-If you are unsure whether a regime applies, ask early - <LUMC legal> can help disambiguate.
+If you are unsure whether a regime applies, ask early - `<LUMC legal>` can help disambiguate.
 
 > **In the SMP:** answer "Yes" if *any* regulatory or institutional regime applies. The follow-up asks you to tick the applicable regimes from a controlled list.
 

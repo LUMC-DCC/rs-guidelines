@@ -15,7 +15,7 @@ Every research software project answers some version of the question: *what curr
 
 Two or four sentences is usually enough. A useful template:
 
-> In *<field/context>*, *<task>* is currently *<manual / slow / inconsistent / hard to reproduce>* because *<reason>*. Existing tools such as *<X>* and *<Y>* solve *<part>*, but not *<gap>*. This software addresses the gap by *<approach>*. It does not attempt to *<explicit non-goal>*.
+> In `<field/context>`, `<task>` is currently `<manual / slow / inconsistent / hard to reproduce>` because `<reason>`. Existing tools such as `<X>` and `<Y>` solve `<part>`, but not `<gap>`. This software addresses the gap by `<approach>`. It does not attempt to `<explicit non-goal>`.
 
 ### Anti-patterns to avoid
 

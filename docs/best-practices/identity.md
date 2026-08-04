@@ -75,7 +75,7 @@ Common situations at LUMC where this applies:
 
 A research prototype can become regulated when it starts influencing decisions about real patients. Re-evaluate whenever the project's scope materially changes.
 
-If your software is regulated, the SMP is *not* a substitute for the regulatory artefacts you will need: IEC 62304 software life-cycle records, ISO 14971 risk file, MDR/IVDR technical file, and so on. Contact <LUMC legal> early.
+If your software is regulated, the SMP is *not* a substitute for the regulatory artefacts you will need: IEC 62304 software life-cycle records, ISO 14971 risk file, MDR/IVDR technical file, and so on. Contact `<LUMC legal>` early.
 
 > **In the SMP:** this maps to the regulated-software flag. Answer "Yes" if any regulatory regime applies *now or is plausible during the project's lifetime*. The SMP captures only the fact that the regime applies; the regulatory documentation lives elsewhere.
 
@@ -84,4 +84,4 @@ If your software is regulated, the SMP is *not* a substitute for the regulatory 
 - [ORCID](https://orcid.org/). Persistent author identifier.
 - [Contributor Roles Taxonomy (CRediT)](https://credit.niso.org/). A vocabulary for describing who did what on a research output. Useful when filling in author roles in `CITATION.cff` or in funder reports.
 - [Citation File Format (`CITATION.cff`)](https://citation-file-format.github.io/). See [Sharing & licensing](sharing-licensing.md).
-- <LUMC legal> (internal). For SaMD/MDR/IVDR questions.
+- `<LUMC legal>` (internal). For SaMD/MDR/IVDR questions.
