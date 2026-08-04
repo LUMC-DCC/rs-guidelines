@@ -92,6 +92,8 @@ Four archetypes worth flagging explicitly:
 | **Abandoned upstream** | A critical library is no longer maintained | Fork and maintain; vendor the relevant code; reduce reliance; switch |
 | **Proprietary data format** | Input or output depends on closed-source tooling | Prefer open formats where possible; document the conversion path; keep a snapshot of the spec |
 
+On choosing sustainable, preferably open file and folder formats, see the LUMC [Folders, files and formats](https://www.albinusnet.nl/weten-en-regelen/onderzoek/data-stewardship/folders-files--formats/) (internal) page.
+
 Two more that come up in clinical contexts:
 
 - **Hardware dependency.** Specialised equipment whose drivers, firmware, or vendor support ends. State alternatives and minimum specifications.
