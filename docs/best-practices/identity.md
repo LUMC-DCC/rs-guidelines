@@ -61,11 +61,11 @@ Where to find identifiers:
 
 > **In the SMP:** the Funding section captures funder name, project title (often a working acronym), grant/internal code, and PI(s). Where a funder or organization has a persistent identifier (a ROR ID or Crossref Funder ID), record it alongside the name. Repeat for each distinct funding source. Use the legal-entity name (e.g., "ZonMw", not "ZM"; "Horizon Europe", not "HE").
 
-## The regulated-software flag
+## Regulated software
 
-Tick the regulated-software flag if your software is (or might plausibly become) subject to a legal, clinical, institutional, or sector-specific regulatory regime. Be conservative. The flag does not mean "we are compliant". It means "this project needs regulatory attention".
+Your software may be subject to a legal, clinical, institutional, or sector-specific regulatory regime, now or as it develops. Decide early whether it is, and be conservative. Recognizing that a project needs regulatory attention is not the same as claiming it is already compliant.
 
-Common situations at LUMC that should trigger the flag:
+Common situations at LUMC where this applies:
 
 - The software is or will be a **Software as a Medical Device (SaMD)**, in vitro diagnostic (IVD) product, or otherwise covered by **MDR**, **IVDR**, **FDA**, or comparable rules.
 - The software is or will be **clinical decision support**: anything that influences diagnosis, treatment, monitoring, or triage.
@@ -73,11 +73,11 @@ Common situations at LUMC that should trigger the flag:
 - The software runs under departmental SOPs that have regulatory implications.
 - The software falls under **NEN 7510** (Dutch information-security standard for healthcare) or comparable institutional security requirements.
 
-A research prototype can become regulated when it starts influencing decisions about real patients. Re-evaluate the flag whenever the project's scope materially changes.
+A research prototype can become regulated when it starts influencing decisions about real patients. Re-evaluate whenever the project's scope materially changes.
 
-If the flag is set, the SMP is *not* a substitute for the regulatory artefacts you will need: IEC 62304 software life-cycle records, ISO 14971 risk file, MDR/IVDR technical file, and so on. Contact <LUMC legal> early.
+If your software is regulated, the SMP is *not* a substitute for the regulatory artefacts you will need: IEC 62304 software life-cycle records, ISO 14971 risk file, MDR/IVDR technical file, and so on. Contact <LUMC legal> early.
 
-> **In the SMP:** answer "Yes" if any regulatory regime applies *now or is plausible during the project's lifetime*. The SMP captures only the fact that the regime applies; the regulatory documentation lives elsewhere.
+> **In the SMP:** this maps to the regulated-software flag. Answer "Yes" if any regulatory regime applies *now or is plausible during the project's lifetime*. The SMP captures only the fact that the regime applies; the regulatory documentation lives elsewhere.
 
 ## Further reading
 
