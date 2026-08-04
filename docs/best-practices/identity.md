@@ -31,7 +31,7 @@ In research software, two roles get conflated and then confused. The SMP separat
 
 In most projects, **maintainers ⊆ authors ⊊ contributors**: every maintainer is an author, every author is also (trivially) a contributor, but plenty of contributors (who fixed a typo, opened a useful issue, reviewed a PR) are neither authors nor maintainers.
 
-### Why at least two maintainers
+### Why a project needs at least two maintainers
 
 The single most common failure mode of research software is: the only person who knew how it worked left. A second maintainer with repository/admin access can:
 
