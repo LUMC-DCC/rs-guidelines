@@ -63,7 +63,7 @@ The [OWASP Top Ten](https://owasp.org/www-project-top-ten/) is the canonical sho
 
 ## Compliance & regulatory considerations
 
-Compliance is broader than "does this software face legal rules". Tick this if the software is subject to any of:
+Compliance is broader than legal regulation alone. This applies if the software is subject to any of:
 
 - legal frameworks (e.g., **GDPR / AVG**);
 - sectoral regulation (**MDR**, **IVDR**, **FDA**, comparable rules outside the EU/US);
