@@ -51,7 +51,15 @@ For every author and maintainer, record at least full name, affiliation, and a c
 
 Recording the funder, grant number, PI, and internal LUMC project code seems bureaucratic until you need it for a Zenodo deposit, a funder report, or a hand-over.
 
-> **In the SMP:** the Funding section captures funder name, project title (often a working acronym), grant/internal code, and PI(s). Repeat for each distinct funding source. Use the legal-entity name (e.g., "ZonMw", not "ZM"; "Horizon Europe", not "HE").
+Where they exist, prefer persistent identifiers over free text: they are unambiguous and machine-readable, which makes funder reports and metadata records easier to generate. Large funders (NWO, ZonMw, Horizon Europe) issue proper identifiers for both the organization and the individual grant; smaller foundations may not, in which case the plain name and grant number are sufficient.
+
+Where to find identifiers:
+
+- [Research Organization Registry (ROR)](https://ror.org/). Persistent identifiers for research organizations and funders; for example, NWO is [ror.org/04jsz6e67](https://ror.org/04jsz6e67). A ROR record also links the organization's Crossref Funder ID.
+- [Crossref Funder Registry](https://search.crossref.org/funding). Searchable directory of funder names and their Crossref Funder IDs.
+- [NWO grant IDs](https://www.nwo.nl/en/grant-id). How NWO project (grant) identifiers work and where to find them.
+
+> **In the SMP:** the Funding section captures funder name, project title (often a working acronym), grant/internal code, and PI(s). Where a funder or organization has a persistent identifier (a ROR ID or Crossref Funder ID), record it alongside the name. Repeat for each distinct funding source. Use the legal-entity name (e.g., "ZonMw", not "ZM"; "Horizon Europe", not "HE").
 
 ## The regulated-software flag
 

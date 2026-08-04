@@ -53,6 +53,7 @@ If you add an abbreviation to the guide, add it here and the tooltip follows aut
 | RDA | Research Data Alliance |
 | RDL | research data lifecycle |
 | ReSA | Research Software Alliance |
+| ROR | Research Organization Registry |
 | RS | research software |
 | RSE | Research Software Engineer |
 | SaMD | Software as a Medical Device |
