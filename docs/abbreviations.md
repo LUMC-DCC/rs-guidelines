@@ -55,6 +55,7 @@ If you add an abbreviation to the guide, add it here and the tooltip follows aut
 | ReSA | Research Software Alliance |
 | ROR | Research Organization Registry |
 | RS | research software |
+| RSD | Research Support Desk |
 | RSE | Research Software Engineer |
 | SaMD | Software as a Medical Device |
 | SBOM | Software Bill of Materials |

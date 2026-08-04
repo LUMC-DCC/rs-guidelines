@@ -3,7 +3,7 @@
 ## Why this guide exists
 
 The LUMC Digital Competence Centre (DCC) supports LUMC researchers in developing and managing research software.
-For example, we help answering questions, such as how to choose a licence, why a project needs more than one maintainer, what makes software citable, how to plan for the day the postdoc leaves.
+For example, we are often asked questions such as how to choose a licence, why a project needs more than one maintainer, what makes software citable, or how to plan for the day the postdoc leaves.
 This guide collects that advice in one navigable place, so that it is available to everyone at the LUMC and other institutions.
 
 It is designed to be used alongside our other resources: [SciWiz](smp/sciwiz.md), the LUMC instance of the tool that provides the Software Management Plan (SMP) writing wizard and export functionalities,
@@ -19,7 +19,7 @@ They were written by Mariia Steeghs-Turchina and Anna Niehues.
 
 The source code lives at [github.com/LUMC-DCC/rs-guidelines](https://github.com/LUMC-DCC/rs-guidelines).
 Corrections, additions, and suggestions are welcome: open an issue or a pull request there.
-For general questions about these guidelines or about research software support at the LUMC, contact us at [LUMCDCC@lumc.nl](mailto:LUMCDCC@lumc.nl).
+For questions about these guidelines, contact us at [LUMCDCC@lumc.nl](mailto:LUMCDCC@lumc.nl). For research support at the LUMC more broadly, the central point of contact is the [LUMC Research Support Desk (RSD)](https://www.albinusnet.nl/en/products-and-services/research/research-facilities/research-support-desk/) (internal).
 
 ## Reusing this guide
 

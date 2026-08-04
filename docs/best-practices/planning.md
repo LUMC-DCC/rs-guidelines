@@ -37,7 +37,7 @@ External services are the people, contracts, and paid tiers outside your immedia
 Examples:
 
 - **IT&DI** support and infrastructure tickets;
-- **LUMC-DCC** consultancy (RSE review, FAIR support, DMP help);
+- **[LUMC Research Support Desk (RSD)](https://www.albinusnet.nl/en/products-and-services/research/research-facilities/research-support-desk/)** (internal) - the central point for research support, including FAIR and data-management questions;
 - **External RSE review** or audit;
 - **Penetration testing** (for Level C with a network face);
 - **Paid CI minutes** on GitHub or GitLab when free tiers are exhausted;
@@ -45,7 +45,7 @@ Examples:
 - **Legal or intellectual property (IP) support**;
 - **Vendor support contracts** for instruments or proprietary software.
 
-Quantify where you can. *"Need DCC help"* is not enough. *"~5 days of DCC RSE consultancy across the project; ~10 hours/year of IT&DI support; €1,200/year for CI minutes once we move to a self-hosted runner"* is.
+Quantify where you can. *"Need RSE support"* is not enough. *"~5 days of external RSE support across the project; ~10 hours/year of IT&DI support; €1,200/year for CI minutes once we move to a self-hosted runner"* is.
 
 If a service is unfunded, say so. *"To be arranged"* is a valid early answer and a real planning risk; flagging it in the SMP is precisely the point.
 
