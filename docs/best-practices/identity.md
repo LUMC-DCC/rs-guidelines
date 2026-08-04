@@ -1,6 +1,6 @@
 # Project identity & people
 
-Before anything technical, a software project needs a name, a small set of named humans, and a clear statement of whether any external regime governs it.
+Before anything technical, a software project needs a name, a small set of named people responsible for it, and a clear statement of whether any external regulations apply.
 
 ## Software title
 
