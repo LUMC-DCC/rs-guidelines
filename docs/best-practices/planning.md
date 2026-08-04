@@ -19,6 +19,8 @@ Common categories:
 - **Cloud compute or storage** - AWS, Azure, GCP, SURF cloud;
 - **Specialised lab instruments** that the software controls, reads from, or feeds.
 
+Where a project stores data, the storage location must follow the LUMC Data Stewardship storage SOP (internal). Commercial cloud (AWS, Azure, GCP) is generally not permitted for personal or patient data; use approved institutional storage for such data.
+
 This is *not* the place for GitHub or GitLab hosting, package registries, or documentation hosting, those belong in [Sharing & licensing](sharing-licensing.md) and [Documentation & community](documentation-community.md), unless you are using paid tiers with explicit capacity or contract implications.
 
 For each item, capture:
