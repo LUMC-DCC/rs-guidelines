@@ -2,7 +2,7 @@
 
 Research software projects do not fail because nobody anticipated *every* failure mode. They fail because nobody anticipated the *obvious* ones in time to do anything about them. The goal of this chapter is risk awareness with proportionate mitigation, not a catalogue of every conceivable thing that could go wrong.
 
-This chapter complements, it does **not** replace, the [LUMC Data Management Plan (DMP)](https://www.albinusnet.nl/en/products-and-services/research/data-stewardship/dmp/). Personal-data legal bases, consent, retention, Data Protection Impact Assessments (DPIAs), and storage policies belong in the DMP. The Risks chapter only flags that the software has a relationship with sensitive data and points to the right document.
+This chapter complements, it does **not** replace, the [LUMC Data Management Plan (DMP)](https://www.albinusnet.nl/en/products-and-services/research/data-stewardship/dmp/) (internal). Personal-data legal bases, consent, retention, Data Protection Impact Assessments (DPIAs), and storage policies belong in the DMP. The Risks chapter only flags that the software has a relationship with sensitive data and points to the right document.
 
 ## Personal and sensitive data
 
@@ -18,9 +18,9 @@ A common confusion: *"my tool can be used with patient data"* sounds like the fi
 
 Three things:
 
-1. **Make sure a DMP exists for the project.** Confirm with your division's privacy officer; see [LUMC Data Stewardship](https://www.albinusnet.nl/actueel/themas/datastewardship/). Link the DMP in the Software Management Plan (SMP).
+1. **Make sure a DMP exists for the project.** Confirm with your division's privacy officer; see [LUMC Data Stewardship](https://www.albinusnet.nl/actueel/themas/datastewardship/) (internal). Link the DMP in the Software Management Plan (SMP).
 2. **Document where the sensitive data lives, who has access, and how access is logged.** Even if the SMP itself stays high-level, your developer documentation should describe approved storage (Research Drive, sFTP, Vault, controlled-access HPC), the authentication path, and the access-review cadence.
-3. **Decide and document the mitigation for the failure modes you can actually imagine.** Mitigations do not need to be elaborate. *"All access is via institutional SSO; access is reviewed annually; logs are written to `<X>` and retained for `<Y>` years; in the event of suspected compromise, the contact route is `<ISMS@lumc.nl>`"* is a strong answer.
+3. **Decide and document the mitigation for the failure modes you can actually imagine.** Mitigations do not need to be elaborate. *"All access is via institutional SSO; access is reviewed annually; logs are written to `<X>` and retained for `<Y>` years; a suspected breach is reported through the LUMC data-breach procedure"* is a strong answer. Every LUMC employee is responsible for reporting a suspected data breach without delay, through the LUMC data-breach reporting procedure (internal: [info page](https://www.albinusnet.nl/en/products-and-services/juridische-zaken/privacy/reporting-a-data-breach/), [QMS document](https://lumc.zenya.work/QC/65-NR-78)), which routes to the LUMC Data Protection Officer (Functionaris Gegevensbescherming).
 
 ### What to do when the answer is *User-supplied only*
 
