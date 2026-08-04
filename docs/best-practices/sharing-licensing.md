@@ -21,6 +21,8 @@ What is *not* an acceptable place for research code:
 
 If a repository must be **private** for legitimate reasons (GDPR, IP, MDR/IVDR, security through obscurity for a small subset of components, contractual obligations), write the reason down in the Software Management Plan (SMP). *"Private for now"* is fine if there is a plan to open it later; *"private indefinitely with no documented reason"* is not.
 
+Note also that publishing source code, or describing the method in a paper, is a **public disclosure** that can foreclose patenting: in Europe (which applies absolute novelty) and most jurisdictions, a disclosure before a patent is filed can permanently bar it. If the software or its underlying method may have patent or commercial value, settle the intention *before* going public: consult `<LUMC technology transfer>` first, and record the IP/patent intention in the SMP. Most research software has no patentable invention and benefits from being open.
+
 > **In the SMP:** record the repository URL, whether it is publicly accessible, and (if not) the specific reason. Plan to revisit the openness decision at every major release.
 
 ## Registries
