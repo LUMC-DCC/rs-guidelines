@@ -15,7 +15,7 @@ Any project beyond a quick, one-off script should be kept in version control fro
 
 What is *not* an acceptable place for research code:
 
-- A laptop only (one disk failure away from no code at all).
+- A laptop only (a single disk failure can mean the loss of all code).
 - A shared drive (no history, no diffs, no review).
 - A *personal* GitHub or GitLab account (when the person leaves, so does the project).
 

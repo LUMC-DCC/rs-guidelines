@@ -115,7 +115,7 @@ The classic Python style guide is [PEP 8](https://peps.python.org/pep-0008/) (or
 
 For Level B and C, enforce formatting and linting in **CI** or via **pre-commit hooks** (using [`pre-commit`](https://pre-commit.com/)) rather than relying on memory. The point is automation: a contributor's formatting mistake is caught at commit time, not after the maintainer finishes reviewing a PR.
 
-> **In the SMP:** the Code quality standards question is binary, with a follow-up listing the tools. Whether checks run in CI or as pre-commit hooks is a separate follow-up. "Yes" means *something is automated*; if quality is enforced only by code review and willpower, "No" is the better answer.
+> **In the SMP:** the Code quality standards question is binary, with a follow-up listing the tools. Whether checks run in CI or as pre-commit hooks is a separate follow-up. "Yes" means *something is automated*; if quality is enforced only by manual review and discipline, "No" is the better answer.
 
 ## Cross-platform / environment testing
 

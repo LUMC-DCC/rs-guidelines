@@ -95,9 +95,9 @@ Two more that come up in clinical contexts:
 - **Hardware dependency.** Specialised equipment whose drivers, firmware, or vendor support ends. State alternatives and minimum specifications.
 - **External data/source availability.** A public API, a reference dataset, or an ontology disappears or changes. Cache permitted snapshots; archive metadata; document fallback behaviour.
 
-A useful sanity check: for each dependency you list, ask *"if this stopped working tomorrow, what would we do?"* If the answer is "panic", it belongs here.
+A useful sanity check: for each dependency you list, ask *"if this stopped working tomorrow, what would we do?"* If there is no ready answer, it belongs here.
 
-> **In the SMP:** in the External dependencies follow-up, identify the dependencies that would be *expensive to replace* and the mitigation for each. Be realistic, focus on what could actually bite you.
+> **In the SMP:** in the External dependencies follow-up, identify the dependencies that would be *expensive to replace* and the mitigation for each. Be realistic, and focus on the dependencies that would cause real problems if they failed.
 
 ## Risk mitigation
 
@@ -113,7 +113,7 @@ For Level C projects, mitigations should also name:
 - **What triggers escalation.** A failed CI run for N days, a missed maintainer hand-over.
 - **Where the evidence lives.** Issue tracker labels, CI logs, release notes, a risk table in the repository, a project board.
 
-Evidence can be lightweight. The point is that someone, possibly a future you, can audit what was promised and what actually happened, without an archaeological dig.
+Evidence can be lightweight. The point is that someone, possibly a future you, can audit what was promised and what actually happened, without a lengthy investigation.
 
 ## Further reading
 

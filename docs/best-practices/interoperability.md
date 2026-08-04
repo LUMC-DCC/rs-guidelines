@@ -78,7 +78,7 @@ If your software exposes interfaces beyond a single CLI, document them. Common i
 - **Database schema** - if your software reads or writes a structured database, the schema is part of the interface.
 - **File-based workflow interface** - e.g., a Snakemake module that consumes and produces specific file layouts.
 
-For each interface, state whether it is **stable**, **experimental**, or **internal**. Users who depend on an "experimental" API have been warned; users who depend on an "internal" API are on their own. This is the contract.
+For each interface, state whether it is **stable**, **experimental**, or **internal**. Users who depend on an "experimental" API do so with that caveat; users who depend on an "internal" API have no guarantee of stability. These labels form the contract.
 
 For REST APIs in particular, provide an OpenAPI specification, most modern frameworks (FastAPI, Spring Boot, Express + swagger-jsdoc) generate one from the code. The spec then drives client generation, documentation tools like [Redoc](https://redocly.com/redoc/) and [Swagger UI](https://swagger.io/tools/swagger-ui/), and contract testing.
 

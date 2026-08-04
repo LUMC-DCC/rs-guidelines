@@ -14,7 +14,7 @@ A good title is **specific**, **unique**, and **short**:
 
 Common pitfalls worth avoiding:
 
-- **Internal codenames as public titles.** Pet names or supervisor's coffee orders are fine in private; rename before publishing.
+- **Internal codenames as public titles.** An informal working name is fine during development; rename before publishing.
 - **Naming after the cohort or department only.** "ALS-tool" and "LUMC-Pathology" are hard to disambiguate at scale, even within LUMC.
 - **Putting the version in the name.** `MyTool2`, `MyToolPro`, `MyToolFinal`. Versions belong in tags, not in names.
 

@@ -130,7 +130,7 @@ A policy with five elements is usually enough:
 - **Automation** - [Dependabot](https://docs.github.com/en/code-security/dependabot), [Renovate](https://docs.renovatebot.com/), GitLab's built-in dependency scanning.
 - **Review requirement** - CI must pass, plus optionally a maintainer review.
 - **Pinning strategy** - permissive ranges in the manifest (`>=2.1,<3.0`), exact versions in the lock file. This is the standard pattern and is what most modern dependency tools default to.
-- **Emergency path for security fixes** - what does the team do when a high-severity CVE drops? For Level C, name a severity threshold (e.g., CVSS ≥ 7) and a response time (e.g., five working days).
+- **Emergency path for security fixes** - what does the team do when a high-severity CVE is disclosed? For Level C, name a severity threshold (e.g., CVSS ≥ 7) and a response time (e.g., five working days).
 
 A small note on the relationship to license-compatibility checks (covered in [Sharing & licensing](sharing-licensing.md)): every dependency update is an opportunity for a license to change.
 
