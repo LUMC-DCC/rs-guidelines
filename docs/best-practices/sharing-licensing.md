@@ -109,7 +109,7 @@ Useful references:
 - [OSI Approved Licenses](https://opensource.org/licenses) - Open source licenses approved by open source initiative
 - [Choose A License](https://choosealicense.com/) - a quick licenses walk-through.
 - [tl;dr Legal](https://www.tldrlegal.com/) - plain-English summaries of common licenses.
-- [Public License Selector](http://ufal.github.io/public-license-selector/) - a quiz for choosing a license.
+- [Public License Selector](https://ufal.github.io/public-license-selector/) - a quiz for choosing a license.
 - [Free Software Foundation - Licensing & Compliance](https://www.fsf.org/licensing/) - FSF's licensing recommendations and FAQ.
 - [The Turing Way - Licensing chapter](https://book.the-turing-way.org/reproducible-research/licensing) - broader treatment with legal and ethical context.
 - [eScience Center - How to share software](https://esciencecenter-digital-skills.github.io/research-software-support/modules/licenses/how_to_share) - practical guide.
@@ -157,8 +157,8 @@ If a methods paper, preprint, or application-note exists for your software, link
 
 ## Further reading
 
-- [Choose A License](https://choosealicense.com/) - license picker.
-- [SPDX](https://spdx.org/licenses/) - canonical machine-readable license identifiers.
-- [The Turing Way - Software Citation](https://book.the-turing-way.org/communication/citable/) and [Licensing](https://book.the-turing-way.org/reproducible-research/licensing) - broader treatment.
-- [Zenodo–GitHub integration guide](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) - official walk-through of the recommended workflow.
-- [Awesome Research Software Registries](https://github.com/NLeSC/awesome-research-software-registries) - registry directory.
+- [Choose A License](https://choosealicense.com/). License picker.
+- [SPDX](https://spdx.org/licenses/). Canonical machine-readable license identifiers.
+- The Turing Way. [Software Citation](https://book.the-turing-way.org/communication/citable/) and [Licensing](https://book.the-turing-way.org/reproducible-research/licensing). Broader treatment.
+- [Zenodo–GitHub integration guide](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content). Official walk-through of the recommended workflow.
+- [Awesome Research Software Registries](https://github.com/NLeSC/awesome-research-software-registries). Registry directory.

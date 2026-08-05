@@ -10,9 +10,9 @@ Given the diverse nature of research software, this guide provides practical rec
 ## What is research software?
 
 > *Research Software includes source code files, algorithms, scripts, computational workflows and executables that were created during the research process or for a research purpose.*
-> -- [Gruenpeter *et al.* 2021]
+> -- [Gruenpeter *et al.* (2021)]
 
-[Gruenpeter *et al.* 2021]: https://doi.org/10.5281/zenodo.5504016
+[Gruenpeter *et al.* (2021)]: https://doi.org/10.5281/zenodo.5504016
 
 Research software can be a research output in itself, or it can be developed to support research activities
 throughout the research lifecycle, from data collection and analysis to visualization and dissemination.
@@ -33,7 +33,7 @@ Within this context, it applies to a broad range of research software: from smal
 > **IMPORTANT:** In some cases, additional regulations may apply that are not covered by this guide.
 > Please make sure to check for additional guidelines or regulations related to, e.g., clinical research, [software as a medical device], processing of potentially personally identifiable information, software security, or security of (cloud) computing environments.
 
-[software as a medical device]: https://www.albinusnet.nl/en/products-and-services/research/research-facilities/research-with-medical-devices/?
+[software as a medical device]: https://www.albinusnet.nl/en/products-and-services/research/research-facilities/research-with-medical-devices/
 
 ## Assumed knowledge
 

@@ -136,10 +136,10 @@ A small note on the relationship to license-compatibility checks (covered in [Sh
 
 ## Further reading
 
-- [Semantic Versioning](https://semver.org/) - full specification.
-- [Calendar Versioning](https://calver.org/) - for time-driven projects.
-- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) - commit-message convention with tooling support.
-- [Keep a Changelog](https://keepachangelog.com/) - changelog format.
-- [GitHub - About releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) - practical reference on tagging, release notes, and assets.
-- [Zenodo–GitHub integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) - automatic archiving and DOI minting at release time.
-- [The Turing Way - Reproducible environments](https://book.the-turing-way.org/reproducible-research/renv) - good orientation across lock files, containers, and whole-environment tools.
+- [Semantic Versioning](https://semver.org/). Full specification.
+- [Calendar Versioning](https://calver.org/). For time-driven projects.
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). Commit-message convention with tooling support.
+- [Keep a Changelog](https://keepachangelog.com/). Changelog format.
+- GitHub. [About releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases). Practical reference on tagging, release notes, and assets.
+- GitHub. [Zenodo–GitHub integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content). Automatic archiving and DOI minting at release time.
+- The Turing Way. [Reproducible environments](https://book.the-turing-way.org/reproducible-research/renv). Good orientation across lock files, containers, and whole-environment tools.

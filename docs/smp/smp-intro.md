@@ -59,4 +59,4 @@ ___
 |-------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | [Practical guide to Software Management Plans by the Netherlands eScience Center and NWO (latest version)](https://doi.org/10.5281/zenodo.7038280) | Provides guidance to create a Software Management Plan (SMP) template                 |
 | [Software Management Wizard (SM Wizard) by ELIXIR](https://smw.dsw.elixir-europe.org/)                                  | ELIXIR Tool for creating SMP in different formats and connecting it to FAIR evaluator |
-|[Animation by TU Delft: What is a Software Management Plan?](https://youtu.be/5Zy3l4dTJd4?si=SetRZ-lHwv-BSSY2)| The animation introduces SMPs |
+|[Animation by TU Delft: What is a Software Management Plan?](https://youtu.be/5Zy3l4dTJd4)| The animation introduces SMPs |

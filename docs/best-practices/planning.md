@@ -148,4 +148,4 @@ If software *cannot* remain accessible, explain why. Valid reasons include sensi
 
 ## Further reading
 
-- [The Turing Way - Project Management](https://book.the-turing-way.org/project-design/project-design) - chapters on planning, hand-over, and lifecycle management.
+- The Turing Way. [Project Management](https://book.the-turing-way.org/project-design/project-design). Chapters on planning, hand-over, and lifecycle management.

@@ -117,10 +117,10 @@ Evidence can be lightweight. The point is that someone, possibly a future you, c
 
 ## Further reading
 
-- [OWASP Top Ten](https://owasp.org/www-project-top-ten/) - canonical short list of common web-application security risks and prevention strategies.
-- [The Turing Way - Risk assessment: complexity and impact](https://book.the-turing-way.org/reproducible-research/risk-assess/risk-assess-impact.html) - explains the risk matrix and how to measure complexity and impact for research software.
-- [How to perform a software risk assessment](https://www.devteam.space/blog/how-to-perform-a-software-risk-assessment/) - a generic, but practical, walk-through.
-- [Ranković and Ivanović - Risk Analysis Tools for Managing Software Projects](https://research.tilburguniversity.edu/en/publications/risk-analysis-tools-for-managing-software-projects) - comparative paper, useful for Level C projects considering a more structured tool.
-- [pip-audit](https://github.com/pypa/pip-audit), [cargo audit](https://github.com/RustSec/rustsec/tree/main/cargo-audit), [npm audit](https://docs.npmjs.com/cli/v10/commands/npm-audit) - language-native vulnerability scanners.
-- [Dependabot](https://docs.github.com/en/code-security/dependabot) and [Renovate](https://docs.renovatebot.com/) - automated dependency-update bots.
-- [LUMC Data Stewardship](https://www.albinusnet.nl/actueel/themas/datastewardship/) (internal) - for DMP.
+- [OWASP Top Ten](https://owasp.org/www-project-top-ten/). Canonical short list of common web-application security risks and prevention strategies.
+- The Turing Way. [Risk assessment: complexity and impact](https://book.the-turing-way.org/reproducible-research/risk-assess/risk-assess-impact.html). Explains the risk matrix and how to measure complexity and impact for research software.
+- [How to perform a software risk assessment](https://www.devteam.space/blog/how-to-perform-a-software-risk-assessment/). A generic, but practical, walk-through.
+- Ranković & Ivanović. [Risk Analysis Tools for Managing Software Projects](https://research.tilburguniversity.edu/en/publications/risk-analysis-tools-for-managing-software-projects). Comparative paper, useful for Level C projects considering a more structured tool.
+- [pip-audit](https://github.com/pypa/pip-audit), [cargo audit](https://github.com/RustSec/rustsec/tree/main/cargo-audit), [npm audit](https://docs.npmjs.com/cli/v10/commands/npm-audit). Language-native vulnerability scanners.
+- [Dependabot](https://docs.github.com/en/code-security/dependabot) and [Renovate](https://docs.renovatebot.com/). Automated dependency-update bots.
+- [LUMC Data Stewardship](https://www.albinusnet.nl/actueel/themas/datastewardship/) (internal). For DMP.

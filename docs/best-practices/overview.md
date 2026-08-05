@@ -13,11 +13,11 @@ and described by [Barker *et al.*, 2022](https://doi.org/10.1038/s41597-022-0171
 
 The **FOSS best practices** have been assembled from various sources, including:
 
-- [Good Practices, Research Software Support](https://esciencecenter-digital-skills.github.io/research-software-support/) - eScience Center
-- [Good practices in research software development](https://esciencecenter-digital-skills.github.io/good-practices-lesson/key-points.html) - eScience Center
-- [Lesson Development for Open Source Software Best Practices Adoption](https://www.semanticscholar.org/paper/Lesson-Development-for-Open-Source-Software-Best-Kuzak-Harrow/b108dff0aaaa2f36903394b0901c4202e01fbffc?utm_source=consensus) - Kuzak & Harrow
-- [Starting an Open Source Project](https://opensource.guide/starting-a-project/) - Open Source Guide
-- [Overview of recommended FAIR practices for research data and software](https://pmc.ncbi.nlm.nih.gov/articles/PMC10787363/table/tbl1/) - Niehues *et al.*
+- eScience Center. [Good Practices, Research Software Support](https://esciencecenter-digital-skills.github.io/research-software-support/).
+- eScience Center. [Good practices in research software development](https://esciencecenter-digital-skills.github.io/good-practices-lesson/key-points.html).
+- Kuzak & Harrow. [Lesson Development for Open Source Software Best Practices Adoption](https://www.semanticscholar.org/paper/Lesson-Development-for-Open-Source-Software-Best-Kuzak-Harrow/b108dff0aaaa2f36903394b0901c4202e01fbffc).
+- Open Source Guide. [Starting an Open Source Project](https://opensource.guide/starting-a-project/).
+- Niehues *et al.* [Overview of recommended FAIR practices for research data and software](https://pmc.ncbi.nlm.nih.gov/articles/PMC10787363/table/tbl1/).
 
 ________________________________________________________________________________________________________________
 

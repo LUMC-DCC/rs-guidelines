@@ -132,9 +132,9 @@ For tests to be reproducible, they need stable input. Sample data and parameter 
 
 ## Further reading
 
-- [The Turing Way — Testing](https://book.the-turing-way.org/reproducible-research/testing/) — broad reference covering all the test types above.
-- [Martin Fowler — The Practical Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html) — the canonical short essay on what to test and at which level.
-- [Atlassian — Plan your regression-testing strategy](https://community.atlassian.com/forums/Jira-articles/Plan-your-regression-testing-strategy-by-asking-the-relevant/ba-p/1158403) — practical regression-testing guide.
-- [OpenSSF Best Practices Badge](https://bestpractices.coreinfrastructure.org/) — self-certifying badge for open-source projects.
-- [PEP 8](https://peps.python.org/pep-0008/) — the Python style guide; the closest thing to a universal reference in the Python world.
-- [pre-commit](https://pre-commit.com/) — framework for running formatters and linters as Git hooks.
+- The Turing Way. [Testing](https://book.the-turing-way.org/reproducible-research/testing/). Broad reference covering all the test types above.
+- Fowler. [The Practical Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html). The canonical short essay on what to test and at which level.
+- Atlassian. [Plan your regression-testing strategy](https://community.atlassian.com/forums/Jira-articles/Plan-your-regression-testing-strategy-by-asking-the-relevant/ba-p/1158403). Practical regression-testing guide.
+- [OpenSSF Best Practices Badge](https://bestpractices.coreinfrastructure.org/). Self-certifying badge for open-source projects.
+- [PEP 8](https://peps.python.org/pep-0008/). The Python style guide; the closest thing to a universal reference in the Python world.
+- [pre-commit](https://pre-commit.com/). Framework for running formatters and linters as Git hooks.

@@ -73,7 +73,7 @@ If the flag is set, the SMP is *not* a substitute for the regulatory artefacts y
 
 ## Further reading
 
-- [ORCID](https://orcid.org/) - persistent author identifier.
-- [Contributor Roles Taxonomy (CRediT)](https://credit.niso.org/) - a vocabulary for describing who did what on a research output. Useful when filling in author roles in `CITATION.cff` or in funder reports.
-- [Citation File Format (`CITATION.cff`)](https://citation-file-format.github.io/), see [Sharing & licensing](sharing-licensing.md).
-- <LUMC legal> (internal) for SaMD/MDR/IVDR questions.
+- [ORCID](https://orcid.org/). Persistent author identifier.
+- [Contributor Roles Taxonomy (CRediT)](https://credit.niso.org/). A vocabulary for describing who did what on a research output. Useful when filling in author roles in `CITATION.cff` or in funder reports.
+- [Citation File Format (`CITATION.cff`)](https://citation-file-format.github.io/). See [Sharing & licensing](sharing-licensing.md).
+- <LUMC legal> (internal). For SaMD/MDR/IVDR questions.

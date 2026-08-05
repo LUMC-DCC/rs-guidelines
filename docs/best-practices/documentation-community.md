@@ -112,7 +112,7 @@ A `CHANGELOG.md` makes version history human-readable. The standard format is [K
 - **Fixed** - bug fixes.
 - **Security** - security-relevant fixes.
 
-[Common Changelog](https://github.com/vweevers/common-changelog) is a stricter subset, useful if you want machine-parseable changelogs. For details on generating changelogs from Git history, see [A Beginner's Guide to Git - What is a changelog and how to generate it](https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/).
+[Common Changelog](https://github.com/vweevers/common-changelog) is a stricter subset, useful if you want machine-parseable changelogs. For details on generating changelogs from Git history, see [A Beginner's Guide to Git - What is a Changelog and How to Generate It](https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/).
 
 Short changelog entries are fine. See also the [Versioning & releases](versioning-releases.md) chapter.
 
@@ -166,9 +166,9 @@ Research-software projects often use **lazy consensus** for routine changes (a P
 
 ## Further reading
 
-- [Write the Docs - Software documentation guide](https://www.writethedocs.org/guide/) - broad, community-built reference on documentation craft.
-- [The Turing Way - Communication and reporting](https://book.the-turing-way.org/communication/communication) - chapters on accessible documentation, citation, and persistent links.
-- [Diátaxis](https://diataxis.fr/) - a clean framework for thinking about documentation in four modes (tutorials, how-tos, reference, explanation). Genuinely useful when you cannot decide where a piece of documentation belongs.
-- [Open Source Guides - Starting an open source project](https://opensource.guide/starting-a-project/) - practical, especially for the social and community side.
-- [Contributor Covenant](https://www.contributor-covenant.org/) - code-of-conduct template.
-- [Keep a Changelog](https://keepachangelog.com/) - changelog conventions.
+- Write the Docs. [Software documentation guide](https://www.writethedocs.org/guide/). Broad, community-built reference on documentation craft.
+- The Turing Way. [Communication and reporting](https://book.the-turing-way.org/communication/communication). Chapters on accessible documentation, citation, and persistent links.
+- [Diátaxis](https://diataxis.fr/). A clean framework for thinking about documentation in four modes (tutorials, how-tos, reference, explanation). Genuinely useful when you cannot decide where a piece of documentation belongs.
+- Open Source Guides. [Starting an open source project](https://opensource.guide/starting-a-project/). Practical, especially for the social and community side.
+- [Contributor Covenant](https://www.contributor-covenant.org/). Code-of-conduct template.
+- [Keep a Changelog](https://keepachangelog.com/). Changelog conventions.
