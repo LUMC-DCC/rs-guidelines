@@ -19,7 +19,7 @@ They were written by Mariia Steeghs-Turchina and Anna Niehues.
 
 The source code lives at [github.com/LUMC-DCC/rs-guidelines](https://github.com/LUMC-DCC/rs-guidelines).
 Corrections, additions, and suggestions are welcome: open an issue or a pull request there.
-For questions about these guidelines, contact us at [LUMCDCC@lumc.nl](mailto:LUMCDCC@lumc.nl). For research support at the LUMC more broadly, the central point of contact is the [LUMC Research Support Desk (RSD)](https://www.albinusnet.nl/en/products-and-services/research/research-facilities/research-support-desk/) (internal).
+For questions about these guidelines, contact us at {{dcc-email}}. For research support at the LUMC more broadly, the central point of contact is the {{rsd}}.
 
 ## Reusing this guide
 

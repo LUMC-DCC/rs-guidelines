@@ -6,8 +6,8 @@ The organizations and communities below support research software (RS) developme
 
 | Organization | Description |
 |---|---|
-| [LUMC DCC](https://www.albinusnet.nl/actueel/themas/lumc-dcc-data-competence-center/) (internal) | The LUMC Digital Competence Centre — promotes FAIR research software and data management at the LUMC through guidance, training, and resources such as this guide. |
-| [LUMC Research Support Desk (RSD)](https://www.albinusnet.nl/en/products-and-services/research/research-facilities/research-support-desk/) (internal) | The central point of contact for research support at the LUMC. |
+| {{dcc-page}} | The LUMC Digital Competence Centre — promotes FAIR research software and data management at the LUMC through guidance, training, and resources such as this guide. |
+| {{rsd}} | The central point of contact for research support at the LUMC. |
 | [eScience Center](https://www.esciencecenter.nl/) | A Dutch organization that supports researchers in developing and using software to enhance their research. |
 | [Software Sustainability Institute (SSI)](https://www.software.ac.uk/) | A UK-based organization that supports researchers in developing sustainable software. |
 | [Code for Science & Society](https://codeforscience.org/) | An organization that supports open source projects in the research community. |

@@ -1,5 +1,5 @@
 """
-Turn the table in docs/abbreviations.md into tooltips on every page.
+Turn the table in docs/resources/abbreviations.md into tooltips on every page.
 
 That table is the single source of truth. Each row becomes an `*[ABBR]: Meaning`
 definition appended to every page, which the `abbr` markdown extension renders
@@ -9,7 +9,7 @@ as a tooltip. Adding a row to the table is all that is needed.
 import re
 from pathlib import Path
 
-SOURCE = Path(__file__).parent.parent / "docs" / "abbreviations.md"
+SOURCE = Path(__file__).parent.parent / "docs" / "resources" / "abbreviations.md"
 ROW = re.compile(r"^\|([^|]+)\|([^|]+)\|$")
 
 _definitions = None

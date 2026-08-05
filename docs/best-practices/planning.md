@@ -37,7 +37,7 @@ External services are the people, contracts, and paid tiers outside your immedia
 Examples:
 
 - **IT&DI** support and infrastructure tickets;
-- **[LUMC Research Support Desk (RSD)](https://www.albinusnet.nl/en/products-and-services/research/research-facilities/research-support-desk/)** (internal) - the central point for research support, including FAIR and data-management questions;
+- **{{rsd}}** - the central point for research support, including FAIR and data-management questions;
 - **External RSE review** or audit;
 - **Penetration testing** (for Level C with a network face);
 - **Paid CI minutes** on GitHub or GitLab when free tiers are exhausted;

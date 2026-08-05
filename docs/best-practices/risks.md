@@ -8,21 +8,21 @@ This chapter complements, it does **not** replace, the [LUMC Data Management Pla
 
 When a question asks "does the software handle personal data?", there are three useful answers, not just yes or no. The distinction matters because it changes both the obligations and the mitigations.
 
-- **Yes, directly handles personal data.** The software is designed to read, store, transmit, log, or process personal or otherwise sensitive data as part of its normal operation, it expects such data to be present. Examples: a Castor extraction script that pulls records including dates of birth, a clinical decision-support API, an imaging pipeline that ingests DICOM files from the hospital PACS. If you are unsure what counts as personal data, see [LUMC Data Stewardship](https://www.albinusnet.nl/actueel/themas/datastewardship/) (internal).
+- **Yes, directly handles personal data.** The software is designed to read, store, transmit, log, or process personal or otherwise sensitive data as part of its normal operation, it expects such data to be present. Examples: a Castor extraction script that pulls records including dates of birth, a clinical decision-support API, an imaging pipeline that ingests DICOM files from the hospital PACS. If you are unsure what counts as personal data, see {{data-stewardship}}.
 - **Yes, but user-supplied data only.** The software is a generic library, CLI, or tool that does not itself expect or require personal data, but a user *could* feed it such data. The software has no special relationship to the data: it does not depend on the data being personal, and does not see, store, or relate to it beyond the immediate operation. Examples: a statistical analysis library, a plotting tool, a deduplication algorithm.
 - **No, does not handle personal data.** The software is not expected to handle such data at all. Examples: a synthetic-data generator, a build-tool plugin, a tool that operates only on simulated inputs.
 
 The difference between the first two is *intent and design*: the first is built around real personal data, the second only permits it. A common confusion: *"my tool can be used with patient data"* sounds like the first case but is usually the second. You are not the data controller for data that someone else feeds your tool, but you are still responsible for not making it easy to leak.
 
-Synthetic or simulated data that only *resembles* personal data, with no link to real individuals, is not itself personal data, so a tool that produces or uses only such data falls under **No, does not handle personal data**. Two cautions: generating synthetic data *from* real personal data is itself processing personal data (that step is the first case); and if individuals could be re-identified from the synthetic data, it may still count as personal. When in doubt, confirm with LUMC Data Stewardship.
+Synthetic or simulated data that only *resembles* personal data, with no link to real individuals, is not itself personal data, so a tool that produces or uses only such data falls under **No, does not handle personal data**. Two cautions: generating synthetic data *from* real personal data is itself processing personal data (that step is the first case); and if individuals could be re-identified from the synthetic data, it may still count as personal. When in doubt, confirm with {{data-stewardship}}.
 
 ### What to do when the answer is *Yes, directly handles personal data*
 
 Three things:
 
-1. **Make sure a DMP exists for the project.** Confirm with your division's privacy officer; see [LUMC Data Stewardship](https://www.albinusnet.nl/actueel/themas/datastewardship/) (internal). Link the DMP in the Software Management Plan (SMP).
+1. **Make sure a DMP exists for the project.** Confirm with your division's privacy officer; see {{data-stewardship}}. Link the DMP in the Software Management Plan (SMP).
 2. **Document where the sensitive data lives, who has access, and how access is logged.** Even if the SMP itself stays high-level, your developer documentation should describe approved storage (Research Drive, sFTP, Vault, controlled-access HPC), the authentication path, and the access-review cadence.
-3. **Decide and document the mitigation for the failure modes you can actually imagine.** Mitigations do not need to be elaborate. *"All access is via institutional SSO; access is reviewed annually; logs are written to `<X>` and retained for `<Y>` years; a suspected breach is reported through the LUMC data-breach procedure"* is a strong answer. Every LUMC employee is responsible for reporting a suspected data breach without delay, through the LUMC data-breach reporting procedure (internal: [info page](https://www.albinusnet.nl/en/products-and-services/juridische-zaken/privacy/reporting-a-data-breach/), [QMS document](https://lumc.zenya.work/QC/65-NR-78)).
+3. **Decide and document the mitigation for the failure modes you can actually imagine.** Mitigations do not need to be elaborate. *"All access is via institutional SSO; access is reviewed annually; logs are written to `<X>` and retained for `<Y>` years; a suspected breach is reported through the LUMC data-breach procedure"* is a strong answer. Every LUMC employee is responsible for reporting a suspected data breach without delay, through the {{data-breach}}.
 
 ### What to do when the answer is *Yes, user-supplied data only*
 
@@ -75,7 +75,7 @@ Compliance is broader than legal regulation alone. This applies if the software 
 
 For each that applies, state which requirements it triggers, who is responsible for satisfying them, and where the corresponding documentation lives (often outside the SMP - in a DMP, an SOP, a contract, a quality-management system).
 
-If you are unsure whether a regime applies, ask early - `<LUMC legal>` can help disambiguate.
+If you are unsure whether a regime applies, ask early - {{legal}} can help disambiguate.
 
 > **In the SMP:** answer "Yes" if *any* regulatory or institutional regime applies. The follow-up asks you to tick the applicable regimes from a controlled list.
 
@@ -127,4 +127,4 @@ Evidence can be lightweight. The point is that someone, possibly a future you, c
 - Ranković & Ivanović. [Risk Analysis Tools for Managing Software Projects](https://research.tilburguniversity.edu/en/publications/risk-analysis-tools-for-managing-software-projects). Comparative paper, useful for Level C projects considering a more structured tool.
 - [pip-audit](https://github.com/pypa/pip-audit), [cargo audit](https://github.com/RustSec/rustsec/tree/main/cargo-audit), [npm audit](https://docs.npmjs.com/cli/v10/commands/npm-audit). Language-native vulnerability scanners.
 - [Dependabot](https://docs.github.com/en/code-security/dependabot) and [Renovate](https://docs.renovatebot.com/). Automated dependency-update bots.
-- [LUMC Data Stewardship](https://www.albinusnet.nl/actueel/themas/datastewardship/) (internal). For DMP.
+- {{data-stewardship}}. For DMP.
