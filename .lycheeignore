@@ -1,0 +1,8 @@
+# Some links are auth-gated / network-restricted and cannot be reached
+# from CI, so the link checker skips them. These links must be
+# verified manually.
+albinusnet\.nl
+zenya\.work
+sciwiz\.lumc\.nl
+git\.lumc\.nl
+gitlab\.lumc\.nl

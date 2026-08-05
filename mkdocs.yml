@@ -28,6 +28,7 @@ markdown_extensions:
   - abbr
 hooks:
   - hooks/abbreviations.py
+  - hooks/organizations.py
   - hooks/contacts.py
 plugins:
   - search
