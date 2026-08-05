@@ -6,7 +6,7 @@ This page is generated from the table below: set each organization's **Category*
 
 | Organization | Category | Description |
 |---|---|---|
-| {{dcc-page}} | Support | The LUMC Digital Competence Centre — promotes FAIR research software and data management at the LUMC through guidance, training, and resources such as this guide. |
+| {{dcc-page}} | Support | The LUMC Digital Competence Center — promotes FAIR research software and data management at the LUMC through guidance, training, and resources such as this guide. |
 | {{rsd}} | Support | The central point of contact for research support at the LUMC. |
 | [eScience Center](https://www.esciencecenter.nl/) | Support | A Dutch organization that supports researchers in developing and using software to enhance their research. |
 | [Software Sustainability Institute (SSI)](https://www.software.ac.uk/) | Support | A UK-based organization that supports researchers in developing sustainable software. |

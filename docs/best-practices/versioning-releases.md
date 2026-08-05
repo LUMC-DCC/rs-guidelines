@@ -1,6 +1,6 @@
 # Versioning & releases
 
-Versioning and releases are what turn a changing repository into something that can be cited, installed, audited, and reproduced. A research artefact that says "I used the code from the lab's GitHub" without naming a version is often not reproducible. The same project with tagged releases is.
+Versioning and releases are what turn a changing repository into something that can be cited, installed, audited, and reproduced. A research artifact that says "I used the code from the lab's GitHub" without naming a version is often not reproducible. The same project with tagged releases is.
 
 Three habits do most of the work here:
 
@@ -32,13 +32,13 @@ Use a versioning scheme that communicates the *nature* of each change. The two c
 
 `MAJOR.MINOR.PATCH`, with the rules:
 
-- **PATCH** - bug fix, no intended change in behaviour or API. Safe to upgrade.
+- **PATCH** - bug fix, no intended change in behavior or API. Safe to upgrade.
 - **MINOR** - new, **backwards-compatible** feature. Safe to upgrade.
 - **MAJOR** - breaking change. Read the release notes before upgrading.
 
 SemVer is the right choice for **libraries** and **APIs**, anything where users write code against a stable interface. The full specification is at [semver.org](https://semver.org/).
 
-A nuance often missed: a 0.x.y version means **the API is not yet stable**. Many research projects sit at 0.x for years and that is fine, but consider tagging a 1.0.0 when the interface stabilises.
+A nuance often missed: a 0.x.y version means **the API is not yet stable**. Many research projects sit at 0.x for years and that is fine, but consider tagging a 1.0.0 when the interface stabilizes.
 
 ### Calendar Versioning (CalVer)
 
@@ -62,7 +62,7 @@ A *release* is more than a tag. A complete release includes:
 
 - a **Git tag** on the relevant commit (immutable);
 - **release notes** describing what changed;
-- a **package or container artefact**, if applicable (published to the relevant registry);
+- a **package or container artifact**, if applicable (published to the relevant registry);
 - an **archived source snapshot** (typically pushed to Zenodo automatically; see [Sharing & licensing](sharing-licensing.md));
 - a **DOI** for public research software;
 - **updated citation metadata** (`CITATION.cff` reflecting the new version and DOI);
@@ -108,7 +108,7 @@ Common patterns:
 
 - **Language package manager.** [PyPI](https://pypi.org/) and [conda-forge](https://conda-forge.org/) for Python; [CRAN](https://cran.r-project.org/) and [Bioconductor](https://www.bioconductor.org/) for R; [npm](https://www.npmjs.com/) for JavaScript; [crates.io](https://crates.io/) for Rust. The right answer when the audience is developers comfortable in that language.
 - **Container image.** [Docker Hub](https://hub.docker.com/), [GitHub Container Registry](https://ghcr.io/), [Quay](https://quay.io/), Apptainer Library, [Biocontainers](https://biocontainers.pro/). The right answer for pipelines, end-user tools, and clinical-adjacent software.
-- **Source-only.** `git clone && pip install -e .`, build-from-source instructions. Acceptable for libraries with no binary artefacts and a developer audience.
+- **Source-only.** `git clone && pip install -e .`, build-from-source instructions. Acceptable for libraries with no binary artifacts and a developer audience.
 - **Self-hosted installer** - uncommon in research software outside of niche fields.
 - **Hosted as a service** - for software where the user *calls your API* rather than installing anything. Documentation, authentication, and uptime become important concerns.
 
@@ -116,9 +116,9 @@ A reasonable rule of thumb: a developer can `pip install` a library; a clinician
 
 > **In the SMP:** the Software packaging question is binary. The follow-up captures *distribution channels* as a free-text field; list each channel where the software is or will be available.
 
-## Containerisation
+## Containerization
 
-Containerisation packages the runtime environment, not just the code. See Containerisation under [Interoperability](interoperability.md).
+Containerization packages the runtime environment, not just the code. See Containerization under [Interoperability](interoperability.md).
 
 ## Dependency update policy
 

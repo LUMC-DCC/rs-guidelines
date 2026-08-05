@@ -87,7 +87,7 @@ For REST APIs in particular, provide an OpenAPI specification, most modern frame
 State which operating systems and architectures the software *officially supports*. There is a real distinction worth respecting:
 
 - **Supported** - CI-tested, advertised in the README, bugs accepted and triaged.
-- **Expected to work** - used by maintainers in practice, but no CI; bugs may not be prioritised.
+- **Expected to work** - used by maintainers in practice, but no CI; bugs may not be prioritized.
 - **Untested** - silence is the right answer; do not claim what you do not verify.
 
 Pure-runtime languages (Python, R, Java, JavaScript without native dependencies) usually work on Linux, macOS, and Windows alike. Anything compiled, anything that calls system libraries, anything that depends on a specific filesystem semantics, anything that uses GPU acceleration, those have real platform constraints worth being explicit about.
@@ -114,7 +114,7 @@ If resource use depends strongly on input characteristics, name the driving fact
 
 > **In the SMP:** the Resource requirements field is free-text. Even a few lines following the structure above is useful.
 
-## Containerisation and environment specification
+## Containerization and environment specification
 
 Beyond your language-level dependency manifest (`pyproject.toml`, `requirements.txt`, `environment.yml`, `Cargo.lock`, `renv.lock`, etc., which live in the repository), three patterns of environment specification offer increasing levels of reproducibility:
 
@@ -138,4 +138,4 @@ A container by itself is not automatically reproducible. Practical hygiene:
 
 [The Turing Way - Containers](https://book.the-turing-way.org/reproducible-research/renv/renv-options.html) covers the trade-offs in more depth.
 
-> **In the SMP:** the Containerisation question offers four states - *Full environment spec*, *Dockerfile or equivalent*, *Lock-file only*, *No*. Pick the strongest pattern that is genuinely in place.
+> **In the SMP:** the Containerization question offers four states - *Full environment spec*, *Dockerfile or equivalent*, *Lock-file only*, *No*. Pick the strongest pattern that is genuinely in place.

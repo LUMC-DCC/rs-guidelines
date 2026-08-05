@@ -111,7 +111,7 @@ Useful common combinations:
 
 Type-checking is a separate discipline but well worth adding for projects above Level A. In Python, `mypy` or `pyright` catch a useful class of bugs at the cost of writing type annotations. In compiled languages, type-checking is just "the compiler".
 
-The classic Python style guide is [PEP 8](https://peps.python.org/pep-0008/) (or, more readably, the [stylised PEP 8 presentation](https://pep8.org/)). For broader Python code-quality tooling and habits, the [Real Python guide](https://realpython.com/python-code-quality/) is a good overview. For an institutional badge programme, [OpenSSF Best Practices Badge](https://bestpractices.coreinfrastructure.org/) is the standard self-certification.
+The classic Python style guide is [PEP 8](https://peps.python.org/pep-0008/) (or, more readably, the [stylized PEP 8 presentation](https://pep8.org/)). For broader Python code-quality tooling and habits, the [Real Python guide](https://realpython.com/python-code-quality/) is a good overview. For an institutional badge program, [OpenSSF Best Practices Badge](https://bestpractices.coreinfrastructure.org/) is the standard self-certification.
 
 For Level B and C, enforce formatting and linting in **CI** or via **pre-commit hooks** (using [`pre-commit`](https://pre-commit.com/)) rather than relying on memory. The point is automation: a contributor's formatting mistake is caught at commit time, not after the maintainer finishes reviewing a PR.
 

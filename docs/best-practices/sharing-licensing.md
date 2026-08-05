@@ -27,7 +27,7 @@ Note also that publishing source code, or describing the method in a paper, is a
 
 ## Registries
 
-A *registry* is a structured metadata catalog that describes, indexes, and helps discover software. It is distinct from a *package repository* (PyPI, conda-forge, Docker Hub, CRAN), which hosts installable artefacts. Registry entries primarily support discoverability and citation, while package entries primarily support distribution and installation. You usually want both.
+A *registry* is a structured metadata catalog that describes, indexes, and helps discover software. It is distinct from a *package repository* (PyPI, conda-forge, Docker Hub, CRAN), which hosts installable artifacts. Registry entries primarily support discoverability and citation, while package entries primarily support distribution and installation. You usually want both.
 
 Useful registries depend on the audience:
 
@@ -39,7 +39,7 @@ Useful registries depend on the audience:
 
 Using multiple registries is encouraged, as different communities rely on different platforms. Registering in several involves only limited one-time effort.
 
-For a curated, audience-specific overview, see [Awesome Research Software Registries](https://github.com/NLeSC/awesome-research-software-registries), a registry index organised by country, organisation, language, and domain.
+For a curated, audience-specific overview, see [Awesome Research Software Registries](https://github.com/NLeSC/awesome-research-software-registries), a registry index organized by country, organization, language, and domain.
 
 > **In the SMP:** for each registry, capture the name and the URL or ID of your entry.
 
@@ -69,7 +69,7 @@ Useful resources on identifiers themselves:
 
 ## Citation
 
-A `CITATION.cff` file in the repository root is the modern way to make software citable. It is plain YAML, machine-readable, and recognised natively by GitHub, GitLab, and Zenodo. When a Zenodo release is created, the `CITATION.cff` is read automatically and used to populate the deposit's authors and metadata.
+A `CITATION.cff` file in the repository root is the modern way to make software citable. It is plain YAML, machine-readable, and recognized natively by GitHub, GitLab, and Zenodo. When a Zenodo release is created, the `CITATION.cff` is read automatically and used to populate the deposit's authors and metadata.
 
 A minimal `CITATION.cff` includes:
 
@@ -96,7 +96,7 @@ Without a license, code is "all rights reserved" by default - even if it is publ
 
 ### Which license?
 
-In practice, the [**Apache License 2.0**](https://www.apache.org/licenses/LICENSE-2.0) is a common and sensible default for research software: it is permissive (compatible with most other open licenses, including commercial use), includes an explicit patent grant (advantage over MIT or BSD-3-Clause for software that might touch patentable methods), and is widely understood. Note that this is guidance as there is no official LUMC-wide software license recommendation. If you are unsure which licence fits your project, contact the {{rsd}}.
+In practice, the [**Apache License 2.0**](https://www.apache.org/licenses/LICENSE-2.0) is a common and sensible default for research software: it is permissive (compatible with most other open licenses, including commercial use), includes an explicit patent grant (advantage over MIT or BSD-3-Clause for software that might touch patentable methods), and is widely understood. Note that this is guidance as there is no official LUMC-wide software license recommendation. If you are unsure which license fits your project, contact the {{rsd}}.
 
 If you have a specific reason to prefer something else:
 
@@ -104,7 +104,7 @@ If you have a specific reason to prefer something else:
 - **GPL-3.0** or **AGPL-3.0** - copyleft. Forces downstream users to keep their derivatives open under the same terms. Choose deliberately; copyleft is a real constraint on adopters.
 - **CC-BY 4.0** - usually for *data and documentation*, not code. Avoid licensing code under a Creative Commons license, they were not designed for that.
 
-Always use the [Software Package Data Exchange (SPDX) identifier](https://spdx.org/licenses/) (`Apache-2.0`, not "Apache 2.0"). It is machine-readable and recognised by package registries, GitHub, and most other tooling.
+Always use the [Software Package Data Exchange (SPDX) identifier](https://spdx.org/licenses/) (`Apache-2.0`, not "Apache 2.0"). It is machine-readable and recognized by package registries, GitHub, and most other tooling.
 
 Useful references:
 
@@ -115,9 +115,9 @@ Useful references:
 - [Free Software Foundation - Licensing & Compliance](https://www.fsf.org/licensing/) - FSF's licensing recommendations and FAQ.
 - [The Turing Way - Licensing chapter](https://book.the-turing-way.org/reproducible-research/licensing) - broader treatment with legal and ethical context.
 - [eScience Center - How to share software](https://esciencecenter-digital-skills.github.io/research-software-support/modules/licenses/how_to_share) - practical guide.
-- [LUMC data-publication licence flowchart](https://www.albinusnet.nl/siteassets/weten-en-regelen/bestanden/onderzoek/20230131_flowchart_data-publication-licences.pdf) (internal) - a decision aid for licensing published *data* (e.g., Creative Commons); note that software uses different licenses.
+- [LUMC data-publication license flowchart](https://www.albinusnet.nl/siteassets/weten-en-regelen/bestanden/onderzoek/20230131_flowchart_data-publication-licences.pdf) (internal) - a decision aid for licensing published *data* (e.g., Creative Commons); note that software uses different licenses.
 
-The repository should contain a `LICENSE` file (the full license text) at the root. Most forges create one for you when you initialise the repository or run a "Choose a license" wizard.
+The repository should contain a `LICENSE` file (the full license text) at the root. Most forges create one for you when you initialize the repository or run a "Choose a license" wizard.
 
 > **In the SMP:** the License question uses the SPDX identifier list (an integrated search via the SciWiz form). If the software is unreleased and you have not yet chosen a license, write down *which* license you intend to use.
 

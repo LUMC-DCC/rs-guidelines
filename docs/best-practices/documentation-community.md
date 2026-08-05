@@ -2,7 +2,7 @@
 
 A lack of documentation is the most frequently cited reason for research software becoming unsable. The code keeps working; the knowledge of *how to use it* dissipates the moment the original author moves on.
 
-This chapter is about the documentation and the social structures around the code: what users need to know, what the next developer needs to know, and how the community around the project organises itself.
+This chapter is about the documentation and the social structures around the code: what users need to know, what the next developer needs to know, and how the community around the project organizes itself.
 
 ## Three audiences
 
@@ -126,8 +126,8 @@ Email-only support is acceptable for Level A. For Level B/C it is weak because r
 
 A useful bug-report template asks for:
 
-- **Expected behaviour.**
-- **Actual behaviour.**
+- **Expected behavior.**
+- **Actual behavior.**
 - **Steps to reproduce** - including input, command, and environment.
 - **Software version** and **operating system / environment**.
 - **A minimal example input** if possible.

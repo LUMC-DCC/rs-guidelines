@@ -17,7 +17,7 @@ Common categories:
 - **Storage tiers**;
 - **Managed databases** - institutional or cloud-hosted;
 - **Cloud compute or storage** - AWS, Azure, GCP, SURF cloud;
-- **Specialised lab instruments** that the software controls, reads from, or feeds.
+- **Specialized lab instruments** that the software controls, reads from, or feeds.
 
 Where a project stores data, the storage location must follow the LUMC Data Stewardship storage SOP (internal). Commercial cloud (AWS, Azure, GCP) is generally not permitted for personal or patient data; use approved institutional storage for such data.
 
@@ -95,9 +95,9 @@ A minimum viable continuity plan:
 
 - A **backup maintainer** has repository/admin access (this is also why the SMP requires at least two maintainers; see [Project identity & people](identity.md)).
 - **Installation and release instructions** are written down somewhere a stranger can find them.
-- **Open issues are triaged** before hand-over: labelled, prioritised, or closed with a reason.
+- **Open issues are triaged** before hand-over: labeled, prioritized, or closed with a reason.
 - **Credentials and secrets** are not tied to a personal account; they live in a shared secrets manager or a service account.
-- The **repository is transferred** to an LUMC or project organisation, not held in a personal GitHub account.
+- The **repository is transferred** to an LUMC or project organization, not held in a personal GitHub account.
 
 For Level C, the continuity plan might need more: named roles, escalation timelines, a hand-over checklist, and how users are notified.
 

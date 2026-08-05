@@ -1,6 +1,6 @@
 # Risks & mitigation
 
-Research software projects do not fail because nobody anticipated *every* failure mode. They fail because nobody anticipated the *obvious* ones in time to do anything about them. The goal of this chapter is risk awareness with proportionate mitigation, not a catalogue of every conceivable thing that could go wrong.
+Research software projects do not fail because nobody anticipated *every* failure mode. They fail because nobody anticipated the *obvious* ones in time to do anything about them. The goal of this chapter is risk awareness with proportionate mitigation, not a catalog of every conceivable thing that could go wrong.
 
 This chapter complements, it does **not** replace, the [LUMC Data Management Plan (DMP)](https://www.albinusnet.nl/en/products-and-services/research/data-stewardship/dmp/) (internal). Personal-data legal bases, consent, retention, Data Protection Impact Assessments (DPIAs), and storage policies belong in the DMP. The Risks chapter only flags that the software has a relationship with sensitive data and points to the right document.
 
@@ -32,7 +32,7 @@ Document the design choices that prevent that:
 - No telemetry by default (and certainly no telemetry that includes user data).
 - No silent caching of inputs to disk in unspecified locations.
 - Logs scrubbed of inputs unless explicitly enabled (and even then, with a warning).
-- Clear, prominent user-facing guidance to anonymise upstream or run in a controlled environment when sensitive data is in play.
+- Clear, prominent user-facing guidance to anonymize upstream or run in a controlled environment when sensitive data is in play.
 
 For libraries used in clinical or research workflows, these design choices are a key part of risk mitigation. Document them clearly.
 
@@ -50,7 +50,7 @@ Security obligations apply mostly to *services, APIs, and daemons*, anything tha
 For services and APIs, document a small number of things that matter most:
 
 - **Authentication.** Who can access the service? Institutional SSO, OAuth, API keys, mutual TLS, Internet Protocol (IP) allowlist?
-- **Authorisation.** What can each role do once authenticated? Read-only, read-write, admin?
+- **Authorization.** What can each role do once authenticated? Read-only, read-write, admin?
 - **Secret management.** Where do keys, passwords, and tokens live? *Never* in the repository. Use a secrets manager (HashiCorp Vault, GitHub/GitLab secrets, your CI's secret store), and document what to do when a secret leaks.
 - **Input validation.** How is malicious or malformed input handled? At minimum, do not pass user input to a shell, a SQL query, or a deserialiser without protection.
 - **Logging - and what *not* to log.** Logs are useful for debugging and forensic analysis, and dangerous when they include personal data, secrets, or session tokens. Decide what is logged, where, for how long, and who can read it.
@@ -96,8 +96,8 @@ On choosing sustainable, preferably open file and folder formats, see the LUMC [
 
 Two more that come up in clinical contexts:
 
-- **Hardware dependency.** Specialised equipment whose drivers, firmware, or vendor support ends. State alternatives and minimum specifications.
-- **External data/source availability.** A public API, a reference dataset, or an ontology disappears or changes. Cache permitted snapshots; archive metadata; document fallback behaviour.
+- **Hardware dependency.** Specialized equipment whose drivers, firmware, or vendor support ends. State alternatives and minimum specifications.
+- **External data/source availability.** A public API, a reference dataset, or an ontology disappears or changes. Cache permitted snapshots; archive metadata; document fallback behavior.
 
 A useful sanity check: for each dependency you list, ask *"if this stopped working tomorrow, what would we do?"* If there is no ready answer, it belongs here.
 

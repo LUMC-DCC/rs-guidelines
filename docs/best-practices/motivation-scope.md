@@ -28,12 +28,12 @@ Two or four sentences is usually enough. A useful template:
 
 ## Purpose categories
 
-The Purpose field is a controlled vocabulary: a multi-select list with categories such as *data analysis*, *pipeline / workflow*, *library / framework*, *visualisation*, *clinical decision support*, *simulation*, *infrastructure / utility*, *interface / wrapper*, and so on.
+The Purpose field is a controlled vocabulary: a multi-select list with categories such as *data analysis*, *pipeline / workflow*, *library / framework*, *visualization*, *clinical decision support*, *simulation*, *infrastructure / utility*, *interface / wrapper*, and so on.
 
 A few rules of thumb:
 
 - **Describe the outputs, not the libraries.** A wrapper that calls scikit-learn is not, on its own, a *machine-learning library*; the library is scikit-learn, your software is a *pipeline*, a *workflow*, or a *CLI*.
-- **Genuine reuse vs interfacing.** If your code imports a third-party library and exposes a thin shell, you are *interfacing*. Describe the shell's purpose ("CLI for in-house pipeline X using library Y"), not the library's. Genuine *reuse* means you fork and modify, or you re-implement an algorithm with substantial customisation.
+- **Genuine reuse vs interfacing.** If your code imports a third-party library and exposes a thin shell, you are *interfacing*. Describe the shell's purpose ("CLI for in-house pipeline X using library Y"), not the library's. Genuine *reuse* means you fork and modify, or you re-implement an algorithm with substantial customization.
 - **Be selective.** Two or three categories is usually right.
 
 Worked examples:

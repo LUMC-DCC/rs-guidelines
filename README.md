@@ -48,10 +48,10 @@ everywhere it is used:
 |---|---|---|
 | Abbreviations | [`docs/resources/abbreviations.md`](docs/resources/abbreviations.md) | tooltips on every page (`hooks/abbreviations.py`) |
 | LUMC contacts | [`docs/resources/contacts.md`](docs/resources/contacts.md) | `{{token}}` expands inline (`hooks/contacts.py`) |
-| Organizations | [`docs/resources/organizations.md`](docs/resources/organizations.md) | flat table → categorised page (`hooks/organizations.py`) |
+| Organizations | [`docs/resources/organizations.md`](docs/resources/organizations.md) | flat table → categorized page (`hooks/organizations.py`) |
 
 **Everything else — Further-reading lists, tool tables, one-off inline links —
-stays inline in the page it belongs to.** The rule of thumb: centralise data
+stays inline in the page it belongs to.** The rule of thumb: centralize data
 that is *repeated across many pages* or needs *consistent structure*; keep
 single-use, context-specific references written inline where they are read.
 

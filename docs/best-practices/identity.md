@@ -9,7 +9,7 @@ A title is the public name of the software. It travels everywhere: in citations,
 A good title is **specific**, **unique**, and **short**:
 
 - *Specific.* Someone who has never heard of your project should be able to guess, within one sentence, what it is broadly about. "ALSGenoTyper" tells you something; "Project Phoenix" tells you nothing.
-- *Unique.* Before you finalise a public name, search the places where collisions may occur: GitHub and GitLab, [PyPI](https://pypi.org/), [conda-forge](https://conda-forge.org/), CRAN, Bioconductor, [bio.tools](https://bio.tools/), Zenodo, and Google. Generic names, such as "Pipeline", "Tools", "Analyzer", almost always collide and usually with something better-funded than you.
+- *Unique.* Before you finalize a public name, search the places where collisions may occur: GitHub and GitLab, [PyPI](https://pypi.org/), [conda-forge](https://conda-forge.org/), CRAN, Bioconductor, [bio.tools](https://bio.tools/), Zenodo, and Google. Generic names, such as "Pipeline", "Tools", "Analyzer", almost always collide and usually with something better-funded than you.
 - *Short.* Long enough to be informative; short enough to fit on a CLI prompt, in a citation key, and in a project banner.
 
 Common pitfalls worth avoiding:
@@ -75,7 +75,7 @@ Common situations at LUMC where this applies:
 
 A research prototype can become regulated when it starts influencing decisions about real patients. Re-evaluate whenever the project's scope materially changes.
 
-If your software is regulated, the SMP is *not* a substitute for the regulatory artefacts you will need: IEC 62304 software life-cycle records, ISO 14971 risk file, MDR/IVDR technical file, and so on. Contact {{legal}} early.
+If your software is regulated, the SMP is *not* a substitute for the regulatory artifacts you will need: IEC 62304 software life-cycle records, ISO 14971 risk file, MDR/IVDR technical file, and so on. Contact {{legal}} early.
 
 > **In the SMP:** this maps to the regulated-software flag. Answer "Yes" if any regulatory regime applies *now or is plausible during the project's lifetime*. The SMP captures only the fact that the regime applies; the regulatory documentation lives elsewhere.
 
