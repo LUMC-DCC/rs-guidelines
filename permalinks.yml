@@ -7,7 +7,139 @@
 # `target` is a path under docs/, with an optional
 # #anchor for a section, subsection, or sub-subsection.
 
-- slug: two-maintainers
-  target: best-practices/identity.md#why-a-project-needs-at-least-two-maintainers
-- slug: testing
-  target: best-practices/testing-quality.md
+
+
+# === Project identity & people (best-practices/identity.md) ===
+- slug: title
+  target: best-practices/identity.md#software-title
+- slug: authors-maintainers
+  target: best-practices/identity.md#authors-vs-maintainers
+- slug: funding
+  target: best-practices/identity.md#funding-and-project-context
+- slug: regulated-software
+  target: best-practices/identity.md#regulated-software
+
+
+# === Motivation & scope (best-practices/motivation-scope.md) ===
+- slug: problem
+  target: best-practices/motivation-scope.md#the-problem
+- slug: purpose
+  target: best-practices/motivation-scope.md#purpose-categories
+- slug: audience
+  target: best-practices/motivation-scope.md#audience
+- slug: related-software
+  target: best-practices/motivation-scope.md#related-and-upstream-software
+- slug: justify-new-project
+  target: best-practices/motivation-scope.md#justify-the-existence-of-a-new-project
+
+
+# === Planning (best-practices/planning.md) ===
+- slug: development-effort
+  target: best-practices/planning.md#development-effort
+- slug: maintenance-effort
+  target: best-practices/planning.md#maintenance-effort
+- slug: expertise
+  target: best-practices/planning.md#expertise
+- slug: external-services
+  target: best-practices/planning.md#external-services
+- slug: infrastructure
+  target: best-practices/planning.md#infrastructure-hardware
+- slug: updates-maintenance
+  target: best-practices/planning.md#updates-maintenance
+- slug: continuity
+  target: best-practices/planning.md#continuity-hand-over
+- slug: retirement-criteria
+  target: best-practices/planning.md#retirement-criteria
+- slug: post-retirement-accessibility
+  target: best-practices/planning.md#post-retirement-accessibility
+
+
+# === Risks & mitigation (best-practices/risks.md) ===
+- slug: personal-data
+  target: best-practices/risks.md#personal-and-sensitive-data
+- slug: security
+  target: best-practices/risks.md#security-access-control
+- slug: external-dependencies
+  target: best-practices/risks.md#external-dependency-risks
+- slug: compliance
+  target: best-practices/risks.md#compliance-regulatory-considerations
+- slug: risk-mitigation
+  target: best-practices/risks.md#risk-mitigation
+
+
+# === Sharing & licensing (best-practices/sharing-licensing.md) ===
+- slug: repository
+  target: best-practices/sharing-licensing.md#repository
+- slug: software-license
+  target: best-practices/sharing-licensing.md#software-license
+- slug: license-compatibility
+  target: best-practices/sharing-licensing.md#license-compatibility
+- slug: registries
+  target: best-practices/sharing-licensing.md#registries
+- slug: persistent-identifiers
+  target: best-practices/sharing-licensing.md#persistent-identifiers
+- slug: publications
+  target: best-practices/sharing-licensing.md#publications
+
+
+# === Testing & quality assurance (best-practices/testing-quality.md) ===
+- slug: testing-expectations
+  target: best-practices/testing-quality.md#minimum-expectations-by-management-level
+- slug: code-quality
+  target: best-practices/testing-quality.md#code-quality-standards
+- slug: dependency-tools
+  target: best-practices/testing-quality.md#project-dependency-management-tools
+- slug: test-frameworks
+  target: best-practices/testing-quality.md#test-frameworks
+- slug: test-types
+  target: best-practices/testing-quality.md#test-types
+- slug: continuous-integration
+  target: best-practices/testing-quality.md#continuous-integration
+
+
+# === Interoperability (best-practices/interoperability.md) ===
+- slug: programming-languages
+  target: best-practices/interoperability.md#programming-languages
+- slug: data-formats
+  target: best-practices/interoperability.md#input-and-output-data-formats
+- slug: functions
+  target: best-practices/interoperability.md#functions-operations
+- slug: interfaces
+  target: best-practices/interoperability.md#apis-and-interfaces
+- slug: cross-platform
+  target: best-practices/interoperability.md#cross-platform-compatibility
+- slug: containerization
+  target: best-practices/interoperability.md#containerization-and-environment-specification
+- slug: resource-requirements
+  target: best-practices/interoperability.md#resource-requirements
+
+
+# === Versioning & releases (best-practices/versioning-releases.md) ===
+- slug: version-control
+  target: best-practices/versioning-releases.md#version-control
+- slug: versioning-scheme
+  target: best-practices/versioning-releases.md#versioning-scheme
+- slug: releases
+  target: best-practices/versioning-releases.md#releases
+- slug: packaging
+  target: best-practices/versioning-releases.md#software-packaging-and-distribution
+
+
+# === Documentation & community (best-practices/documentation-community.md) ===
+- slug: user-docs
+  target: best-practices/documentation-community.md#user-documentation
+- slug: developer-docs
+  target: best-practices/documentation-community.md#developer-documentation
+- slug: deployment-docs
+  target: best-practices/documentation-community.md#deployment-dependency-documentation
+- slug: bug-reporting
+  target: best-practices/documentation-community.md#bug-reporting-feature-requests
+- slug: governance
+  target: best-practices/documentation-community.md#governance
+
+
+# === SciWiz / the SMP (smp/sciwiz.md) ===
+- slug: management-levels
+  target: smp/sciwiz.md#management-levels
+- slug: sciwiz
+  target: smp/sciwiz.md
