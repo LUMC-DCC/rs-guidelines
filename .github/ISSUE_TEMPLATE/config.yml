@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Research software support at the LUMC
+    url: mailto:LUMCDCC@lumc.nl
+    about: For help with your own research software, contact the LUMC DCC.
