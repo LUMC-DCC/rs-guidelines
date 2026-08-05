@@ -20,7 +20,7 @@ Common pitfalls worth avoiding:
 
 If the project might in the future be renamed (this happens), keep the *name* and *identifier* layers separate: the GitHub repo URL, the package name, the documentation site, and the DOI on Zenodo are all things that can be migrated cleanly if the title is the only fixed point.
 
-> **In the SMP:** the Title field should contain the final public name as it would appear in publications or presentations.
+> **In the Software Management Plan (SMP):** the Title field should contain the final public name as it would appear in publications or presentations.
 
 ## Authors vs. maintainers
 
@@ -59,7 +59,7 @@ Tick the regulated-software flag if your software is (or might plausibly become)
 
 Common situations at LUMC that should trigger the flag:
 
-- The software is or will be a **Software as a Medical Device (SaMD)**, IVD product, or otherwise covered by **MDR**, **IVDR**, **FDA**, or comparable rules.
+- The software is or will be a **Software as a Medical Device (SaMD)**, in vitro diagnostic (IVD) product, or otherwise covered by **MDR**, **IVDR**, **FDA**, or comparable rules.
 - The software is or will be **clinical decision support**: anything that influences diagnosis, treatment, monitoring, or triage.
 - The software is part of a **validated laboratory workflow** (ISO 15189, ISO 13485, IEC 62304, ISO 14971).
 - The software runs under departmental SOPs that have regulatory implications.

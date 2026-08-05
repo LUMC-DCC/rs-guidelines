@@ -29,7 +29,7 @@ Bash - small helper scripts only, no scientific logic
 Rust >=1.78 - performance-critical parser, exposed through Python bindings
 ```
 
-> **In the SMP:** the Programming languages list captures language, version constraint, and role.
+> **In the Software Management Plan (SMP):** the Programming languages list captures language, version constraint, and role.
 
 ## Input and output data formats
 

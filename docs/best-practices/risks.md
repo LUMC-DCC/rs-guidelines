@@ -2,7 +2,7 @@
 
 Research software projects do not fail because nobody anticipated *every* failure mode. They fail because nobody anticipated the *obvious* ones in time to do anything about them. The goal of this chapter is risk awareness with proportionate mitigation, not a catalogue of every conceivable thing that could go wrong.
 
-This chapter complements, it does **not** replace, the [LUMC Data Management Plan (DMP)](https://www.albinusnet.nl/en/products-and-services/research/data-stewardship/dmp/). Personal-data legal bases, consent, retention, DPIAs, and storage policies belong in the DMP. The Risks chapter only flags that the software has a relationship with sensitive data and points to the right document.
+This chapter complements, it does **not** replace, the [LUMC Data Management Plan (DMP)](https://www.albinusnet.nl/en/products-and-services/research/data-stewardship/dmp/). Personal-data legal bases, consent, retention, Data Protection Impact Assessments (DPIAs), and storage policies belong in the DMP. The Risks chapter only flags that the software has a relationship with sensitive data and points to the right document.
 
 ## Personal and sensitive data
 
@@ -18,7 +18,7 @@ A common confusion: *"my tool can be used with patient data"* sounds like the fi
 
 Three things:
 
-1. **Make sure a DMP exists for the project.** Confirm with your division's privacy officer; see [LUMC Data Stewardship](https://www.albinusnet.nl/actueel/themas/datastewardship/). Link the DMP in the SMP.
+1. **Make sure a DMP exists for the project.** Confirm with your division's privacy officer; see [LUMC Data Stewardship](https://www.albinusnet.nl/actueel/themas/datastewardship/). Link the DMP in the Software Management Plan (SMP).
 2. **Document where the sensitive data lives, who has access, and how access is logged.** Even if the SMP itself stays high-level, your developer documentation should describe approved storage (Research Drive, sFTP, Vault, controlled-access HPC), the authentication path, and the access-review cadence.
 3. **Decide and document the mitigation for the failure modes you can actually imagine.** Mitigations do not need to be elaborate. *"All access is via institutional SSO; access is reviewed annually; logs are written to <X> and retained for <Y> years; in the event of suspected compromise, the contact route is <ISMS@lumc.nl>"* is a strong answer.
 
@@ -47,7 +47,7 @@ Security obligations apply mostly to *services, APIs, and daemons*, anything tha
 
 For services and APIs, document a small number of things that matter most:
 
-- **Authentication.** Who can access the service? Institutional SSO, OAuth, API keys, mutual TLS, IP allowlist?
+- **Authentication.** Who can access the service? Institutional SSO, OAuth, API keys, mutual TLS, Internet Protocol (IP) allowlist?
 - **Authorisation.** What can each role do once authenticated? Read-only, read-write, admin?
 - **Secret management.** Where do keys, passwords, and tokens live? *Never* in the repository. Use a secrets manager (HashiCorp Vault, GitHub/GitLab secrets, your CI's secret store), and document what to do when a secret leaks.
 - **Input validation.** How is malicious or malformed input handled? At minimum, do not pass user input to a shell, a SQL query, or a deserialiser without protection.
@@ -66,7 +66,7 @@ Compliance is broader than "does this software face legal rules". Tick this if t
 - legal frameworks (e.g., **GDPR / AVG**);
 - sectoral regulation (**MDR**, **IVDR**, **FDA**, comparable rules outside the EU/US);
 - domain standards adopted as institutional policy (**NEN 7510**, **ISO 13485**, **IEC 62304**, **ISO 14971**);
-- departmental SOPs that govern the software's use;
+- departmental standard operating procedures (SOPs) that govern the software's use;
 - funder software-management requirements;
 - journal software-availability requirements (more and more journals now require code to be archived and citable);
 - data-transfer or collaboration agreements that constrain what the software can do or where it can run.

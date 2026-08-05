@@ -1,6 +1,6 @@
 # Software Management Plan in SciWiz
 
-[**SciWiz**](https://sciwiz.lumc.nl/) is the LUMC’s instance of the platform that provides the SMP template as an
+[**SciWiz**](https://sciwiz.lumc.nl/) is the LUMC’s instance of the platform that provides the Software Management Plan (SMP) template as an
 interactive online form. You can log in, create a project, and step through the questions at your own pace. SciWiz provides a flexible approach to standardizing software management across LUMC, while also accommodating diverse project needs.
 
 > Note: SciWiz is currently only accessible via the LUMC network.
@@ -55,10 +55,14 @@ Do not answer with terms such as **"planned"** or **"not yet implemented"**. Ins
 ## A note on regulated software
 
 The SMP is **not** a substitute for the regulatory documentation that must be produced for medical device or in vitro diagnostic software.
-While it can complement such documentation,it cannot replace the artefacts required for Software as a Medical Device (SaMD), IVD software, clinical decision-support tools, or software developed under a formal quality-management system (ISO 13485, IEC 62304, ISO 14971, MDR, IVDR, etc.).
+While it can complement such documentation,it cannot replace the artefacts required for Software as a Medical Device (SaMD), in vitro diagnostic (IVD) software, clinical decision-support tools, or software developed under a formal quality-management system (ISO 13485, IEC 62304, ISO 14971, MDR, IVDR, etc.).
 
 If your software produces or influences a clinical recommendation, triages patients, is embedded in a regulated device, or is otherwise covered by a sectoral regime, flag this in the General chapter and contact <LUMC legal> early. Treat the SMP as a high-level overview that complements, not replaces, your regulated documentation.
 
 ## A note on data: the SMP does not replace the DMP
 
+<<<<<<< HEAD
 The LUMC SMP addresses data only in relation to how software *handles* it. Details about legal basis, retention, consent, and storage of personal data belong in your Data Management Plan. The [Risks & mitigation](../best-practices/risks.md) chapter only flags that the software has a relationship with sensitive data and points to the corresponding DMP.
+=======
+The LUMC SMP addresses data only in relation to how software *handles* it. Details about legal basis, retention, consent, and storage of personal data belong in your Data Management Plan (DMP). The [Risks & mitigation](../best-practices/risks.md) chapter only flags that the software has a relationship with sensitive data and points to the corresponding DMP.
+>>>>>>> 00af4fe (make abbreviations, add hook for tooltips, define acronyms in relevant places)

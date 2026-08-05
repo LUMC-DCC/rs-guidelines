@@ -6,7 +6,7 @@ The LUMC Digital Competence Centre (DCC) supports LUMC researchers in developing
 For example, we help answering questions, such as how to choose a licence, why a project needs more than one maintainer, what makes software citable, how to plan for the day the postdoc leaves.
 This guide collects that advice in one navigable place, so that it is available to everyone at the LUMC and other institutions.
 
-It is designed to be used alongside our other resources: [SciWiz](smp/sciwiz.md), the LUMC instance of the tool that provides the SMP writing wizard and export functionalities,
+It is designed to be used alongside our other resources: [SciWiz](smp/sciwiz.md), the LUMC instance of the tool that provides the Software Management Plan (SMP) writing wizard and export functionalities,
 and the [LUMC FAIR Research Software Training website](https://lumc-dcc.github.io/research_software_training/).
 
 This guide is a *living document*.

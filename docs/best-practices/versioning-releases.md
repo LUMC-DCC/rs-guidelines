@@ -54,7 +54,7 @@ For internal workflows where releases are frequent and informal, `YYYY-MM-DD.<sh
 
 Use Git tags such as `v1.2.0` (the `v` prefix is conventional in Git releases and helps distinguish version tags from branch names). Avoid ambiguous tag names (`final`, `latest`, `paper-version`, `paper-version-2`, `paper-version-NEW`). These names are real, they happen, and they cause real confusion six months later.
 
-> **In the SMP:** the Versioning scheme field is free text. State the scheme (e.g., "SemVer").
+> **In the Software Management Plan (SMP):** the Versioning scheme field is free text. State the scheme (e.g., "SemVer").
 
 ## Releases
 

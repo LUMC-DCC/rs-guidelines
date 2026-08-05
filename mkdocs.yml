@@ -24,6 +24,10 @@ theme:
         toggle:
           icon: material/brightness-4
           name: Switch to light mode
+markdown_extensions:
+  - abbr
+hooks:
+  - hooks/abbreviations.py
 plugins:
   - search
   - awesome-pages:

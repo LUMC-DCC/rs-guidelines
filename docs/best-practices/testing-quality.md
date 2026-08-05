@@ -7,7 +7,7 @@ Tests and quality checks are how you (and a future maintainer) know that the sof
 | Level | Minimum |
 |---|---|
 | **A** | Manual or smoke checks documented in the README |
-| **B** | Smoke tests, unit tests for critical logic, CI on at least one platform |
+| **B** | Smoke tests, unit tests for critical logic, continuous integration (CI) on at least one platform |
 | **C** | Unit + integration + end-to-end tests, CI matrix across platforms, release-blocking quality gates |
 
 Start where you are. Add the next level when the project becomes the next level, usually, when a second person starts depending on it.
@@ -28,7 +28,7 @@ A useful mental model is the **test pyramid** (Martin Fowler, [The Practical Tes
 
 Do **not** chase coverage percentages blindly. 100% line coverage on a function that runs `int(x) + 1` proves nothing; 60% coverage on the function that actually controls the scientific output is the one to focus on. **Test the code that can change the scientific conclusions first.**
 
-> **In the SMP:** the Test types field is multi-select. Match the depth to the project level and to the risk profile of what the software does. For Level C software making clinical recommendations, expect smoke + unit + integration + end-to-end + regression. For a Level A analysis script, smoke + a couple of unit tests of the critical function may be the right answer.
+> **In the Software Management Plan (SMP):** the Test types field is multi-select. Match the depth to the project level and to the risk profile of what the software does. For Level C software making clinical recommendations, expect smoke + unit + integration + end-to-end + regression. For a Level A analysis script, smoke + a couple of unit tests of the critical function may be the right answer.
 
 ## Test frameworks
 

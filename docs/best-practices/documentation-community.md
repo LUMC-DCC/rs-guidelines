@@ -49,7 +49,7 @@ For API documentation specifically:
 - [**Redoc**](https://redocly.com/redoc/) or [**Swagger UI**](https://swagger.io/tools/swagger-ui/) - for REST APIs documented with OpenAPI.
 - Language-native generators: `rustdoc` (Rust), `pkgdown` (R), `JSDoc` (JavaScript), `Javadoc` (Java), `Doxygen` (C/C++).
 
-> **In the SMP:** the User documentation question distinguishes three states - *full docs* (a site), *README only*, and *no docs*. Level A projects often legitimately stop at a good README. For Level B and C, "README only" is a limitation.
+> **In the Software Management Plan (SMP):** the User documentation question distinguishes three states - *full docs* (a site), *README only*, and *no docs*. Level A projects often legitimately stop at a good README. For Level B and C, "README only" is a limitation.
 
 ## Deployment & dependency documentation
 
@@ -91,7 +91,7 @@ A `CONTRIBUTING.md` file explains how outsiders (and forgetful insiders) should 
 - branch and pull request (PR) expectations (branch naming, target branch, commit-message conventions);
 - review process and timelines;
 - coding style and linting;
-- whether external contributions require a CLA, DCO, or attribution.
+- whether external contributions require a Contributor License Agreement (CLA), a Developer Certificate of Origin (DCO), or attribution.
 
 The GitHub guide on [setting guidelines for repository contributors](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors) is a solid reference.
 

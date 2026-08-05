@@ -26,7 +26,7 @@ For each item, capture:
 - **Requirement** - what you need;
 - **Details** - capacity, access constraints, funding source.
 
-> **In the SMP:** the Infrastructure list is open-ended. Be specific enough that a hand-over to a new team would not require guessing. "GPU access" is not enough; "2× NVIDIA A100 80GB on Shark, allocation under PI <X>, valid until end of 2027" is.
+> **In the Software Management Plan (SMP):** the Infrastructure list is open-ended. Be specific enough that a hand-over to a new team would not require guessing. "GPU access" is not enough; "2× NVIDIA A100 80GB on Shark, allocation under PI <X>, valid until end of 2027" is.
 
 ## External services
 
@@ -40,7 +40,7 @@ Examples:
 - **Penetration testing** (for Level C with a network face);
 - **Paid CI minutes** on GitHub or GitLab when free tiers are exhausted;
 - **Commercial APIs** (OpenAI, Anthropic, mapping services, payment processors);
-- **Legal or IP support**;
+- **Legal or intellectual property (IP) support**;
 - **Vendor support contracts** for instruments or proprietary software.
 
 Quantify where you can. *"Need DCC help"* is not enough. *"~5 days of DCC RSE consultancy across the project; ~10 hours/year of IT&DI support; €1,200/year for CI minutes once we move to a self-hosted runner"* is.

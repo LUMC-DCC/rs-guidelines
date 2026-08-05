@@ -7,7 +7,7 @@
 
 [Gruenpeter *et al.* 2021]: https://doi.org/10.5281/zenodo.5504016
 
-Research software can be a research output in itself, or it can be developed to support research activities
+Research software (RS) can be a research output in itself, or it can be developed to support research activities
 throughout the research lifecycle, from data collection and analysis to visualization and dissemination.
 It can be used to analyze data, simulate systems, visualize results, and more.
 

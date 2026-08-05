@@ -1,9 +1,11 @@
 # Relevant organizations for RS
 
+The organizations and communities below support research software (RS) development, and offer tools, training, and guidance for continued learning.
+
 | Organization                                                               | Description                                                                                                         |
 |----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
 | [eScience Center](https://www.esciencecenter.nl/)                          | A Dutch organization that supports researchers in developing and using software to enhance their research.          |
-| [NL-RSE](https://nl-rse.org/)                                              | A Dutch community of RS Engineers (RSEs) that aims to professionalize the role of RSEs in the Netherlands.          |
+| [NL-RSE](https://nl-rse.org/)                                              | A Dutch community of Research Software Engineers (RSEs) that aims to professionalize the role of RSEs in the Netherlands.          |
 | [Research Software Alliance (ReSA)](https://www.researchsoft.org/)         | An international organization that aims to bring together RS communities to collaborate on the advancement of RS.   |
 | [Free Software Foundation (FSF)](https://www.fsf.org/)                     | An organization that promotes the use of free software and advocates for the rights of software users.              |
 | [Open Source Initiative (OSI)](https://opensource.org/)                    | An organization that promotes and protects open source software.                                                    |

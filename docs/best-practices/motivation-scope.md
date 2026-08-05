@@ -24,7 +24,7 @@ Two or four sentences is usually enough. A useful template:
 - **Vague scope.** *"We needed better data analysis."* Better than what, by which measure?
 - **Confusing the audience with the developer.** A motivation written for the supervisor is not the same as one written for a future user. Aim at the latter.
 
-> **In the SMP:** the Problem field expects 2–4 sentences that an expert from an adjacent sub-field could understand. Drop the jargon by one level from what you would write in a paper's abstract.
+> **In the Software Management Plan (SMP):** the Problem field expects 2–4 sentences that an expert from an adjacent sub-field could understand. Drop the jargon by one level from what you would write in a paper's abstract.
 
 ## Purpose categories
 

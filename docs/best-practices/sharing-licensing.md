@@ -3,7 +3,7 @@
 Properly sharing research software involves more than just uploading it somewhere. It involves a series of small decisions: choosing a repository, creating a registry entry, assigning a persistent identifier, adding a citation file, and selecting a license. These decisions make your work findable, retrievable, citable, and legally reusable.
 
 LUMC supports the [Open Science](https://www.openscience.nl/en/what-is-open-science) principle of being **"as open as possible, as closed as necessary"**. In line with its [strategic](https://www.lumc.nl/en/about-lumc/maatschappelijke-rol/strategy-202428/) commitment to making research outputs such as datasets, code, and models broadly accessible, openness is the default.
-Choosing a closed-source approach can be appropriate in cases involving GDPR, intellectual property, medical device regulations, or contractual obligations, but such restrictions require clear justification.
+Choosing a closed-source approach can be appropriate in cases involving GDPR, intellectual property (IP), medical device regulations, or contractual obligations, but such restrictions require clear justification.
 
 ## Repository
 
@@ -19,7 +19,7 @@ What is *not* an acceptable place for research code:
 - A shared drive (no history, no diffs, no review).
 - A *personal* GitHub or GitLab account (when the person leaves, so does the project).
 
-If a repository must be **private** for legitimate reasons (GDPR, IP, MDR/IVDR, security through obscurity for a small subset of components, contractual obligations), write the reason down in the SMP. *"Private for now"* is fine if there is a plan to open it later; *"private indefinitely with no documented reason"* is not.
+If a repository must be **private** for legitimate reasons (GDPR, IP, MDR/IVDR, security through obscurity for a small subset of components, contractual obligations), write the reason down in the Software Management Plan (SMP). *"Private for now"* is fine if there is a plan to open it later; *"private indefinitely with no documented reason"* is not.
 
 > **In the SMP:** record the repository URL, whether it is publicly accessible, and (if not) the specific reason. Plan to revisit the openness decision at every major release.
 
@@ -33,7 +33,7 @@ Useful registries depend on the audience:
 - **[Research Software Directory](https://research-software-directory.org/)** - Dutch-academic-flavoured registry; LUMC and other UMCs have entries here.
 - **[WorkflowHub](https://workflowhub.eu/)** - A registry for describing, sharing and publishing scientific computational workflows
 - **[Zenodo](https://zenodo.org/)** - strictly speaking a deposit/archive, but it issues DOIs and is searchable.
-- **[Software Heritage](https://www.softwareheritage.org/)** - universal archive; assigns a SWHID identifier that resolves to a specific commit, even if the original repository disappears.
+- **[Software Heritage](https://www.softwareheritage.org/)** - universal archive; assigns a Software Hash Identifier (SWHID) that resolves to a specific commit, even if the original repository disappears.
 
 Using multiple registries is encouraged, as different communities rely on different platforms. Registering in several involves only limited one-time effort.
 
@@ -102,7 +102,7 @@ If you have a specific reason to prefer something else:
 - **GPL-3.0** or **AGPL-3.0** - copyleft. Forces downstream users to keep their derivatives open under the same terms. Choose deliberately; copyleft is a real constraint on adopters.
 - **CC-BY 4.0** - usually for *data and documentation*, not code. Avoid licensing code under a Creative Commons license, they were not designed for that.
 
-Always use the [SPDX identifier](https://spdx.org/licenses/) (`Apache-2.0`, not "Apache 2.0"). It is machine-readable and recognised by package registries, GitHub, and most other tooling.
+Always use the [Software Package Data Exchange (SPDX) identifier](https://spdx.org/licenses/) (`Apache-2.0`, not "Apache 2.0"). It is machine-readable and recognised by package registries, GitHub, and most other tooling.
 
 Useful references:
 
