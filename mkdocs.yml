@@ -30,6 +30,7 @@ hooks:
   - hooks/abbreviations.py
   - hooks/organizations.py
   - hooks/contacts.py
+  - hooks/permalinks.py
 plugins:
   - search
   - awesome-pages:
