@@ -7,6 +7,13 @@ interactive online form. You can log in, create a project, and step through the 
 
 ## How to create an SMP
 
+The short walkthrough below shows the basic workflow in SciWiz:
+
+<video controls preload="metadata" width="100%" style="max-width:100%; border-radius:4px;">
+  <source src="../../assets/sciwiz-workflow.mp4" type="video/mp4">
+  Your browser does not support embedded video — <a href="../../assets/sciwiz-workflow.mp4">download the walkthrough</a> instead.
+</video>
+
 1. Access [SciWiz](https://sciwiz.lumc.nl/).
     - Go to [sciwiz.lumc.nl](https://sciwiz.lumc.nl/).
     - Log in or create an account using your LUMC email address.
@@ -61,8 +68,4 @@ If your software produces or influences a clinical recommendation, triages patie
 
 ## A note on data: the SMP does not replace the DMP
 
-<<<<<<< HEAD
-The LUMC SMP addresses data only in relation to how software *handles* it. Details about legal basis, retention, consent, and storage of personal data belong in your Data Management Plan. The [Risks & mitigation](../best-practices/risks.md) chapter only flags that the software has a relationship with sensitive data and points to the corresponding DMP.
-=======
 The LUMC SMP addresses data only in relation to how software *handles* it. Details about legal basis, retention, consent, and storage of personal data belong in your Data Management Plan (DMP). The [Risks & mitigation](../best-practices/risks.md) chapter only flags that the software has a relationship with sensitive data and points to the corresponding DMP.
->>>>>>> 00af4fe (make abbreviations, add hook for tooltips, define acronyms in relevant places)
