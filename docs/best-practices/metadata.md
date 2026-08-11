@@ -110,7 +110,7 @@ Note that CITATION.cff does not have fields for programming language, software t
 
 ## Mandatory fields
 
-The following CodeMeta fields are required in every LUMC research software repository; each must be present and non-empty.
+These CodeMeta fields are strongly recommended for every LUMC research software repository, and required to ensure citation, discoverability, and downstream tool support: registries, archives, and validators rely on them.
 
 Several fields can hold more than one value — provide these as a JSON array. In this reference, the fields that accept multiple values are `identifier`, `author`, `license`, `programmingLanguage`, `applicationCategory`, `applicationSubCategory`, `schema:featureList` (operations), `keywords`, `maintainer`, `funding`, `referencePublication`, `operatingSystem`, `softwareRequirements`, `supportingData`, and `runtimePlatform`. A single value may be written either as a plain string or as a one-element array.
 
