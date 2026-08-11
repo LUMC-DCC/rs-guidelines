@@ -29,7 +29,7 @@ Metadata serves three purposes, in increasing order of ambition.
 
 ### `codemeta.json`
 
-CodeMeta is a software metadata vocabulary built on schema.org and represented in JSON-LD format. It serves as the primary metadata record and is consumed by the widest range of repositories and tools. LUMC defines a specific profile of CodeMeta v3.1 (`<codemeta-schema-repo>`) that specifies which fields are mandatory and what constraints apply. The mandatory and recommended fields below are a curated subset: any valid CodeMeta field is welcome — the profile only sets a mandatory minimum and highlights the most useful optional ones.
+CodeMeta is a software metadata vocabulary built on schema.org and represented in JSON-LD format. It serves as the primary metadata record and is consumed by the widest range of repositories and tools. LUMC selected it from several software-metadata standards (Bioschemas, biotoolsSchema, and others) for its breadth and crosswalks (see `<metadata-standards-explanation>` for the selection procedure). LUMC defines a specific profile of CodeMeta v3.1 (`<codemeta-schema-repo>`) that specifies which fields are mandatory and what constraints apply. The mandatory and recommended fields below are a curated subset: any valid CodeMeta field is welcome — the profile only sets a mandatory minimum and highlights the most useful optional ones.
 
 A minimal valid `codemeta.json`:
 
