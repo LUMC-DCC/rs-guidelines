@@ -35,7 +35,13 @@ A minimal valid `codemeta.json`:
 
 ```json
 {
-  "@context": ["https://w3id.org/codemeta/3.1", {"schema": "https://schema.org/"}],
+  "@context": [
+    "https://w3id.org/codemeta/3.1",
+    {
+      "schema": "https://schema.org/",
+      "edam": "http://edamontology.org/"
+    }
+  ],
   "@type": "SoftwareSourceCode",
   "name": "MyTool",
   "description": "A tool for aligning short sequencing reads to a reference genome.",
@@ -58,7 +64,7 @@ A minimal valid `codemeta.json`:
   "programmingLanguage": ["Python"],
   "applicationCategory": "Command-line tool",
   "schema:featureList": [
-    "http://edamontology.org/operation_3198"
+    { "@id": "edam:operation_3198", "name": "Read mapping" }
   ]
 }
 ```
@@ -70,7 +76,10 @@ Use the [CodeMeta generator](https://codemeta.github.io/create/) to create your 
 
 JSON-LD documents carry a `@context` declaration that maps property names to globally unique identifiers (URIs). This is what makes the file machine-readable in a standardized way: a tool reading your file knows that `name` means `https://schema.org/name`, not something else. The CodeMeta context (`https://w3id.org/codemeta/3.1`) defines the software-metadata vocabulary.
 
-CodeMeta is built on schema.org: almost every field on this page is mapped in the CodeMeta v3.1 vocabulary and is written plain (no prefix), whether it originated in schema.org (`name`, `version`, `keywords`, `applicationCategory`, `runtimePlatform`, `operatingSystem`, `softwareRequirements`, `supportingData`) or is a CodeMeta-defined extension (`maintainer`, `referencePublication`, `developmentStatus`, `contIntegration`, `issueTracker`). The one exception is `featureList`, which is **not** included in the CodeMeta context — so operations are recorded with the explicit prefix as `schema:featureList`. For that prefix to resolve, the `@context` defines `schema` via the `{"schema": "https://schema.org/"}` entry above (CodeMeta already defines `schema` internally, so it would resolve without that entry, but defining it explicitly is clearer). This is the only field that needs a prefix and the sole reason for the dual context. tools that generate the file handle it for you.
+CodeMeta is built on schema.org: almost every field on this page is mapped in the CodeMeta v3.1 vocabulary and is written plain (no prefix), whether it originated in schema.org (`name`, `version`, `keywords`, `applicationCategory`, `applicationSubCategory`, `runtimePlatform`, `operatingSystem`, `softwareRequirements`, `supportingData`) or is a CodeMeta-defined extension (`maintainer`, `referencePublication`, `developmentStatus`, `contIntegration`, `issueTracker`). The inline object in the `@context` does two things:
+
+- defines `schema` because `featureList` is not in the CodeMeta vocabulary, operations are recorded with the explicit prefix as `schema:featureList`;
+- defines the `edam` prefix, so EDAM terms can be written compactly as real IRIs (`edam:operation_3198`, `edam:topic_0622`).
 
 ### `CITATION.cff`
 
@@ -103,7 +112,7 @@ Note that CITATION.cff does not have fields for programming language, software t
 
 The following CodeMeta fields are required in every LUMC research software repository; each must be present and non-empty.
 
-Several fields can hold more than one value — provide these as a JSON array. In this reference, the fields that accept multiple values are `identifier`, `author`, `license`, `programmingLanguage`, `applicationCategory`, `schema:featureList` (operations), `keywords`, `maintainer`, `funding`, `referencePublication`, `operatingSystem`, `softwareRequirements`, `supportingData`, and `runtimePlatform`. A single value may be written either as a plain string or as a one-element array.
+Several fields can hold more than one value — provide these as a JSON array. In this reference, the fields that accept multiple values are `identifier`, `author`, `license`, `programmingLanguage`, `applicationCategory`, `applicationSubCategory`, `schema:featureList` (operations), `keywords`, `maintainer`, `funding`, `referencePublication`, `operatingSystem`, `softwareRequirements`, `supportingData`, and `runtimePlatform`. A single value may be written either as a plain string or as a one-element array.
 
 ### Name: `name`
 
@@ -244,14 +253,8 @@ What your software does. EDAM operation URIs are preferred because they enable s
 
 ```json
 "schema:featureList": [
-  "http://edamontology.org/operation_3198",
-  "http://edamontology.org/operation_3227"
-]
-```
-
-```json
-"schema:featureList": [
-  "http://edamontology.org/operation_3198",
+  { "@id": "edam:operation_3198", "name": "Read mapping" },
+  { "@id": "edam:operation_3227" },
   "Dimensionality reduction of high-dimensional omics data"
 ]
 ```
@@ -263,8 +266,6 @@ To find EDAM terms:
 3. Search the EDAM ontology at [EBI OLS](https://www.ebi.ac.uk/ols4/ontologies/edam)
 
 List terms that most closely describe the main function of your software. You can refine these if and when registering in bio.tools.
-
-This field requires the dual `@context` described above.
 
 ## Recommended fields
 
@@ -287,16 +288,27 @@ The fields below are not enforced by CI but are strongly encouraged. Several are
 
 ### Keywords: `keywords`
 
-Free-text keywords or ontology term URIs (including EDAM topics) for discovery: subject area, methods, and biological context such as organism, tissue, or disease.
+Free-text keywords and non-URI terms for discovery: subject area, methods, and biological context such as organism, tissue, or disease. (EDAM topics go in `applicationSubCategory` below.)
 
 ```json
 "keywords": [
   "genomics",
   "variant calling",
-  "http://edamontology.org/topic_0622",
   "Homo sapiens",
   "breast cancer",
   "http://purl.obolibrary.org/obo/DOID_1612"
+]
+```
+
+### Topics: `applicationSubCategory`
+
+The subject areas the software addresses, describing the *domain* (unlike `applicationCategory`, the *kind* of software). EDAM topic URI terms are preferred, but, as with operations, a plain-text label is acceptable when no suitable EDAM topic exists.
+
+```json
+"applicationSubCategory": [
+  "edam:topic_0622",
+  { "@id": "edam:topic_3170", "name": "RNA-Seq" },
+  "Clinical decision support"
 ]
 ```
 
