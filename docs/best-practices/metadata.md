@@ -150,10 +150,18 @@ Update this field on every new release.
 
 ### Persistent identifier: `identifier`
 
-A versioned, persistent identifier for this specific release. This is what others should cite when referring to a particular version of your software.
+A versioned, persistent identifier for this specific release. This is what others should cite when referring to a particular version of your software. It can be a URL or a `PropertyValue`.
 
 ```json
 "identifier": "https://doi.org/10.5281/zenodo.1234567"
+```
+
+```json
+"identifier": {
+  "@type": "PropertyValue",
+  "propertyID": "doi",
+  "value": "10.5281/zenodo.1234567"
+}
 ```
 
 For how to mint one, see [Persistent identifiers](sharing-licensing.md#persistent-identifiers). For scripts or internal tools that will not be formally published, a Git tag URL is acceptable:
@@ -189,16 +197,21 @@ The people responsible for creating the software (see [Authors vs. maintainers](
 ]
 ```
 
+An author may also be an `Organization`, not only a `Person`.
+
 ### License(s): `license`
 
-The license under which the software is distributed, as an [SPDX identifier](https://spdx.org/licenses/) URI.
+The license under which the software is distributed, as an [SPDX identifier](https://spdx.org/licenses/) URL or a `CreativeWork` node.
 
 ```json
-"license": "https://spdx.org/licenses/Apache-2.0"
-```
-
-```json
-"license": ["https://spdx.org/licenses/Apache-2.0", "https://spdx.org/licenses/MIT"]
+"license": [
+  "https://spdx.org/licenses/MIT",
+  {
+    "@type": "CreativeWork",
+    "name": "Apache License 2.0",
+    "url": "https://spdx.org/licenses/Apache-2.0"
+  }
+]
 ```
 
 For choosing a license, see [Software license](sharing-licensing.md#software-license).
@@ -213,10 +226,13 @@ The URL of the version-controlled source code repository.
 
 ### Programming language(s): `programmingLanguage`
 
-The language(s) in which the software is written.
+The language(s) in which the software is written. It can be a plain text name or a `ComputerLanguage` (lets you pin a version).
 
 ```json
-"programmingLanguage": ["Python", "C++"]
+"programmingLanguage": [
+  { "@type": "ComputerLanguage", "name": "Python", "version": "3.14" },
+  "C++"
+]
 ```
 
 ### Software type: `applicationCategory`
@@ -274,15 +290,14 @@ Use ISO 8601 date format (`YYYY-MM-DD`).
 
 ### Keywords: `keywords`
 
-Free-text keywords and non-URI terms for discovery: subject area, methods, and biological context such as organism, tissue, or disease. (EDAM topics go in `applicationSubCategory` below.)
+Plain-text keywords and non-URI terms for discovery: subject area, methods, and biological context such as organism, tissue, or disease. EDAM topics go in `applicationSubCategory` below.
 
 ```json
 "keywords": [
   "genomics",
   "variant calling",
   "Homo sapiens",
-  "breast cancer",
-  "http://purl.obolibrary.org/obo/DOID_1612"
+  "breast cancer"
 ]
 ```
 
@@ -333,25 +348,10 @@ Contact people responsible for the software. For why a project should have at le
 
 ### Funding: `funding`
 
-Grants, each with the funder as an organization. Give the funder an `@id` where available (see [Funding and project context](identity.md#funding-and-project-context)).
+The funding source(s) as text, typically the grant or project code (see [Funding and project context](identity.md#funding-and-project-context)).
 
 ```json
-"funding": [
-  {
-    "@type": "Grant",
-    "identifier": "NWO-123456",
-    "funder": {
-      "@type": "Organization",
-      "@id": "https://ror.org/04jsz6e67",
-      "name": "Dutch Research Council (NWO)"
-    }
-  },
-  {
-    "@type": "Grant",
-    "identifier": "ZonMw-789",
-    "funder": { "@type": "Organization", "name": "ZonMw" }
-  }
-]
+"funding": ["NWO-123456", "ZonMw-789"]
 ```
 
 ### Publications: `referencePublication`
@@ -368,10 +368,8 @@ Grants, each with the funder as an organization. Give the funder an `@id` where 
 Use the [repostatus.org](https://www.repostatus.org/) vocabulary.
 
 ```json
-"developmentStatus": "https://www.repostatus.org/#active"
+"developmentStatus": "active"
 ```
-
-Permitted values: `concept`, `wip`, `suspended`, `abandoned`, `active`, `inactive`, `unsupported`, `moved`.
 
 ### Operating systems: `operatingSystem`
 
@@ -381,8 +379,19 @@ Permitted values: `concept`, `wip`, `suspended`, `abandoned`, `active`, `inactiv
 
 ### Dependencies: `softwareRequirements`
 
+A plain text or a `SoftwareSourceCode` (lets you add a version and the `provider`).
+
 ```json
-"softwareRequirements": ["Python >=3.10", "numpy >=1.24"]
+"softwareRequirements": [
+  {
+    "@type": "SoftwareSourceCode",
+    "name": "numpy",
+    "version": ">=1.24",
+    "provider": { "@type": "Organization", "name": "PyPI", "url": "https://pypi.org" }
+  },
+  { "@type": "SoftwareSourceCode", "name": "pandas", "version": ">=2.0" },
+  "matplotlib"
+]
 ```
 
 ### Supporting data: `supportingData`
@@ -392,13 +401,13 @@ Reference datasets the software depends on, or the data a model was trained on.
 ```json
 "supportingData": [
   {
-    "@type": "Dataset",
+    "@type": "DataFeed",
     "name": "GRCh38 reference genome",
     "version": "GRCh38.p14",
     "url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/"
   },
   {
-    "@type": "Dataset",
+    "@type": "DataFeed",
     "name": "Training cohort (de-identified)",
     "version": "v2.0",
     "url": "https://doi.org/10.5281/zenodo.7654321"
@@ -423,8 +432,14 @@ Reference datasets the software depends on, or the data a model was trained on.
 
 ### Changelog: `releaseNotes`
 
+A link to the changelog, or the notes themselves (`Text` or `URL`).
+
 ```json
 "releaseNotes": "https://github.com/lumc/mytool/blob/main/CHANGELOG.md"
+```
+
+```json
+"releaseNotes": "v2.1.0: added CRAM support; fixed an index race condition."
 ```
 
 ### Continuous integration: `continuousIntegration`
