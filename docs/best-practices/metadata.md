@@ -122,7 +122,7 @@ The name of your software, exactly as it should appear in citations and search r
 "name": "MyTool"
 ```
 
-Avoid version numbers or institutional qualifiers in the name itself.
+For naming guidance, see [software title](identity.md#software-title).
 
 ### Description: `description`
 
@@ -140,7 +140,7 @@ The version of the software this metadata file describes.
 "version": "2.1.0"
 ```
 
-Prefer [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`) for any software that has formal releases. For scripts or notebooks without a release, the full Git commit hash is also acceptable:
+For guidance, see [versioning scheme](versioning-releases.md#versioning-scheme). For scripts or notebooks without a release, the full Git commit hash is also acceptable:
 
 ```json
 "version": "a3f8c2d1b4e7f0291a3f8c2d1b4e7f0291a3f8c2"
@@ -164,7 +164,7 @@ For how to mint one, see [Persistent identifiers](sharing-licensing.md#persisten
 
 ### Authors: `author`
 
-The people responsible for creating the software. Include an ORCID identifier for each author in `@id`; this is what links software citation to researcher profiles and enables use in research assessments. An author's affiliation is an organization, which takes a ROR identifier in its own `@id`.
+The people responsible for creating the software (see [Authors vs. maintainers](identity.md#authors-vs-maintainers)). If available, include an ORCID identifier for each author in `@id`, and give each author's affiliation organization a ROR identifier in its own `@id`.
 
 ```json
 "author": [
@@ -188,8 +188,6 @@ The people responsible for creating the software. Include an ORCID identifier fo
   }
 ]
 ```
-
-If an author does not have an ORCID, register at [orcid.org](https://orcid.org/register). In the meantime, omit the `@id` field rather than leaving it empty.
 
 ### License(s): `license`
 
