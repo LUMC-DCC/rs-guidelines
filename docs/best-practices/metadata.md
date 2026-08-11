@@ -35,7 +35,7 @@ A minimal valid `codemeta.json`:
 
 ```json
 {
-  "@context": ["https://w3id.org/codemeta/3.1", "https://schema.org/"],
+  "@context": ["https://w3id.org/codemeta/3.1", {"schema": "https://schema.org/"}],
   "@type": "SoftwareSourceCode",
   "name": "MyTool",
   "description": "A tool for aligning short sequencing reads to a reference genome.",
@@ -70,7 +70,7 @@ Use the [CodeMeta generator](https://codemeta.github.io/create/) to create your 
 
 JSON-LD documents carry a `@context` declaration that maps property names to globally unique identifiers (URIs). This is what makes the file machine-readable in a standardized way: a tool reading your file knows that `name` means `https://schema.org/name`, not something else. The CodeMeta context (`https://w3id.org/codemeta/3.1`) defines the software-metadata vocabulary.
 
-CodeMeta is built on schema.org: almost every field on this page is part of the CodeMeta v3.1 vocabulary and is written plain (no prefix), whether it originated in schema.org (`name`, `version`, `keywords`, `applicationCategory`, `runtimePlatform`, `operatingSystem`, `softwareRequirements`, `supportingData`) or is a CodeMeta-defined extension (`maintainer`, `referencePublication`, `developmentStatus`, `contIntegration`, `issueTracker`). The one exception is `featureList`, a schema.org property **not** included in the CodeMeta context — recording operations therefore uses `schema:featureList` and requires adding the schema.org context as a second entry. This is the sole reason for the dual context. Tools that generate the file include it by default; if you write the file by hand, keep both entries.
+CodeMeta is built on schema.org: almost every field on this page is mapped in the CodeMeta v3.1 vocabulary and is written plain (no prefix), whether it originated in schema.org (`name`, `version`, `keywords`, `applicationCategory`, `runtimePlatform`, `operatingSystem`, `softwareRequirements`, `supportingData`) or is a CodeMeta-defined extension (`maintainer`, `referencePublication`, `developmentStatus`, `contIntegration`, `issueTracker`). The one exception is `featureList`, which is **not** included in the CodeMeta context — so operations are recorded with the explicit prefix as `schema:featureList`. For that prefix to resolve, the `@context` defines `schema` via the `{"schema": "https://schema.org/"}` entry above (CodeMeta already defines `schema` internally, so it would resolve without that entry, but defining it explicitly is clearer). This is the only field that needs a prefix and the sole reason for the dual context. tools that generate the file handle it for you.
 
 ### `CITATION.cff`
 
