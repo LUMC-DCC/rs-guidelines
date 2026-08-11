@@ -46,7 +46,7 @@ A minimal valid `codemeta.json`:
   "name": "MyTool",
   "description": "A tool for aligning short sequencing reads to a reference genome.",
   "version": "1.3.0",
-  "identifier": "https://doi.org/10.5281/zenodo.1234567",
+  "identifier": "https://doi.org/10.0000/example.mytool.1",
   "author": [
     {
       "@type": "Person",
@@ -60,7 +60,7 @@ A minimal valid `codemeta.json`:
     }
   ],
   "license": "https://spdx.org/licenses/Apache-2.0",
-  "codeRepository": "https://github.com/lumc/mytool",
+  "codeRepository": "https://github.com/example/mytool",
   "programmingLanguage": ["Python"],
   "applicationCategory": "Command-line tool",
   "schema:featureList": [
@@ -99,8 +99,8 @@ authors:
     affiliation: Leiden University Medical Center
 version: 1.3.0
 date-released: 2026-06-01
-doi: 10.5281/zenodo.1234567
-repository-code: https://github.com/lumc/mytool
+doi: 10.0000/example.mytool.1
+repository-code: https://github.com/example/mytool
 license: Apache-2.0
 ```
 
@@ -153,21 +153,21 @@ Update this field on every new release.
 A versioned, persistent identifier for this specific release. This is what others should cite when referring to a particular version of your software. It can be a URL or a `PropertyValue`.
 
 ```json
-"identifier": "https://doi.org/10.5281/zenodo.1234567"
+"identifier": "https://doi.org/10.0000/example.mytool.1"
 ```
 
 ```json
 "identifier": {
   "@type": "PropertyValue",
   "propertyID": "doi",
-  "value": "10.5281/zenodo.1234567"
+  "value": "10.0000/example.mytool.1"
 }
 ```
 
 For how to mint one, see [Persistent identifiers](sharing-licensing.md#persistent-identifiers). For scripts or internal tools that will not be formally published, a Git tag URL is acceptable:
 
 ```json
-"identifier": "https://github.com/lumc/myscript/tree/v1.0"
+"identifier": "https://github.com/example/myscript/tree/v1.0"
 ```
 
 ### Authors: `author`
@@ -178,7 +178,7 @@ The people responsible for creating the software (see [Authors vs. maintainers](
 "author": [
   {
     "@type": "Person",
-    "@id": "https://orcid.org/0000-0000-0000-0001",
+    "@id": "https://orcid.org/0000-0000-0000-0000",
     "givenName": "Jane",
     "familyName": "Doe",
     "affiliation": {
@@ -189,7 +189,7 @@ The people responsible for creating the software (see [Authors vs. maintainers](
   },
   {
     "@type": "Person",
-    "@id": "https://orcid.org/0000-0000-0000-0002",
+    "@id": "https://orcid.org/0000-0000-0000-0000",
     "givenName": "John",
     "familyName": "Smith",
     "affiliation": { "@type": "Organization", "name": "Amsterdam UMC" }
@@ -221,7 +221,7 @@ For choosing a license, see [Software license](sharing-licensing.md#software-lic
 The URL of the version-controlled source code repository.
 
 ```json
-"codeRepository": "https://github.com/lumc/mytool"
+"codeRepository": "https://github.com/example/mytool"
 ```
 
 ### Programming language(s): `programmingLanguage`
@@ -275,7 +275,7 @@ The fields below are not enforced by CI but are strongly encouraged. Several are
 
 ```json
 "identifier": [
-  "https://doi.org/10.5281/zenodo.1234567",
+  "https://doi.org/10.0000/example.mytool.1",
   "https://bio.tools/mytool"
 ]
 ```
@@ -316,13 +316,13 @@ The subject areas the software addresses, describing the *domain* (unlike `appli
 ### Documentation URL: `softwareHelp`
 
 ```json
-"softwareHelp": { "@type": "CreativeWork", "url": "https://mytool.readthedocs.io" }
+"softwareHelp": { "@type": "CreativeWork", "url": "https://docs.example.com/mytool" }
 ```
 
 ### Issue tracker: `issueTracker`
 
 ```json
-"issueTracker": "https://github.com/lumc/mytool/issues"
+"issueTracker": "https://github.com/example/mytool/issues"
 ```
 
 ### Contact persons: `maintainer`
@@ -335,13 +335,13 @@ Contact people responsible for the software. For why a project should have at le
     "@type": "Person",
     "givenName": "Jane",
     "familyName": "Doe",
-    "email": "j.doe@lumc.nl"
+    "email": "j.doe@example.com"
   },
   {
     "@type": "Person",
     "givenName": "John",
     "familyName": "Smith",
-    "email": "j.smith@aumc.nl"
+    "email": "j.smith@example.com"
   }
 ]
 ```
@@ -351,15 +351,15 @@ Contact people responsible for the software. For why a project should have at le
 The funding source(s) as text, typically the grant or project code (see [Funding and project context](identity.md#funding-and-project-context)).
 
 ```json
-"funding": ["NWO-123456", "ZonMw-789"]
+"funding": ["NWO-000000", "ZonMw-000"]
 ```
 
 ### Publications: `referencePublication`
 
 ```json
 "referencePublication": [
-  { "@type": "ScholarlyArticle", "@id": "https://doi.org/10.1093/bioinformatics/btXXXX" },
-  { "@type": "ScholarlyArticle", "@id": "https://doi.org/10.1371/journal.pone.XXXXXXX" }
+  { "@type": "ScholarlyArticle", "@id": "https://doi.org/10.0000/example.article.1" },
+  { "@type": "ScholarlyArticle", "@id": "https://doi.org/10.0000/example.article.2" }
 ]
 ```
 
@@ -404,13 +404,13 @@ Reference datasets the software depends on, or the data a model was trained on.
     "@type": "DataFeed",
     "name": "GRCh38 reference genome",
     "version": "GRCh38.p14",
-    "url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/"
+    "url": "https://data.example.org/genomes/reference/"
   },
   {
     "@type": "DataFeed",
     "name": "Training cohort (de-identified)",
     "version": "v2.0",
-    "url": "https://doi.org/10.5281/zenodo.7654321"
+    "url": "https://doi.org/10.0000/example.dataset.1"
   }
 ]
 ```
@@ -425,8 +425,8 @@ Reference datasets the software depends on, or the data a model was trained on.
 
 ```json
 "softwareHelp": [
-  { "@type": "CreativeWork", "url": "https://mytool.readthedocs.io" },
-  { "@type": "CreativeWork", "url": "https://mybinder.org/v2/gh/lumc/mytool/HEAD" }
+  { "@type": "CreativeWork", "url": "https://docs.example.com/mytool" },
+  { "@type": "CreativeWork", "url": "https://example.org/training/mytool" }
 ]
 ```
 
@@ -435,7 +435,7 @@ Reference datasets the software depends on, or the data a model was trained on.
 A link to the changelog, or the notes themselves (`Text` or `URL`).
 
 ```json
-"releaseNotes": "https://github.com/lumc/mytool/blob/main/CHANGELOG.md"
+"releaseNotes": "https://github.com/example/mytool/blob/main/CHANGELOG.md"
 ```
 
 ```json
@@ -445,7 +445,7 @@ A link to the changelog, or the notes themselves (`Text` or `URL`).
 ### Continuous integration: `continuousIntegration`
 
 ```json
-"continuousIntegration": "https://github.com/lumc/mytool/actions"
+"continuousIntegration": "https://github.com/example/mytool/actions"
 ```
 
 Where possible, run your tests in CI (see [Continuous integration](testing-quality.md#continuous-integration)).
