@@ -76,7 +76,7 @@ Use the [CodeMeta generator](https://codemeta.github.io/create/) to create your 
 
 JSON-LD documents carry a `@context` declaration that maps property names to globally unique identifiers (URIs). This is what makes the file machine-readable in a standardized way: a tool reading your file knows that `name` means `https://schema.org/name`, not something else. The CodeMeta context (`https://w3id.org/codemeta/3.1`) defines the software-metadata vocabulary.
 
-CodeMeta is built on schema.org: almost every field on this page is mapped in the CodeMeta v3.1 vocabulary and is written plain (no prefix), whether it originated in schema.org (`name`, `version`, `keywords`, `applicationCategory`, `applicationSubCategory`, `runtimePlatform`, `operatingSystem`, `softwareRequirements`, `supportingData`) or is a CodeMeta-defined extension (`maintainer`, `referencePublication`, `developmentStatus`, `contIntegration`, `issueTracker`). The inline object in the `@context` does two things:
+CodeMeta is built on schema.org: almost every field on this page is mapped in the CodeMeta v3.1 vocabulary and is written plain (no prefix), whether it originated in schema.org (`name`, `version`, `keywords`, `applicationCategory`, `applicationSubCategory`, `runtimePlatform`, `operatingSystem`, `softwareRequirements`, `supportingData`) or is a CodeMeta-defined extension (`maintainer`, `referencePublication`, `developmentStatus`, `continuousIntegration`, `issueTracker`). The inline object in the `@context` does two things:
 
 - defines `schema` because `featureList` is not in the CodeMeta vocabulary, operations are recorded with the explicit prefix as `schema:featureList`;
 - defines the `edam` prefix, so EDAM terms can be written compactly as real IRIs (`edam:operation_3198`, `edam:topic_0622`).
@@ -427,10 +427,10 @@ Reference datasets the software depends on, or the data a model was trained on.
 "releaseNotes": "https://github.com/lumc/mytool/blob/main/CHANGELOG.md"
 ```
 
-### Continuous integration: `contIntegration`
+### Continuous integration: `continuousIntegration`
 
 ```json
-"contIntegration": "https://github.com/lumc/mytool/actions"
+"continuousIntegration": "https://github.com/lumc/mytool/actions"
 ```
 
 Where possible, run your tests in CI (see [Continuous integration](testing-quality.md#continuous-integration)).
