@@ -266,6 +266,8 @@ The fields below are not enforced by CI but are strongly encouraged. Several are
 
 ### Release date: `datePublished`
 
+Use ISO 8601 date format (`YYYY-MM-DD`).
+
 ```json
 "datePublished": "2026-06-01"
 ```
