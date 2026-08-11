@@ -418,11 +418,13 @@ Reference datasets the software depends on, or the data a model was trained on.
 "releaseNotes": "https://github.com/lumc/mytool/blob/main/CHANGELOG.md"
 ```
 
-### Test suite: `contIntegration`
+### Continuous integration: `contIntegration`
 
 ```json
 "contIntegration": "https://github.com/lumc/mytool/actions"
 ```
+
+Where possible, run your tests in CI (see [Continuous integration](testing-quality.md#continuous-integration)).
 
 ### Information without a dedicated field
 
