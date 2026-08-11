@@ -84,7 +84,7 @@ The [CFF INIT](https://citation-file-format.github.io/cff-initializer-javascript
 
 If a methods paper exists for the software, be explicit in the citation: *cite the paper for the method and cite the software DOI for the exact implementation/version*.
 
-A practical reference on the whole workflow: [The Turing Way - Software Citation with `CITATION.cff`](https://book.the-turing-way.org/communication/citable/citable-cff.html).
+A practical reference on the whole workflow: [The Turing Way - Software Citation with `CITATION.cff`](https://book.the-turing-way.org/communication/citable/citable-cff.html). For the full `CITATION.cff` and `codemeta.json` field-by-field specification, see [Software metadata](metadata.md).
 
 > **In the SMP:** the Publications question captures the paper(s) that describe the method, with their DOI/PMID/PMCID. The software DOI lives under Persistent identifiers. Keeping these separate is intentional. A piece of software can outlive its methods paper, or vice versa.
 
