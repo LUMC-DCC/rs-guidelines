@@ -62,6 +62,7 @@ A minimal valid `codemeta.json`:
   ]
 }
 ```
+The schema repository provides further worked examples (`<codemeta-schema-examples>`) of filled-in files, from minimal to complete, to use as references.
 
 Use the [CodeMeta generator](https://codemeta.github.io/create/) to create your file interactively, or copy and adapt an existing one.
 
