@@ -221,7 +221,7 @@ The language(s) in which the software is written.
 
 ### Software type: `applicationCategory`
 
-The category of software. Use one or more values from the controlled vocabulary below:
+The category of software. Prefer values from the [bio.tools toolType vocabulary](https://biotools.readthedocs.io/en/latest/curators_guide.html#tool-type) (which maximizes interoperability with that registry). A free-text label is acceptable when none fits.
 
 ```json
 "applicationCategory": "Command-line tool"
@@ -230,20 +230,6 @@ The category of software. Use one or more values from the controlled vocabulary 
 ```json
 "applicationCategory": ["Library", "Web API"]
 ```
-
-| Value | Use for |
-|---|---|
-| `Command-line tool` | Tools invoked from a shell or terminal |
-| `Library` | Code intended to be imported by other software |
-| `Web application` | Browser-based applications with a user interface |
-| `Web API` | Programmatic HTTP interfaces |
-| `Workflow` | Pipelines composed of multiple steps (Nextflow, Snakemake, CWL, Galaxy) |
-| `Script` | Single-purpose scripts, including Jupyter and R Markdown notebooks |
-| `Desktop application` | GUI applications installed locally |
-| `Database portal` | Web interfaces to databases |
-| `Ontology` | Formal ontologies or controlled vocabularies |
-
-This vocabulary is aligned with the [bio.tools toolType list](https://biotools.readthedocs.io/en/latest/curators_guide.html#tool-type) to maximize interoperability with that registry.
 
 ### Operations: `schema:featureList`
 
