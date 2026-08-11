@@ -155,7 +155,7 @@ For how to mint one, see [Persistent identifiers](sharing-licensing.md#persisten
 
 ### Authors: `author`
 
-The people responsible for creating the software. Include an ORCID identifier for each author; this is what links software citation to researcher profiles and enables use in research assessments.
+The people responsible for creating the software. Include an ORCID identifier for each author in `@id`; this is what links software citation to researcher profiles and enables use in research assessments. An author's affiliation is an organization, which takes a ROR identifier in its own `@id`.
 
 ```json
 "author": [
@@ -164,7 +164,11 @@ The people responsible for creating the software. Include an ORCID identifier fo
     "@id": "https://orcid.org/0000-0000-0000-0001",
     "givenName": "Jane",
     "familyName": "Doe",
-    "affiliation": { "@type": "Organization", "name": "Leiden University Medical Center" }
+    "affiliation": {
+      "@type": "Organization",
+      "@id": "https://ror.org/05xvt9f17",
+      "name": "Leiden University Medical Center"
+    }
   },
   {
     "@type": "Person",
@@ -331,12 +335,18 @@ Contact people responsible for the software. For why a project should have at le
 
 ### Funding: `funding`
 
+Grants, each with the funder as an organization. Give the funder an `@id` where available (see [Funding and project context](identity.md#funding-and-project-context)).
+
 ```json
 "funding": [
   {
     "@type": "Grant",
     "identifier": "NWO-123456",
-    "funder": { "@type": "Organization", "name": "Dutch Research Council (NWO)" }
+    "funder": {
+      "@type": "Organization",
+      "@id": "https://ror.org/04jsz6e67",
+      "name": "Dutch Research Council (NWO)"
+    }
   },
   {
     "@type": "Grant",
