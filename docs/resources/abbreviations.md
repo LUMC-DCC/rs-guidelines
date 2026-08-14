@@ -18,7 +18,7 @@ It is also the source of the tooltips you see elsewhere: any abbreviation in thi
 | CVE | Common Vulnerabilities and Exposures |
 | CVSS | Common Vulnerability Scoring System |
 | CWL | Common Workflow Language |
-| DCC | Digital Competence Center |
+| DCC | Data Competence Center |
 | DCO | Developer Certificate of Origin |
 | DMP | Data Management Plan |
 | DOI | Digital Object Identifier |

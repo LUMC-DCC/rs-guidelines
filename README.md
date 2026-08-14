@@ -3,7 +3,7 @@
 [![GitHub Pages](https://img.shields.io/badge/view-docs-blue?logo=github)](https://lumc-dcc.github.io/rs-guidelines)
 
 Source for the Research Software Guidelines site — [lumc-dcc.github.io/rs-guidelines](https://lumc-dcc.github.io/rs-guidelines) —
-a navigable, practical guide to managing and developing research software, by the LUMC Digital Competence Center (DCC).
+a navigable, practical guide to managing and developing research software, by the LUMC Data Competence Center (DCC).
 
 ## Quick start
 

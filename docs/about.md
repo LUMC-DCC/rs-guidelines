@@ -2,7 +2,7 @@
 
 ## Why this guide exists
 
-The LUMC Digital Competence Center (DCC) supports LUMC researchers in developing and managing research software.
+The LUMC Data Competence Center (DCC) supports LUMC researchers in developing and managing research software.
 For example, we are often asked questions such as how to choose a license, why a project needs more than one maintainer, what makes software citable, or how to plan for the day the postdoc leaves.
 This guide collects that advice in one navigable place, so that it is available to everyone at the LUMC and other institutions.
 
@@ -14,7 +14,7 @@ Research software practices change, tools come and go, and these pages are updat
 
 ## Who made it
 
-The Research Software Guidelines are developed and maintained by the **LUMC Digital Competence Center (DCC)**.
+The Research Software Guidelines are developed and maintained by the **LUMC Data Competence Center (DCC)**.
 They were written by Mariia Steeghs-Turchina and Anna Niehues.
 
 The source code lives at [github.com/LUMC-DCC/rs-guidelines](https://github.com/LUMC-DCC/rs-guidelines).
