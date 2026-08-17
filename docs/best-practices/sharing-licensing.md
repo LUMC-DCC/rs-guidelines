@@ -3,7 +3,7 @@
 Properly sharing research software involves more than just uploading it somewhere. It involves a series of small decisions: choosing a repository, creating a registry entry, assigning a persistent identifier, adding a citation file, and selecting a license. These decisions make your work findable, retrievable, citable, and legally reusable.
 
 LUMC supports the [Open Science](https://www.openscience.nl/en/what-is-open-science) principle of being **"as open as possible, as closed as necessary"**. In line with its [strategic](https://www.lumc.nl/en/about-lumc/maatschappelijke-rol/strategy-202428/) commitment to making research outputs such as datasets, code, and models broadly accessible, openness is the default.
-Choosing a closed-source approach can be appropriate in cases involving GDPR, intellectual property, medical device regulations, or contractual obligations, but such restrictions require clear justification.
+Choosing a closed-source approach can be appropriate in cases involving GDPR, intellectual property (IP), medical device regulations, or contractual obligations, but such restrictions require clear justification.
 
 ## Repository
 
@@ -15,17 +15,19 @@ Any project beyond a quick, one-off script should be kept in version control fro
 
 What is *not* an acceptable place for research code:
 
-- A laptop only (one disk failure away from no code at all).
+- A laptop only (a single disk failure can mean the loss of all code).
 - A shared drive (no history, no diffs, no review).
 - A *personal* GitHub or GitLab account (when the person leaves, so does the project).
 
-If a repository must be **private** for legitimate reasons (GDPR, IP, MDR/IVDR, security through obscurity for a small subset of components, contractual obligations), write the reason down in the SMP. *"Private for now"* is fine if there is a plan to open it later; *"private indefinitely with no documented reason"* is not.
+If a repository must be **private** for legitimate reasons (GDPR, IP, MDR/IVDR, security through obscurity for a small subset of components, contractual obligations), write the reason down in the Software Management Plan (SMP). *"Private for now"* is fine if there is a plan to open it later; *"private indefinitely with no documented reason"* is not.
+
+Note also that publishing source code, or describing the method in a paper, is a **public disclosure** that can foreclose patenting: in Europe (which applies absolute novelty) and most jurisdictions, a disclosure before a patent is filed can permanently bar it. If the software or its underlying method may have patent or commercial value, settle the intention *before* going public: consult {{technology-transfer}} first, and record the IP/patent intention in the SMP. Most research software has no patentable invention and benefits from being open.
 
 > **In the SMP:** record the repository URL, whether it is publicly accessible, and (if not) the specific reason. Plan to revisit the openness decision at every major release.
 
 ## Registries
 
-A *registry* is a structured metadata catalog that describes, indexes, and helps discover software. It is distinct from a *package repository* (PyPI, conda-forge, Docker Hub, CRAN), which hosts installable artefacts. Registry entries primarily support discoverability and citation, while package entries primarily support distribution and installation. You usually want both.
+A *registry* is a structured metadata catalog that describes, indexes, and helps discover software. It is distinct from a *package repository* (PyPI, conda-forge, Docker Hub, CRAN), which hosts installable artifacts. Registry entries primarily support discoverability and citation, while package entries primarily support distribution and installation. You usually want both.
 
 Useful registries depend on the audience:
 
@@ -33,11 +35,11 @@ Useful registries depend on the audience:
 - **[Research Software Directory](https://research-software-directory.org/)** - Dutch-academic-flavoured registry; LUMC and other UMCs have entries here.
 - **[WorkflowHub](https://workflowhub.eu/)** - A registry for describing, sharing and publishing scientific computational workflows
 - **[Zenodo](https://zenodo.org/)** - strictly speaking a deposit/archive, but it issues DOIs and is searchable.
-- **[Software Heritage](https://www.softwareheritage.org/)** - universal archive; assigns a SWHID identifier that resolves to a specific commit, even if the original repository disappears.
+- **[Software Heritage](https://www.softwareheritage.org/)** - universal archive; assigns a Software Hash Identifier (SWHID) that resolves to a specific commit, even if the original repository disappears.
 
 Using multiple registries is encouraged, as different communities rely on different platforms. Registering in several involves only limited one-time effort.
 
-For a curated, audience-specific overview, see [Awesome Research Software Registries](https://github.com/NLeSC/awesome-research-software-registries), a registry index organised by country, organisation, language, and domain.
+For a curated, audience-specific overview, see [Awesome Research Software Registries](https://github.com/NLeSC/awesome-research-software-registries), a registry index organized by country, organization, language, and domain.
 
 > **In the SMP:** for each registry, capture the name and the URL or ID of your entry.
 
@@ -67,7 +69,7 @@ Useful resources on identifiers themselves:
 
 ## Citation
 
-A `CITATION.cff` file in the repository root is the modern way to make software citable. It is plain YAML, machine-readable, and recognised natively by GitHub, GitLab, and Zenodo. When a Zenodo release is created, the `CITATION.cff` is read automatically and used to populate the deposit's authors and metadata.
+A `CITATION.cff` file in the repository root is the modern way to make software citable. It is plain YAML, machine-readable, and recognized natively by GitHub, GitLab, and Zenodo. When a Zenodo release is created, the `CITATION.cff` is read automatically and used to populate the deposit's authors and metadata.
 
 A minimal `CITATION.cff` includes:
 
@@ -82,7 +84,7 @@ The [CFF INIT](https://citation-file-format.github.io/cff-initializer-javascript
 
 If a methods paper exists for the software, be explicit in the citation: *cite the paper for the method and cite the software DOI for the exact implementation/version*.
 
-A practical reference on the whole workflow: [The Turing Way - Software Citation with `CITATION.cff`](https://book.the-turing-way.org/communication/citable/citable-cff.html).
+A practical reference on the whole workflow: [The Turing Way - Software Citation with `CITATION.cff`](https://book.the-turing-way.org/communication/citable/citable-cff.html). For the full `CITATION.cff` and `codemeta.json` field-by-field specification, see [Software metadata](metadata.md).
 
 > **In the SMP:** the Publications question captures the paper(s) that describe the method, with their DOI/PMID/PMCID. The software DOI lives under Persistent identifiers. Keeping these separate is intentional. A piece of software can outlive its methods paper, or vice versa.
 
@@ -94,7 +96,7 @@ Without a license, code is "all rights reserved" by default - even if it is publ
 
 ### Which license?
 
-The LUMC default is **"as open as possible, as closed as necessary"**. Concretely, the recommended default is the [**Apache License 2.0**](https://www.apache.org/licenses/LICENSE-2.0). It is permissive (compatible with most other open licenses, including commercial use), includes an explicit patent grant (a real practical advantage over MIT or BSD-3-Clause for software that might touch patentable methods), and is widely understood.
+In practice, the [**Apache License 2.0**](https://www.apache.org/licenses/LICENSE-2.0) is a common and sensible default for research software: it is permissive (compatible with most other open licenses, including commercial use), includes an explicit patent grant (advantage over MIT or BSD-3-Clause for software that might touch patentable methods), and is widely understood. Note that this is guidance as there is no official LUMC-wide software license recommendation. If you are unsure which license fits your project, contact the {{rsd}}.
 
 If you have a specific reason to prefer something else:
 
@@ -102,19 +104,20 @@ If you have a specific reason to prefer something else:
 - **GPL-3.0** or **AGPL-3.0** - copyleft. Forces downstream users to keep their derivatives open under the same terms. Choose deliberately; copyleft is a real constraint on adopters.
 - **CC-BY 4.0** - usually for *data and documentation*, not code. Avoid licensing code under a Creative Commons license, they were not designed for that.
 
-Always use the [SPDX identifier](https://spdx.org/licenses/) (`Apache-2.0`, not "Apache 2.0"). It is machine-readable and recognised by package registries, GitHub, and most other tooling.
+Always use the [Software Package Data Exchange (SPDX) identifier](https://spdx.org/licenses/) (`Apache-2.0`, not "Apache 2.0"). It is machine-readable and recognized by package registries, GitHub, and most other tooling.
 
 Useful references:
 
 - [OSI Approved Licenses](https://opensource.org/licenses) - Open source licenses approved by open source initiative
 - [Choose A License](https://choosealicense.com/) - a quick licenses walk-through.
 - [tl;dr Legal](https://www.tldrlegal.com/) - plain-English summaries of common licenses.
-- [Public License Selector](http://ufal.github.io/public-license-selector/) - a quiz for choosing a license.
+- [Public License Selector](https://ufal.github.io/public-license-selector/) - a quiz for choosing a license.
 - [Free Software Foundation - Licensing & Compliance](https://www.fsf.org/licensing/) - FSF's licensing recommendations and FAQ.
 - [The Turing Way - Licensing chapter](https://book.the-turing-way.org/reproducible-research/licensing) - broader treatment with legal and ethical context.
 - [eScience Center - How to share software](https://esciencecenter-digital-skills.github.io/research-software-support/modules/licenses/how_to_share) - practical guide.
+- [LUMC data-publication license flowchart](https://www.albinusnet.nl/siteassets/weten-en-regelen/bestanden/onderzoek/20230131_flowchart_data-publication-licences.pdf) (internal) - a decision aid for licensing published *data* (e.g., Creative Commons); note that software uses different licenses.
 
-The repository should contain a `LICENSE` file (the full license text) at the root. Most forges create one for you when you initialise the repository or run a "Choose a license" wizard.
+The repository should contain a `LICENSE` file (the full license text) at the root. Most forges create one for you when you initialize the repository or run a "Choose a license" wizard.
 
 > **In the SMP:** the License question uses the SPDX identifier list (an integrated search via the SciWiz form). If the software is unreleased and you have not yet chosen a license, write down *which* license you intend to use.
 
@@ -157,8 +160,8 @@ If a methods paper, preprint, or application-note exists for your software, link
 
 ## Further reading
 
-- [Choose A License](https://choosealicense.com/) - license picker.
-- [SPDX](https://spdx.org/licenses/) - canonical machine-readable license identifiers.
-- [The Turing Way - Software Citation](https://book.the-turing-way.org/communication/citable/) and [Licensing](https://book.the-turing-way.org/reproducible-research/licensing) - broader treatment.
-- [Zenodo–GitHub integration guide](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) - official walk-through of the recommended workflow.
-- [Awesome Research Software Registries](https://github.com/NLeSC/awesome-research-software-registries) - registry directory.
+- [Choose A License](https://choosealicense.com/). License picker.
+- [SPDX](https://spdx.org/licenses/). Canonical machine-readable license identifiers.
+- The Turing Way. [Software Citation](https://book.the-turing-way.org/communication/citable/) and [Licensing](https://book.the-turing-way.org/reproducible-research/licensing). Broader treatment.
+- [Zenodo–GitHub integration guide](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content). Official walk-through of the recommended workflow.
+- [Awesome Research Software Registries](https://github.com/NLeSC/awesome-research-software-registries). Registry directory.

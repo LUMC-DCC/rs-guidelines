@@ -1,6 +1,6 @@
 # Are you developing RS?
 
-As a rule of thumb, to assess whether you are developing research software, consider the following questions:
+As a rule of thumb, to assess whether you are developing research software (RS), consider the following questions:
 
 1.	Are you writing code to support or conduct research for a publication?
 2.	Have you created scripts or programs to analyze or process research data?

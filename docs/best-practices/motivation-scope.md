@@ -15,7 +15,7 @@ Every research software project answers some version of the question: *what curr
 
 Two or four sentences is usually enough. A useful template:
 
-> In *<field/context>*, *<task>* is currently *<manual / slow / inconsistent / hard to reproduce>* because *<reason>*. Existing tools such as *<X>* and *<Y>* solve *<part>*, but not *<gap>*. This software addresses the gap by *<approach>*. It does not attempt to *<explicit non-goal>*.
+> In `<field/context>`, `<task>` is currently `<manual / slow / inconsistent / hard to reproduce>` because `<reason>`. Existing tools such as `<X>` and `<Y>` solve `<part>`, but not `<gap>`. This software addresses the gap by `<approach>`. It does not attempt to `<explicit non-goal>`.
 
 ### Anti-patterns to avoid
 
@@ -24,16 +24,16 @@ Two or four sentences is usually enough. A useful template:
 - **Vague scope.** *"We needed better data analysis."* Better than what, by which measure?
 - **Confusing the audience with the developer.** A motivation written for the supervisor is not the same as one written for a future user. Aim at the latter.
 
-> **In the SMP:** the Problem field expects 2–4 sentences that an expert from an adjacent sub-field could understand. Drop the jargon by one level from what you would write in a paper's abstract.
+> **In the Software Management Plan (SMP):** the Problem field expects 2–4 sentences that an expert from an adjacent sub-field could understand. Drop the jargon by one level from what you would write in a paper's abstract.
 
 ## Purpose categories
 
-The Purpose field is a controlled vocabulary: a multi-select list with categories such as *data analysis*, *pipeline / workflow*, *library / framework*, *visualisation*, *clinical decision support*, *simulation*, *infrastructure / utility*, *interface / wrapper*, and so on.
+The Purpose field is a controlled vocabulary: a multi-select list with categories such as *data analysis*, *pipeline / workflow*, *library / framework*, *visualization*, *clinical decision support*, *simulation*, *infrastructure / utility*, *interface / wrapper*, and so on.
 
 A few rules of thumb:
 
 - **Describe the outputs, not the libraries.** A wrapper that calls scikit-learn is not, on its own, a *machine-learning library*; the library is scikit-learn, your software is a *pipeline*, a *workflow*, or a *CLI*.
-- **Genuine reuse vs interfacing.** If your code imports a third-party library and exposes a thin shell, you are *interfacing*. Describe the shell's purpose ("CLI for in-house pipeline X using library Y"), not the library's. Genuine *reuse* means you fork and modify, or you re-implement an algorithm with substantial customisation.
+- **Genuine reuse vs interfacing.** If your code imports a third-party library and exposes a thin shell, you are *interfacing*. Describe the shell's purpose ("CLI for in-house pipeline X using library Y"), not the library's. Genuine *reuse* means you fork and modify, or you re-implement an algorithm with substantial customization.
 - **Be selective.** Two or three categories is usually right.
 
 Worked examples:

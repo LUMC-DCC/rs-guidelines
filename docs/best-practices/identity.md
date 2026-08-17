@@ -1,6 +1,6 @@
 # Project identity & people
 
-Before anything technical, a software project needs a name, a small set of named humans, and a clear statement of whether any external regime governs it.
+Before anything technical, a software project needs a name, a small set of named people responsible for it, and a clear statement of whether any external regulations apply.
 
 ## Software title
 
@@ -9,18 +9,18 @@ A title is the public name of the software. It travels everywhere: in citations,
 A good title is **specific**, **unique**, and **short**:
 
 - *Specific.* Someone who has never heard of your project should be able to guess, within one sentence, what it is broadly about. "ALSGenoTyper" tells you something; "Project Phoenix" tells you nothing.
-- *Unique.* Before you finalise a public name, search the places where collisions may occur: GitHub and GitLab, [PyPI](https://pypi.org/), [conda-forge](https://conda-forge.org/), CRAN, Bioconductor, [bio.tools](https://bio.tools/), Zenodo, and Google. Generic names, such as "Pipeline", "Tools", "Analyzer", almost always collide and usually with something better-funded than you.
+- *Unique.* Before you finalize a public name, search the places where collisions may occur: GitHub and GitLab, [PyPI](https://pypi.org/), [conda-forge](https://conda-forge.org/), CRAN, Bioconductor, [bio.tools](https://bio.tools/), Zenodo, and Google. Generic names, such as "Pipeline", "Tools", "Analyzer", almost always collide and usually with something better-funded than you.
 - *Short.* Long enough to be informative; short enough to fit on a CLI prompt, in a citation key, and in a project banner.
 
 Common pitfalls worth avoiding:
 
-- **Internal codenames as public titles.** Pet names or supervisor's coffee orders are fine in private; rename before publishing.
+- **Internal codenames as public titles.** An informal working name is fine during development; rename before publishing.
 - **Naming after the cohort or department only.** "ALS-tool" and "LUMC-Pathology" are hard to disambiguate at scale, even within LUMC.
 - **Putting the version in the name.** `MyTool2`, `MyToolPro`, `MyToolFinal`. Versions belong in tags, not in names.
 
 If the project might in the future be renamed (this happens), keep the *name* and *identifier* layers separate: the GitHub repo URL, the package name, the documentation site, and the DOI on Zenodo are all things that can be migrated cleanly if the title is the only fixed point.
 
-> **In the SMP:** the Title field should contain the final public name as it would appear in publications or presentations.
+> **In the Software Management Plan (SMP):** the Title field should contain the final public name as it would appear in publications or presentations.
 
 ## Authors vs. maintainers
 
@@ -31,7 +31,7 @@ In research software, two roles get conflated and then confused. The SMP separat
 
 In most projects, **maintainers ⊆ authors ⊊ contributors**: every maintainer is an author, every author is also (trivially) a contributor, but plenty of contributors (who fixed a typo, opened a useful issue, reviewed a PR) are neither authors nor maintainers.
 
-### Why at least two maintainers
+### Why a project needs at least two maintainers
 
 The single most common failure mode of research software is: the only person who knew how it worked left. A second maintainer with repository/admin access can:
 
@@ -51,29 +51,37 @@ For every author and maintainer, record at least full name, affiliation, and a c
 
 Recording the funder, grant number, PI, and internal LUMC project code seems bureaucratic until you need it for a Zenodo deposit, a funder report, or a hand-over.
 
-> **In the SMP:** the Funding section captures funder name, project title (often a working acronym), grant/internal code, and PI(s). Repeat for each distinct funding source. Use the legal-entity name (e.g., "ZonMw", not "ZM"; "Horizon Europe", not "HE").
+Where they exist, prefer persistent identifiers over free text: they are unambiguous and machine-readable, which makes funder reports and metadata records easier to generate. Large funders (NWO, ZonMw, Horizon Europe) issue proper identifiers for both the organization and the individual grant; smaller foundations may not, in which case the plain name and grant number are sufficient.
 
-## The regulated-software flag
+Where to find identifiers:
 
-Tick the regulated-software flag if your software is (or might plausibly become) subject to a legal, clinical, institutional, or sector-specific regulatory regime. Be conservative. The flag does not mean "we are compliant". It means "this project needs regulatory attention".
+- [Research Organization Registry (ROR)](https://ror.org/). Persistent identifiers for research organizations and funders; for example, NWO is [ror.org/04jsz6e67](https://ror.org/04jsz6e67). A ROR record also links the organization's Crossref Funder ID.
+- [Crossref Funder Registry](https://search.crossref.org/funding). Searchable directory of funder names and their Crossref Funder IDs.
+- [NWO grant IDs](https://www.nwo.nl/en/grant-id). How NWO project (grant) identifiers work and where to find them.
 
-Common situations at LUMC that should trigger the flag:
+> **In the SMP:** the Funding section captures funder name, project title (often a working acronym), grant/internal code, and PI(s). Where a funder or organization has a persistent identifier (a ROR ID or Crossref Funder ID), record it alongside the name. Repeat for each distinct funding source. Use the legal-entity name (e.g., "ZonMw", not "ZM"; "Horizon Europe", not "HE").
 
-- The software is or will be a **Software as a Medical Device (SaMD)**, IVD product, or otherwise covered by **MDR**, **IVDR**, **FDA**, or comparable rules.
+## Regulated software
+
+Your software may be subject to a legal, clinical, institutional, or sector-specific regulatory regime, now or as it develops. Decide early whether it is, and be conservative. Recognizing that a project needs regulatory attention is not the same as claiming it is already compliant.
+
+Common situations at LUMC where this applies:
+
+- The software is or will be a **Software as a Medical Device (SaMD)**, in vitro diagnostic (IVD) product, or otherwise covered by **MDR**, **IVDR**, **FDA**, or comparable rules.
 - The software is or will be **clinical decision support**: anything that influences diagnosis, treatment, monitoring, or triage.
 - The software is part of a **validated laboratory workflow** (ISO 15189, ISO 13485, IEC 62304, ISO 14971).
 - The software runs under departmental SOPs that have regulatory implications.
 - The software falls under **NEN 7510** (Dutch information-security standard for healthcare) or comparable institutional security requirements.
 
-A research prototype can become regulated when it starts influencing decisions about real patients. Re-evaluate the flag whenever the project's scope materially changes.
+A research prototype can become regulated when it starts influencing decisions about real patients. Re-evaluate whenever the project's scope materially changes.
 
-If the flag is set, the SMP is *not* a substitute for the regulatory artefacts you will need: IEC 62304 software life-cycle records, ISO 14971 risk file, MDR/IVDR technical file, and so on. Contact <LUMC legal> early.
+If your software is regulated, the SMP is *not* a substitute for the regulatory artifacts you will need: IEC 62304 software life-cycle records, ISO 14971 risk file, MDR/IVDR technical file, and so on. Contact {{legal}} early.
 
-> **In the SMP:** answer "Yes" if any regulatory regime applies *now or is plausible during the project's lifetime*. The SMP captures only the fact that the regime applies; the regulatory documentation lives elsewhere.
+> **In the SMP:** this maps to the regulated-software flag. Answer "Yes" if any regulatory regime applies *now or is plausible during the project's lifetime*. The SMP captures only the fact that the regime applies; the regulatory documentation lives elsewhere.
 
 ## Further reading
 
-- [ORCID](https://orcid.org/) - persistent author identifier.
-- [Contributor Roles Taxonomy (CRediT)](https://credit.niso.org/) - a vocabulary for describing who did what on a research output. Useful when filling in author roles in `CITATION.cff` or in funder reports.
-- [Citation File Format (`CITATION.cff`)](https://citation-file-format.github.io/), see [Sharing & licensing](sharing-licensing.md).
-- <LUMC legal> (internal) for SaMD/MDR/IVDR questions.
+- [ORCID](https://orcid.org/). Persistent author identifier.
+- [Contributor Roles Taxonomy (CRediT)](https://credit.niso.org/). A vocabulary for describing who did what on a research output. Useful when filling in author roles in `CITATION.cff` or in funder reports.
+- [Citation File Format (`CITATION.cff`)](https://citation-file-format.github.io/). See [Sharing & licensing](sharing-licensing.md).
+- {{legal}} (internal). For SaMD/MDR/IVDR questions.

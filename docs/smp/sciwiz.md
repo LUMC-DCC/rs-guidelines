@@ -1,20 +1,27 @@
 # Software Management Plan in SciWiz
 
-[**SciWiz**](https://sciwiz.lumc.nl/) is the LUMC’s instance of the platform that provides the SMP template as an
+[**SciWiz**](https://sciwiz.lumc.nl/) is the LUMC’s instance of the platform that provides the Software Management Plan (SMP) template as an
 interactive online form. You can log in, create a project, and step through the questions at your own pace. SciWiz provides a flexible approach to standardizing software management across LUMC, while also accommodating diverse project needs.
 
 > Note: SciWiz is currently only accessible via the LUMC network.
 
 ## How to create an SMP
 
+The short walkthrough below shows the basic workflow in SciWiz:
+
+<video controls preload="metadata" width="100%" style="max-width:100%; border-radius:4px;">
+  <source src="../../assets/sciwiz-workflow.mp4" type="video/mp4">
+  Your browser does not support embedded video — <a href="../../assets/sciwiz-workflow.mp4">download the walkthrough</a> instead.
+</video>
+
 1. Access [SciWiz](https://sciwiz.lumc.nl/).
-    - Go to [sciwiz.lumc.nl](https://sciwiz.lumc.nl/). 
+    - Go to [sciwiz.lumc.nl](https://sciwiz.lumc.nl/).
     - Log in or create an account using your LUMC email address.
 2. Create a new project
     - Once logged in, in the left-hand navigation bar, click **Projects**.
     - Click **Create** (top right).
     - Enter the name of your software project.
-    - Select the following Knowledge Model: “LUMC-DCC Software Management Plan”.
+    - Select the following Knowledge Model: “LUMC-DCC Software Management Plan”, choosing its latest available version.
     - When prompted to select Question Tags, you can filter questions according to your project’s complexity, see [Management levels](#management-levels) for more details.
     - Click **Create** to start.
 3. Write the SMP by answering questions. You can save your progress at any time and return later to complete it. You can also invite collaborators.
@@ -25,7 +32,7 @@ The **Research Software best practices** section of this guideline roughly maps 
 
 The SMP uses three management levels—A, B and C—to adjust the questions according to management needs, with A being the lowest level and C the highest.
 
-| Level | Typical software | Expected rigour |
+| Level | Typical software | Expected rigor |
 |---|---|---|
 | **A — personal / one-off** | A script or notebook for one paper | Repository, license, purpose, maintainership, minimal reproducibility notes |
 | **B — project / shared** | A reusable pipeline, package, workflow or tool used by a group | Documentation, testing, citation, packaging, dependency management, maintenance plan |
@@ -55,10 +62,10 @@ Do not answer with terms such as **"planned"** or **"not yet implemented"**. Ins
 ## A note on regulated software
 
 The SMP is **not** a substitute for the regulatory documentation that must be produced for medical device or in vitro diagnostic software.
-While it can complement such documentation,it cannot replace the artefacts required for Software as a Medical Device (SaMD), IVD software, clinical decision-support tools, or software developed under a formal quality-management system (ISO 13485, IEC 62304, ISO 14971, MDR, IVDR, etc.).
+While it can complement such documentation,it cannot replace the artifacts required for Software as a Medical Device (SaMD), in vitro diagnostic (IVD) software, clinical decision-support tools, or software developed under a formal quality-management system (ISO 13485, IEC 62304, ISO 14971, MDR, IVDR, etc.).
 
-If your software produces or influences a clinical recommendation, triages patients, is embedded in a regulated device, or is otherwise covered by a sectoral regime, flag this in the General chapter and contact <LUMC legal> early. Treat the SMP as a high-level overview that complements, not replaces, your regulated documentation.
+If your software produces or influences a clinical recommendation, triages patients, is embedded in a regulated device, or is otherwise covered by a sectoral regime, flag this in the General chapter and contact {{legal}} early. For guidance on recognizing regulated software, see [Regulated software](../best-practices/identity.md#regulated-software). Treat the SMP as a high-level overview that complements, not replaces, your regulated documentation.
 
 ## A note on data: the SMP does not replace the DMP
 
-The LUMC SMP addresses data only in relation to how software *handles* it. Details about legal basis, retention, consent, and storage of personal data belong in your Data Management Plan. The [Risks & mitigation](../best-practices/risks.md) chapter only flags that the software has a relationship with sensitive data and points to the corresponding DMP.
+The LUMC SMP addresses data only in relation to how software *handles* it. Details about legal basis, retention, consent, and storage of personal data belong in your Data Management Plan (DMP). The [Risks & mitigation](../best-practices/risks.md) chapter only flags that the software has a relationship with sensitive data and points to the corresponding DMP.

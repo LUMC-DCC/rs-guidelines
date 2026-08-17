@@ -12,7 +12,8 @@ contributing to its long-term impact and alignment with best practices, includin
 
 ## Why write it
 
-An SMP may sound like an extra administrative task, but it is a powerful tool for planning, organizing, and future-proofing your research software.
+An SMP is a tool for planning, organizing, and future-proofing your research software, not just a form to be filled in.
+The document is the by-product; the value is in the thoughts it encourages, and in having the answers written down where your future self and your colleagues can find them.
 Here's why:
 
 * **Avoid future headaches:** Plan early for software maintenance and updates, so you’re not caught off guard when environments or dependencies change.
@@ -48,6 +49,8 @@ Write an SMP if your software is at least one of:
 
 You probably don't need one for one-line scripts, throwaway exploratory notebooks, or personal utilities you will never share. A practical test: if a future colleague would reasonably need instructions to understand, rerun, or maintain it, an SMP is warranted.
 
+That test tells you whether to *write* an SMP — not whether the SMP is worth your attention. The questions it asks are simply good research software management practice: who maintains this, how is it licensed, where does it live, how would someone else rerun it. They are worth answering for any project, even one that never gets a plan of its own. Today's throwaway script is also tomorrow's shared tool more often than anyone expects, and the projects that age well are usually the ones whose authors had thought about these questions early.
+
 ___
 
 ## SMP resources
@@ -56,4 +59,4 @@ ___
 |-------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | [Practical guide to Software Management Plans by the Netherlands eScience Center and NWO (latest version)](https://doi.org/10.5281/zenodo.7038280) | Provides guidance to create a Software Management Plan (SMP) template                 |
 | [Software Management Wizard (SM Wizard) by ELIXIR](https://smw.dsw.elixir-europe.org/)                                  | ELIXIR Tool for creating SMP in different formats and connecting it to FAIR evaluator |
-|[Animation by TU Delft: What is a Software Management Plan?](https://youtu.be/5Zy3l4dTJd4?si=SetRZ-lHwv-BSSY2)| The animation introduces SMPs |
+|[Animation by TU Delft: What is a Software Management Plan?](https://youtu.be/5Zy3l4dTJd4)| The animation introduces SMPs |

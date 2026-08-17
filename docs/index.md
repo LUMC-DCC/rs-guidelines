@@ -10,9 +10,9 @@ Given the diverse nature of research software, this guide provides practical rec
 ## What is research software?
 
 > *Research Software includes source code files, algorithms, scripts, computational workflows and executables that were created during the research process or for a research purpose.*
-> -- [Gruenpeter *et al.* 2021]
+> -- [Gruenpeter *et al.* (2021)]
 
-[Gruenpeter *et al.* 2021]: https://doi.org/10.5281/zenodo.5504016
+[Gruenpeter *et al.* (2021)]: https://doi.org/10.5281/zenodo.5504016
 
 Research software can be a research output in itself, or it can be developed to support research activities
 throughout the research lifecycle, from data collection and analysis to visualization and dissemination.
@@ -31,15 +31,15 @@ This guide focuses on the role of research software in supporting reproducible a
 Within this context, it applies to a broad range of research software: from small, single-use scripts to more complex applications serving as research infrastructure.
 
 > **IMPORTANT:** In some cases, additional regulations may apply that are not covered by this guide.
-> Please make sure to check for additional guidelines or regulations related to, e.g., clinical research, [software as a medical device], processing of potentially personally identifiable information, software security, or security of (cloud) computing environments.
+> Please make sure to check for additional guidelines or regulations related to, e.g., clinical research, [software as a medical device] (internal), processing of potentially personally identifiable information, software security, or security of (cloud) computing environments.
 
-[software as a medical device]: https://www.albinusnet.nl/en/products-and-services/research/research-facilities/research-with-medical-devices/?
+[software as a medical device]: https://www.albinusnet.nl/en/products-and-services/research/research-facilities/research-with-medical-devices/
 
 ## Assumed knowledge
 
 This guide assumes that you have a basic understanding of software development and research practices.
 Additionally, it is helpful if you are familiar with Git.
-If you are not familiar with Git, you can enroll in the [LUMC's Git course](https://git.lumc.nl/courses/gitcourse).
+If you are not familiar with Git, you can enroll in the [LUMC's Git course](https://git.lumc.nl/courses/gitcourse) (internal).
 You can find more training on our [LUMC FAIR Research Software Training website](https://lumc-dcc.github.io/research_software_training/).
 
 ## Guide organization & usage

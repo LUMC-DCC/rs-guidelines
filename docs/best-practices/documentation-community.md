@@ -2,7 +2,7 @@
 
 A lack of documentation is the most frequently cited reason for research software becoming unsable. The code keeps working; the knowledge of *how to use it* dissipates the moment the original author moves on.
 
-This chapter is about the documentation and the social structures around the code: what users need to know, what the next developer needs to know, and how the community around the project organises itself.
+This chapter is about the documentation and the social structures around the code: what users need to know, what the next developer needs to know, and how the community around the project organizes itself.
 
 ## Three audiences
 
@@ -49,7 +49,7 @@ For API documentation specifically:
 - [**Redoc**](https://redocly.com/redoc/) or [**Swagger UI**](https://swagger.io/tools/swagger-ui/) - for REST APIs documented with OpenAPI.
 - Language-native generators: `rustdoc` (Rust), `pkgdown` (R), `JSDoc` (JavaScript), `Javadoc` (Java), `Doxygen` (C/C++).
 
-> **In the SMP:** the User documentation question distinguishes three states - *full docs* (a site), *README only*, and *no docs*. Level A projects often legitimately stop at a good README. For Level B and C, "README only" is a limitation.
+> **In the Software Management Plan (SMP):** the User documentation question distinguishes three states - *full docs* (a site), *README only*, and *no docs*. Level A projects often legitimately stop at a good README. For Level B and C, "README only" is a limitation.
 
 ## Deployment & dependency documentation
 
@@ -91,7 +91,7 @@ A `CONTRIBUTING.md` file explains how outsiders (and forgetful insiders) should 
 - branch and pull request (PR) expectations (branch naming, target branch, commit-message conventions);
 - review process and timelines;
 - coding style and linting;
-- whether external contributions require a CLA, DCO, or attribution.
+- whether external contributions require a Contributor License Agreement (CLA), a Developer Certificate of Origin (DCO), or attribution.
 
 The GitHub guide on [setting guidelines for repository contributors](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors) is a solid reference.
 
@@ -112,7 +112,7 @@ A `CHANGELOG.md` makes version history human-readable. The standard format is [K
 - **Fixed** - bug fixes.
 - **Security** - security-relevant fixes.
 
-[Common Changelog](https://github.com/vweevers/common-changelog) is a stricter subset, useful if you want machine-parseable changelogs. For details on generating changelogs from Git history, see [A Beginner's Guide to Git - What is a changelog and how to generate it](https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/).
+[Common Changelog](https://github.com/vweevers/common-changelog) is a stricter subset, useful if you want machine-parseable changelogs. For details on generating changelogs from Git history, see [A Beginner's Guide to Git - What is a Changelog and How to Generate It](https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/).
 
 Short changelog entries are fine. See also the [Versioning & releases](versioning-releases.md) chapter.
 
@@ -126,8 +126,8 @@ Email-only support is acceptable for Level A. For Level B/C it is weak because r
 
 A useful bug-report template asks for:
 
-- **Expected behaviour.**
-- **Actual behaviour.**
+- **Expected behavior.**
+- **Actual behavior.**
 - **Steps to reproduce** - including input, command, and environment.
 - **Software version** and **operating system / environment**.
 - **A minimal example input** if possible.
@@ -166,9 +166,9 @@ Research-software projects often use **lazy consensus** for routine changes (a P
 
 ## Further reading
 
-- [Write the Docs - Software documentation guide](https://www.writethedocs.org/guide/) - broad, community-built reference on documentation craft.
-- [The Turing Way - Communication and reporting](https://book.the-turing-way.org/communication/communication) - chapters on accessible documentation, citation, and persistent links.
-- [Diátaxis](https://diataxis.fr/) - a clean framework for thinking about documentation in four modes (tutorials, how-tos, reference, explanation). Genuinely useful when you cannot decide where a piece of documentation belongs.
-- [Open Source Guides - Starting an open source project](https://opensource.guide/starting-a-project/) - practical, especially for the social and community side.
-- [Contributor Covenant](https://www.contributor-covenant.org/) - code-of-conduct template.
-- [Keep a Changelog](https://keepachangelog.com/) - changelog conventions.
+- Write the Docs. [Software documentation guide](https://www.writethedocs.org/guide/). Broad, community-built reference on documentation craft.
+- The Turing Way. [Communication and reporting](https://book.the-turing-way.org/communication/communication). Chapters on accessible documentation, citation, and persistent links.
+- [Diátaxis](https://diataxis.fr/). A clean framework for thinking about documentation in four modes (tutorials, how-tos, reference, explanation). Genuinely useful when you cannot decide where a piece of documentation belongs.
+- Open Source Guides. [Starting an open source project](https://opensource.guide/starting-a-project/). Practical, especially for the social and community side.
+- [Contributor Covenant](https://www.contributor-covenant.org/). Code-of-conduct template.
+- [Keep a Changelog](https://keepachangelog.com/). Changelog conventions.

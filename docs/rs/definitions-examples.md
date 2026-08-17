@@ -3,11 +3,11 @@
 ## Definitions of RS
 
 > *Research Software includes source code files, algorithms, scripts, computational workflows and executables that were created during the research process or for a research purpose.*
-> -- [Gruenpeter *et al.* 2021]
+> -- [Gruenpeter *et al.* (2021)]
 
-[Gruenpeter *et al.* 2021]: https://doi.org/10.5281/zenodo.5504016
+[Gruenpeter *et al.* (2021)]: https://doi.org/10.5281/zenodo.5504016
 
-Research software can be a research output in itself, or it can be developed to support research activities
+Research software (RS) can be a research output in itself, or it can be developed to support research activities
 throughout the research lifecycle, from data collection and analysis to visualization and dissemination.
 It can be used to analyze data, simulate systems, visualize results, and more.
 
@@ -16,14 +16,14 @@ Research software can be developed by researchers, software engineers, or a comb
 
 To learn more about the definition of research software, see
 
-* [Defining Research Software: a controversial discussion (2021) by Gruenpeter *et al.*](https://doi.org/10.5281/zenodo.5504016)
-* [The Research Software Encyclopedia: A Community Framework to Define Research Software (2022) by Sochat *et al.*](https://doi.org/10.5334/jors.359)
+- Gruenpeter *et al.* (2021). [Defining Research Software: a controversial discussion](https://doi.org/10.5281/zenodo.5504016).
+- Sochat *et al.* (2022). [The Research Software Encyclopedia: A Community Framework to Define Research Software](https://doi.org/10.5334/jors.359).
 
 
 ## Roles & examples of RS
 
 Here, we provide examples of RS. The categories are based on the role of the software in the research process
-(inspired by [Defining the roles of research software (2023) by Nieuwpoort and Katz](https://doi.org/10.54900/9akm9y5-5ject5y)).
+(inspired by Nieuwpoort & Katz (2023), [Defining the roles of research software](https://doi.org/10.54900/9akm9y5-5ject5y)).
 
 **Data collection & instrumentation:**
 

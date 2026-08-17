@@ -1,0 +1,33 @@
+name: Check links
+
+on:
+  pull_request:
+  schedule:
+    - cron: "0 6 * * 1"  # weekly, Monday 06:00 UTC — link rot is gradual
+  workflow_dispatch:
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install .
+
+      - name: Build site
+        run: mkdocs build --strict
+
+      - name: Check links in the built site
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Check rendered HTML so token-expanded and generated links are covered.
+          # Internal LUMC hosts are excluded via .lycheeignore (unreachable from CI).
+          args: --no-progress --exclude-mail --accept 200,206,429 './site/**/*.html'
+          fail: false  # report broken links without blocking; make required later if wanted

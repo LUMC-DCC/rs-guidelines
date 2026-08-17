@@ -17,7 +17,9 @@ Common categories:
 - **Storage tiers**;
 - **Managed databases** - institutional or cloud-hosted;
 - **Cloud compute or storage** - AWS, Azure, GCP, SURF cloud;
-- **Specialised lab instruments** that the software controls, reads from, or feeds.
+- **Specialized lab instruments** that the software controls, reads from, or feeds.
+
+Where a project stores data, the storage location must follow the LUMC Data Stewardship storage SOP (internal). Commercial cloud (AWS, Azure, GCP) is generally not permitted for personal or patient data; use approved institutional storage for such data.
 
 This is *not* the place for GitHub or GitLab hosting, package registries, or documentation hosting, those belong in [Sharing & licensing](sharing-licensing.md) and [Documentation & community](documentation-community.md), unless you are using paid tiers with explicit capacity or contract implications.
 
@@ -26,7 +28,7 @@ For each item, capture:
 - **Requirement** - what you need;
 - **Details** - capacity, access constraints, funding source.
 
-> **In the SMP:** the Infrastructure list is open-ended. Be specific enough that a hand-over to a new team would not require guessing. "GPU access" is not enough; "2× NVIDIA A100 80GB on Shark, allocation under PI <X>, valid until end of 2027" is.
+> **In the Software Management Plan (SMP):** the Infrastructure list is open-ended. Be specific enough that a hand-over to a new team would not require guessing. "GPU access" is not enough; "2× NVIDIA A100 80GB on Shark, allocation under PI `<X>`, valid until end of 2027" is.
 
 ## External services
 
@@ -35,15 +37,15 @@ External services are the people, contracts, and paid tiers outside your immedia
 Examples:
 
 - **IT&DI** support and infrastructure tickets;
-- **LUMC-DCC** consultancy (RSE review, FAIR support, DMP help);
+- **{{rsd}}** - the central point for research support, including FAIR and data-management questions;
 - **External RSE review** or audit;
 - **Penetration testing** (for Level C with a network face);
 - **Paid CI minutes** on GitHub or GitLab when free tiers are exhausted;
 - **Commercial APIs** (OpenAI, Anthropic, mapping services, payment processors);
-- **Legal or IP support**;
+- **Legal or intellectual property (IP) support**;
 - **Vendor support contracts** for instruments or proprietary software.
 
-Quantify where you can. *"Need DCC help"* is not enough. *"~5 days of DCC RSE consultancy across the project; ~10 hours/year of IT&DI support; €1,200/year for CI minutes once we move to a self-hosted runner"* is.
+Quantify where you can. *"Need RSE support"* is not enough. *"~5 days of external RSE support across the project; ~10 hours/year of IT&DI support; €1,200/year for CI minutes once we move to a self-hosted runner"* is.
 
 If a service is unfunded, say so. *"To be arranged"* is a valid early answer and a real planning risk; flagging it in the SMP is precisely the point.
 
@@ -93,9 +95,9 @@ A minimum viable continuity plan:
 
 - A **backup maintainer** has repository/admin access (this is also why the SMP requires at least two maintainers; see [Project identity & people](identity.md)).
 - **Installation and release instructions** are written down somewhere a stranger can find them.
-- **Open issues are triaged** before hand-over: labelled, prioritised, or closed with a reason.
+- **Open issues are triaged** before hand-over: labeled, prioritized, or closed with a reason.
 - **Credentials and secrets** are not tied to a personal account; they live in a shared secrets manager or a service account.
-- The **repository is transferred** to an LUMC or project organisation, not held in a personal GitHub account.
+- The **repository is transferred** to an LUMC or project organization, not held in a personal GitHub account.
 
 For Level C, the continuity plan might need more: named roles, escalation timelines, a hand-over checklist, and how users are notified.
 
@@ -148,4 +150,4 @@ If software *cannot* remain accessible, explain why. Valid reasons include sensi
 
 ## Further reading
 
-- [The Turing Way - Project Management](https://book.the-turing-way.org/project-design/project-design) - chapters on planning, hand-over, and lifecycle management.
+- The Turing Way. [Project Management](https://book.the-turing-way.org/project-design/project-design). Chapters on planning, hand-over, and lifecycle management.

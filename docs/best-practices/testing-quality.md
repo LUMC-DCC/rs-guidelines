@@ -7,7 +7,7 @@ Tests and quality checks are how you (and a future maintainer) know that the sof
 | Level | Minimum |
 |---|---|
 | **A** | Manual or smoke checks documented in the README |
-| **B** | Smoke tests, unit tests for critical logic, CI on at least one platform |
+| **B** | Smoke tests, unit tests for critical logic, continuous integration (CI) on at least one platform |
 | **C** | Unit + integration + end-to-end tests, CI matrix across platforms, release-blocking quality gates |
 
 Start where you are. Add the next level when the project becomes the next level, usually, when a second person starts depending on it.
@@ -28,7 +28,7 @@ A useful mental model is the **test pyramid** (Martin Fowler, [The Practical Tes
 
 Do **not** chase coverage percentages blindly. 100% line coverage on a function that runs `int(x) + 1` proves nothing; 60% coverage on the function that actually controls the scientific output is the one to focus on. **Test the code that can change the scientific conclusions first.**
 
-> **In the SMP:** the Test types field is multi-select. Match the depth to the project level and to the risk profile of what the software does. For Level C software making clinical recommendations, expect smoke + unit + integration + end-to-end + regression. For a Level A analysis script, smoke + a couple of unit tests of the critical function may be the right answer.
+> **In the Software Management Plan (SMP):** the Test types field is multi-select. Match the depth to the project level and to the risk profile of what the software does. For Level C software making clinical recommendations, expect smoke + unit + integration + end-to-end + regression. For a Level A analysis script, smoke + a couple of unit tests of the critical function may be the right answer.
 
 ## Test frameworks
 
@@ -111,11 +111,11 @@ Useful common combinations:
 
 Type-checking is a separate discipline but well worth adding for projects above Level A. In Python, `mypy` or `pyright` catch a useful class of bugs at the cost of writing type annotations. In compiled languages, type-checking is just "the compiler".
 
-The classic Python style guide is [PEP 8](https://peps.python.org/pep-0008/) (or, more readably, the [stylised PEP 8 presentation](https://pep8.org/)). For broader Python code-quality tooling and habits, the [Real Python guide](https://realpython.com/python-code-quality/) is a good overview. For an institutional badge programme, [OpenSSF Best Practices Badge](https://bestpractices.coreinfrastructure.org/) is the standard self-certification.
+The classic Python style guide is [PEP 8](https://peps.python.org/pep-0008/) (or, more readably, the [stylized PEP 8 presentation](https://pep8.org/)). For broader Python code-quality tooling and habits, the [Real Python guide](https://realpython.com/python-code-quality/) is a good overview. For an institutional badge program, [OpenSSF Best Practices Badge](https://bestpractices.coreinfrastructure.org/) is the standard self-certification.
 
 For Level B and C, enforce formatting and linting in **CI** or via **pre-commit hooks** (using [`pre-commit`](https://pre-commit.com/)) rather than relying on memory. The point is automation: a contributor's formatting mistake is caught at commit time, not after the maintainer finishes reviewing a PR.
 
-> **In the SMP:** the Code quality standards question is binary, with a follow-up listing the tools. Whether checks run in CI or as pre-commit hooks is a separate follow-up. "Yes" means *something is automated*; if quality is enforced only by code review and willpower, "No" is the better answer.
+> **In the SMP:** the Code quality standards question is binary, with a follow-up listing the tools. Whether checks run in CI or as pre-commit hooks is a separate follow-up. "Yes" means *something is automated*; if quality is enforced only by manual review and discipline, "No" is the better answer.
 
 ## Cross-platform / environment testing
 
@@ -132,9 +132,9 @@ For tests to be reproducible, they need stable input. Sample data and parameter 
 
 ## Further reading
 
-- [The Turing Way — Testing](https://book.the-turing-way.org/reproducible-research/testing/) — broad reference covering all the test types above.
-- [Martin Fowler — The Practical Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html) — the canonical short essay on what to test and at which level.
-- [Atlassian — Plan your regression-testing strategy](https://community.atlassian.com/forums/Jira-articles/Plan-your-regression-testing-strategy-by-asking-the-relevant/ba-p/1158403) — practical regression-testing guide.
-- [OpenSSF Best Practices Badge](https://bestpractices.coreinfrastructure.org/) — self-certifying badge for open-source projects.
-- [PEP 8](https://peps.python.org/pep-0008/) — the Python style guide; the closest thing to a universal reference in the Python world.
-- [pre-commit](https://pre-commit.com/) — framework for running formatters and linters as Git hooks.
+- The Turing Way. [Testing](https://book.the-turing-way.org/reproducible-research/testing/). Broad reference covering all the test types above.
+- Fowler. [The Practical Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html). The canonical short essay on what to test and at which level.
+- Atlassian. [Plan your regression-testing strategy](https://community.atlassian.com/forums/Jira-articles/Plan-your-regression-testing-strategy-by-asking-the-relevant/ba-p/1158403). Practical regression-testing guide.
+- [OpenSSF Best Practices Badge](https://bestpractices.coreinfrastructure.org/). Self-certifying badge for open-source projects.
+- [PEP 8](https://peps.python.org/pep-0008/). The Python style guide; the closest thing to a universal reference in the Python world.
+- [pre-commit](https://pre-commit.com/). Framework for running formatters and linters as Git hooks.

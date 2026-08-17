@@ -29,7 +29,7 @@ Bash - small helper scripts only, no scientific logic
 Rust >=1.78 - performance-critical parser, exposed through Python bindings
 ```
 
-> **In the SMP:** the Programming languages list captures language, version constraint, and role.
+> **In the Software Management Plan (SMP):** the Programming languages list captures language, version constraint, and role.
 
 ## Input and output data formats
 
@@ -38,7 +38,7 @@ CSV, JSON, XML, HDF5, and Parquet are *containers*, what makes data interoperabl
 
 For each input and output format, capture:
 
-- **Format name.** Prefer controlled **EDAM Format** terms where available (the SMP integrates with [EDAM](https://edamontology.org/) - start typing and pick from the dropdown). Common entries: `BAM`, `FASTQ`, `VCF`, `DICOM`, `NIfTI`, `BIDS`, `TSV`, `JSON`, `Parquet`, `NetCDF`.
+- **Format name.** Prefer controlled **EDAM Format** terms where available (the SMP integrates with [EDAM](https://edamontology.org/) - start typing and pick from the dropdown). Common entries: `BAM`, `FASTQ`, `VCF`, `DICOM`, `NIfTI`, `BIDS`, `TSV`, `JSON`, `Parquet`, `NetCDF`. Alternatively, you can choose a machine-readable [IANA media type](https://www.iana.org/assignments/media-types/) (MIME type, e.g., `text/csv`, `application/json`).
 - **Format version / profile** if it matters: `VCF >=4.2`, `DICOM SR`, `BIDS 1.8`.
 - **Schema or expected columns/fields**, especially for generic containers. For a CSV, "columns: `subject_id, age_at_scan, group`" is the actual contract. Link to a schema file if one exists (JSON Schema, XSD, BIDS specification).
 - **Constraints** that matter for interoperability - e.g., "only ASCII filenames", "no compressed inputs", "must be sorted by chromosome".
@@ -78,7 +78,7 @@ If your software exposes interfaces beyond a single CLI, document them. Common i
 - **Database schema** - if your software reads or writes a structured database, the schema is part of the interface.
 - **File-based workflow interface** - e.g., a Snakemake module that consumes and produces specific file layouts.
 
-For each interface, state whether it is **stable**, **experimental**, or **internal**. Users who depend on an "experimental" API have been warned; users who depend on an "internal" API are on their own. This is the contract.
+For each interface, state whether it is **stable**, **experimental**, or **internal**. Users who depend on an "experimental" API do so with that caveat; users who depend on an "internal" API have no guarantee of stability. These labels form the contract.
 
 For REST APIs in particular, provide an OpenAPI specification, most modern frameworks (FastAPI, Spring Boot, Express + swagger-jsdoc) generate one from the code. The spec then drives client generation, documentation tools like [Redoc](https://redocly.com/redoc/) and [Swagger UI](https://swagger.io/tools/swagger-ui/), and contract testing.
 
@@ -87,7 +87,7 @@ For REST APIs in particular, provide an OpenAPI specification, most modern frame
 State which operating systems and architectures the software *officially supports*. There is a real distinction worth respecting:
 
 - **Supported** - CI-tested, advertised in the README, bugs accepted and triaged.
-- **Expected to work** - used by maintainers in practice, but no CI; bugs may not be prioritised.
+- **Expected to work** - used by maintainers in practice, but no CI; bugs may not be prioritized.
 - **Untested** - silence is the right answer; do not claim what you do not verify.
 
 Pure-runtime languages (Python, R, Java, JavaScript without native dependencies) usually work on Linux, macOS, and Windows alike. Anything compiled, anything that calls system libraries, anything that depends on a specific filesystem semantics, anything that uses GPU acceleration, those have real platform constraints worth being explicit about.
@@ -114,7 +114,7 @@ If resource use depends strongly on input characteristics, name the driving fact
 
 > **In the SMP:** the Resource requirements field is free-text. Even a few lines following the structure above is useful.
 
-## Containerisation and environment specification
+## Containerization and environment specification
 
 Beyond your language-level dependency manifest (`pyproject.toml`, `requirements.txt`, `environment.yml`, `Cargo.lock`, `renv.lock`, etc., which live in the repository), three patterns of environment specification offer increasing levels of reproducibility:
 
@@ -138,4 +138,4 @@ A container by itself is not automatically reproducible. Practical hygiene:
 
 [The Turing Way - Containers](https://book.the-turing-way.org/reproducible-research/renv/renv-options.html) covers the trade-offs in more depth.
 
-> **In the SMP:** the Containerisation question offers four states - *Full environment spec*, *Dockerfile or equivalent*, *Lock-file only*, *No*. Pick the strongest pattern that is genuinely in place.
+> **In the SMP:** the Containerization question offers four states - *Full environment spec*, *Dockerfile or equivalent*, *Lock-file only*, *No*. Pick the strongest pattern that is genuinely in place.
