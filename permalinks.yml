@@ -84,7 +84,7 @@
 
 # === Metadata (best-practices/metadata.md) ===
 - slug: metadata
-  target: best-practices/metadata
+  target: best-practices/metadata.md
 
 
 # === Testing & quality assurance (best-practices/testing-quality.md) ===
