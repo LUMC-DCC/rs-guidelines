@@ -82,6 +82,11 @@
   target: best-practices/sharing-licensing.md#publications
 
 
+# === Metadata (best-practices/metadata.md) ===
+- slug: metadata
+  target: best-practices/metadata
+
+
 # === Testing & quality assurance (best-practices/testing-quality.md) ===
 - slug: testing-expectations
   target: best-practices/testing-quality.md#minimum-expectations-by-management-level
