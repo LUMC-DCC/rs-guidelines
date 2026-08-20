@@ -1,0 +1,2137 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lumc-dcc.github.io/rs-guidelines/best-practices/metadata/">
+      
+      
+        <link rel="prev" href="../sharing-licensing/">
+      
+      
+        <link rel="next" href="../documentation-community/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Software metadata - Research Software Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"PT Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#software-metadata" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Research Software Guidelines" class="md-header__button md-logo" aria-label="Research Software Guidelines" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Research Software Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Software metadata
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/LUMC-DCC/rs-guidelines" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rs-guidelines
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Research Software Guidelines" class="md-nav__button md-logo" aria-label="Research Software Guidelines" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Research Software Guidelines
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/LUMC-DCC/rs-guidelines" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rs-guidelines
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    README
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    What is research software?
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            What is research software?
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rs/definitions-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Definitions &amp; examples of RS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rs/is-developing-rs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are you developing RS?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software Management Plans
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Software Management Plans
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smp/smp-intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SMP introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smp/sciwiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Management Plan in SciWiz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Research Software best practices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Research Software best practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview: FAIR4RS &amp; FOSS principles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../identity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project identity &amp; people
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../motivation-scope/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Motivation &amp; scope
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Risks &amp; mitigation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Planning &amp; sustainability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sharing-licensing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing &amp; licensing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Software metadata
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Software metadata
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-of-software-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of software metadata
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-two-metadata-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      The two metadata files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The two metadata files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codemetajson" class="md-nav__link">
+    <span class="md-ellipsis">
+      codemeta.json
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="codemeta.json">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is @context?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#citationcff" class="md-nav__link">
+    <span class="md-ellipsis">
+      CITATION.cff
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mandatory-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mandatory fields
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mandatory fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Name: name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description: description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version: version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistent-identifier-identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Persistent identifier: identifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authors-author" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authors: author
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#licenses-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License(s): license
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository-url-coderepository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository URL: codeRepository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-languages-programminglanguage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming language(s): programmingLanguage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-type-applicationcategory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software type: applicationCategory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-schemafeaturelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations: schema:featureList
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended fields
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommended fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#other-identifiers-identifier-additional-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other identifiers: identifier (additional values)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-date-datepublished" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release date: datePublished
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keywords-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keywords: keywords
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topics-applicationsubcategory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topics: applicationSubCategory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation-url-softwarehelp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation URL: softwareHelp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-tracker-issuetracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue tracker: issueTracker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contact-persons-maintainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact persons: maintainer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funding-funding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funding: funding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publications-referencepublication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publications: referencePublication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-status-developmentstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support status: developmentStatus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-systems-operatingsystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operating systems: operatingSystem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependencies-softwarerequirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies: softwareRequirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supporting-data-supportingdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supporting data: supportingData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-and-environment-runtimeplatform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container and environment: runtimePlatform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-materials-softwarehelp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training materials: softwareHelp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changelog-releasenotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changelog: releaseNotes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-integration-continuousintegration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous integration: continuousIntegration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-without-a-dedicated-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information without a dedicated field
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-update-the-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to update the metadata
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-your-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registering your software
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation-community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation &amp; community
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interoperability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interoperability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing-quality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing &amp; quality assurance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versioning-releases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Versioning &amp; releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/organizations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relevant organizations for RS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/abbreviations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Abbreviations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/contacts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contacts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-of-software-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of software metadata
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-two-metadata-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      The two metadata files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The two metadata files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codemetajson" class="md-nav__link">
+    <span class="md-ellipsis">
+      codemeta.json
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="codemeta.json">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is @context?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#citationcff" class="md-nav__link">
+    <span class="md-ellipsis">
+      CITATION.cff
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mandatory-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mandatory fields
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mandatory fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Name: name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description: description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version: version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistent-identifier-identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Persistent identifier: identifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authors-author" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authors: author
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#licenses-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License(s): license
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository-url-coderepository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository URL: codeRepository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-languages-programminglanguage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming language(s): programmingLanguage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-type-applicationcategory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software type: applicationCategory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-schemafeaturelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations: schema:featureList
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended fields
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommended fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#other-identifiers-identifier-additional-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other identifiers: identifier (additional values)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-date-datepublished" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release date: datePublished
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keywords-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keywords: keywords
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topics-applicationsubcategory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topics: applicationSubCategory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation-url-softwarehelp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation URL: softwareHelp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-tracker-issuetracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue tracker: issueTracker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contact-persons-maintainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact persons: maintainer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funding-funding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funding: funding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publications-referencepublication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publications: referencePublication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-status-developmentstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support status: developmentStatus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-systems-operatingsystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operating systems: operatingSystem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependencies-softwarerequirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies: softwareRequirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supporting-data-supportingdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supporting data: supportingData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-and-environment-runtimeplatform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container and environment: runtimePlatform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-materials-softwarehelp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training materials: softwareHelp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changelog-releasenotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changelog: releaseNotes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-integration-continuousintegration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous integration: continuousIntegration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-without-a-dedicated-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information without a dedicated field
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-update-the-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to update the metadata
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-your-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registering your software
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="software-metadata">Software metadata</h1>
+<p>Structured metadata makes your software findable, citable, and reusable. This page explains what metadata to add to your research software repository, why each field matters, and how to create and maintain the required files. The guidance is layered: the quick start covers the minimum steps, and each subsequent section provides more technical detail for those who need it.</p>
+<p>This page focuses on the metadata <em>files</em> themselves. For the surrounding decisions, see the guidance on choosing a <a href="../sharing-licensing/#repository">repository</a> and <a href="../sharing-licensing/#software-license">license</a>, minting <a href="../sharing-licensing/#persistent-identifiers">persistent identifiers</a>, picking <a href="../sharing-licensing/#registries">registries</a>, and recording <a href="../interoperability/#programming-languages">programming languages</a> and <a href="../interoperability/#input-and-output-data-formats">data formats</a>.</p>
+<h2 id="quick-start">Quick start</h2>
+<p>Add two files to the root of your repository:</p>
+<ul>
+<li><strong><code>codemeta.json</code></strong> — the primary metadata record, covering all required and recommended fields</li>
+<li><strong><code>CITATION.cff</code></strong> — a citation-specific file that GitHub and Zenodo render automatically</li>
+</ul>
+<p>If you only have five minutes: fill in the mandatory fields listed in the <a href="#mandatory-fields">field reference</a> and commit.</p>
+<blockquote>
+<p><strong>Planned tooling.</strong> A <abbr title="Leiden University Medical Center">LUMC</abbr> research-software template repository (<code>&lt;template-repo&gt;</code>), generated from your <abbr title="Software Management Plan">SMP</abbr>, will ship both files pre-filled and validate them automatically in <abbr title="continuous integration">CI</abbr>. Until that gets released, create and maintain the files manually as described below.</p>
+</blockquote>
+<h2 id="purpose-of-software-metadata">Purpose of software metadata</h2>
+<p>Metadata serves three purposes, in increasing order of ambition.</p>
+<p><strong>Citability.</strong> A <code>CITATION.cff</code> file enables GitHub to show a "Cite this repository" button and allows Zenodo to auto-populate citation records. Without it, users either cite only the associated paper (losing credit for the software itself) or cite the repository URL in a way that is not persistent or versioned.</p>
+<p><strong>Discoverability.</strong> A complete <code>codemeta.json</code> is harvested by Zenodo, Software Heritage, the Research Software Directory, and other archives, making your software visible in search results and institutional inventories. EDAM operation terms enable semantic discovery in bio.tools and other life-sciences registries.</p>
+<p><strong>Reuse.</strong> Machine-readable metadata allows automated tools to verify compatibility, resolve dependencies, and reproduce computational environments, which is the practical foundation for genuinely reusable research software.</p>
+<h2 id="the-two-metadata-files">The two metadata files</h2>
+<h3 id="codemetajson"><code>codemeta.json</code></h3>
+<p>CodeMeta is a software metadata vocabulary built on schema.org and represented in JSON-LD format. It serves as the primary metadata record and is consumed by a wide range of repositories and tools. <abbr title="Leiden University Medical Center">LUMC</abbr> selected it from several software-metadata standards (Bioschemas, biotoolsSchema, and others) for its breadth and crosswalks (see <code>&lt;metadata-standards-explanation&gt;</code> for the selection procedure). <abbr title="Leiden University Medical Center">LUMC</abbr> defines a specific profile of CodeMeta v3.1 (<code>&lt;codemeta-schema-repo&gt;</code>) that specifies which fields are mandatory and what constraints apply. The mandatory and recommended fields below are a curated subset: any valid CodeMeta field is welcome — the profile only sets a mandatory minimum and highlights the most useful optional ones.</p>
+<p>A minimal valid <code>codemeta.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;@context&quot;: [
+    &quot;https://w3id.org/codemeta/3.1&quot;,
+    { &quot;schema&quot;: &quot;https://schema.org/&quot; }
+  ],
+  &quot;@type&quot;: &quot;SoftwareSourceCode&quot;,
+  &quot;name&quot;: &quot;MyTool&quot;,
+  &quot;description&quot;: &quot;A tool for aligning short sequencing reads to a reference genome.&quot;,
+  &quot;version&quot;: &quot;1.3.0&quot;,
+  &quot;identifier&quot;: &quot;https://doi.org/10.0000/example.mytool.1&quot;,
+  &quot;author&quot;: [
+    {
+      &quot;@type&quot;: &quot;Person&quot;,
+      &quot;@id&quot;: &quot;https://orcid.org/0000-0000-0000-0000&quot;,
+      &quot;givenName&quot;: &quot;Jane&quot;,
+      &quot;familyName&quot;: &quot;Doe&quot;,
+      &quot;affiliation&quot;: {
+        &quot;@type&quot;: &quot;Organization&quot;,
+        &quot;name&quot;: &quot;Leiden University Medical Center&quot;
+      }
+    }
+  ],
+  &quot;license&quot;: &quot;https://spdx.org/licenses/Apache-2.0&quot;,
+  &quot;codeRepository&quot;: &quot;https://github.com/example/mytool&quot;,
+  &quot;programmingLanguage&quot;: [&quot;Python&quot;],
+  &quot;applicationCategory&quot;: &quot;Command-line tool&quot;,
+  &quot;schema:featureList&quot;: [
+    &quot;http://edamontology.org/operation_0000&quot;
+  ]
+}
+</code></pre>
+<p>The schema repository provides further worked examples (<code>&lt;codemeta-schema-examples&gt;</code>) of filled-in files, from minimal to complete, to use as references.</p>
+<p>Use the <a href="https://codemeta.github.io/create/">CodeMeta generator</a> to create your file interactively, or copy and adapt an existing one.</p>
+<h4 id="what-is-context">What is <code>@context</code>?</h4>
+<p>JSON-LD documents carry a <code>@context</code> declaration that maps property names to globally unique identifiers (URIs). This is what makes the file machine-readable in a standardized way: a tool reading your file knows that <code>name</code> means <code>https://schema.org/name</code>, not something else. The CodeMeta context (<code>https://w3id.org/codemeta/3.1</code>) defines the software-metadata vocabulary.</p>
+<p>CodeMeta is built on schema.org: almost every field on this page is mapped in the CodeMeta v3.1 vocabulary and is written plain (no prefix), whether it originated in schema.org (<code>name</code>, <code>version</code>, <code>keywords</code>, <code>applicationCategory</code>, <code>applicationSubCategory</code>, <code>runtimePlatform</code>, <code>operatingSystem</code>, <code>softwareRequirements</code>, <code>supportingData</code>) or is a CodeMeta-defined extension (<code>maintainer</code>, <code>referencePublication</code>, <code>developmentStatus</code>, <code>continuousIntegration</code>, <code>issueTracker</code>). The inline object in the <code>@context</code> defines <code>schema</code> because <code>featureList</code> is not in the CodeMeta vocabulary, so operations are recorded with the explicit prefix as <code>schema:featureList</code>.</p>
+<h3 id="citationcff"><code>CITATION.cff</code></h3>
+<p>CITATION.cff is a YAML file focused on citation. GitHub renders it as a "Cite this repository" button, Zenodo uses it to populate citation records when a release is archived. It is simpler to write than <code>codemeta.json</code> and is native to the GitHub interface.</p>
+<p>A minimal <code>CITATION.cff</code>:</p>
+<pre><code class="language-yaml">cff-version: 1.2.0
+title: MyTool
+message: &quot;If you use this software, please cite it using the metadata in this file.&quot;
+type: software
+authors:
+  - family-names: Doe
+    given-names: Jane
+    orcid: https://orcid.org/0000-0000-0000-0000
+    affiliation: Leiden University Medical Center
+version: 1.3.0
+date-released: 2026-06-01
+doi: 10.0000/example.mytool.1
+repository-code: https://github.com/example/mytool
+license: Apache-2.0
+</code></pre>
+<p>Use <a href="https://citation-file-format.github.io/cff-initializer-javascript/">cffinit</a> to generate this file interactively, or copy and adapt an existing one.</p>
+<p>Note that CITATION.cff does not have fields for programming language, software type, or operations. It is not a replacement for <code>codemeta.json</code>; maintain both files, keeping name, version, and authors consistent between them.</p>
+<h2 id="mandatory-fields">Mandatory fields</h2>
+<p>These CodeMeta fields are strongly recommended for every <abbr title="Leiden University Medical Center">LUMC</abbr> research software repository, and required to ensure citation, discoverability, and downstream tool support: registries, archives, and validators rely on them.</p>
+<p>Several fields can hold more than one value — provide these as a JSON array. In this reference, the fields that accept multiple values are <code>identifier</code>, <code>author</code>, <code>license</code>, <code>programmingLanguage</code>, <code>applicationCategory</code>, <code>applicationSubCategory</code>, <code>schema:featureList</code> (operations), <code>keywords</code>, <code>maintainer</code>, <code>funding</code>, <code>referencePublication</code>, <code>operatingSystem</code>, <code>softwareRequirements</code>, <code>supportingData</code>, and <code>runtimePlatform</code>. A single value may be written either as a plain string or as a one-element array.</p>
+<h3 id="name-name">Name: <code>name</code></h3>
+<p>The name of your software, exactly as it should appear in citations and search results.</p>
+<pre><code class="language-json">&quot;name&quot;: &quot;MyTool&quot;
+</code></pre>
+<p>For naming guidance, see <a href="../identity/#software-title">software title</a>.</p>
+<h3 id="description-description">Description: <code>description</code></h3>
+<p>A few sentences describing what the software does. Write for a reader outside your immediate research group: what problem does it solve, and at what level of abstraction?</p>
+<pre><code class="language-json">&quot;description&quot;: &quot;A command-line tool for variant calling in whole-genome sequencing data, optimized for low-coverage samples.&quot;
+</code></pre>
+<h3 id="version-version">Version: <code>version</code></h3>
+<p>The version of the software this metadata file describes.</p>
+<pre><code class="language-json">&quot;version&quot;: &quot;2.1.0&quot;
+</code></pre>
+<p>For guidance, see <a href="../versioning-releases/#versioning-scheme">versioning scheme</a>. For scripts or notebooks without a release, the full Git commit hash is also acceptable:</p>
+<pre><code class="language-json">&quot;version&quot;: &quot;a3f8c2d1b4e7f0291a3f8c2d1b4e7f0291a3f8c2&quot;
+</code></pre>
+<p>Update this field on every new release.</p>
+<h3 id="persistent-identifier-identifier">Persistent identifier: <code>identifier</code></h3>
+<p>A versioned, persistent identifier for this specific release. This is what others should cite when referring to a particular version of your software. It can be a URL or a <code>PropertyValue</code>.</p>
+<pre><code class="language-json">&quot;identifier&quot;: &quot;https://doi.org/10.0000/example.mytool.1&quot;
+</code></pre>
+<pre><code class="language-json">&quot;identifier&quot;: {
+  &quot;@type&quot;: &quot;PropertyValue&quot;,
+  &quot;propertyID&quot;: &quot;doi&quot;,
+  &quot;value&quot;: &quot;10.0000/example.mytool.1&quot;
+}
+</code></pre>
+<p>For how to mint one, see <a href="../sharing-licensing/#persistent-identifiers">Persistent identifiers</a>. For scripts or internal tools that will not be formally published, a Git tag URL is acceptable:</p>
+<pre><code class="language-json">&quot;identifier&quot;: &quot;https://github.com/example/myscript/tree/v1.0&quot;
+</code></pre>
+<h3 id="authors-author">Authors: <code>author</code></h3>
+<p>The people responsible for creating the software (see <a href="../identity/#authors-vs-maintainers">Authors vs. maintainers</a>). If available, include an <abbr title="Open Researcher and Contributor ID">ORCID</abbr> identifier for each author in <code>@id</code>, and give each author's affiliation organization a <abbr title="Research Organization Registry">ROR</abbr> identifier in its own <code>@id</code>.</p>
+<pre><code class="language-json">&quot;author&quot;: [
+  {
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;@id&quot;: &quot;https://orcid.org/0000-0000-0000-0000&quot;,
+    &quot;givenName&quot;: &quot;Jane&quot;,
+    &quot;familyName&quot;: &quot;Doe&quot;,
+    &quot;affiliation&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;@id&quot;: &quot;https://ror.org/05xvt9f17&quot;,
+      &quot;name&quot;: &quot;Leiden University Medical Center&quot;
+    }
+  },
+  {
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;@id&quot;: &quot;https://orcid.org/0000-0000-0000-0000&quot;,
+    &quot;givenName&quot;: &quot;John&quot;,
+    &quot;familyName&quot;: &quot;Smith&quot;,
+    &quot;affiliation&quot;: { &quot;@type&quot;: &quot;Organization&quot;, &quot;name&quot;: &quot;Amsterdam UMC&quot; }
+  }
+]
+</code></pre>
+<p>An author may also be an <code>Organization</code>, not only a <code>Person</code>.</p>
+<h3 id="licenses-license">License(s): <code>license</code></h3>
+<p>The license under which the software is distributed, as an <a href="https://spdx.org/licenses/"><abbr title="Software Package Data Exchange">SPDX</abbr> identifier</a> URL or a <code>CreativeWork</code> node.</p>
+<pre><code class="language-json">&quot;license&quot;: [
+  &quot;https://spdx.org/licenses/MIT&quot;,
+  {
+    &quot;@type&quot;: &quot;CreativeWork&quot;,
+    &quot;name&quot;: &quot;Apache License 2.0&quot;,
+    &quot;url&quot;: &quot;https://spdx.org/licenses/Apache-2.0&quot;
+  }
+]
+</code></pre>
+<p>For choosing a license, see <a href="../sharing-licensing/#software-license">Software license</a>.</p>
+<h3 id="repository-url-coderepository">Repository URL: <code>codeRepository</code></h3>
+<p>The URL of the version-controlled source code repository.</p>
+<pre><code class="language-json">&quot;codeRepository&quot;: &quot;https://github.com/example/mytool&quot;
+</code></pre>
+<h3 id="programming-languages-programminglanguage">Programming language(s): <code>programmingLanguage</code></h3>
+<p>The language(s) in which the software is written. It can be a plain text name or a <code>ComputerLanguage</code> (lets you pin a version).</p>
+<pre><code class="language-json">&quot;programmingLanguage&quot;: [
+  { &quot;@type&quot;: &quot;ComputerLanguage&quot;, &quot;name&quot;: &quot;Python&quot;, &quot;version&quot;: &quot;3.14&quot; },
+  &quot;C++&quot;
+]
+</code></pre>
+<h3 id="software-type-applicationcategory">Software type: <code>applicationCategory</code></h3>
+<p>The category of software. Prefer values from the <a href="https://biotools.readthedocs.io/en/latest/curators_guide.html#tool-type">bio.tools toolType vocabulary</a> (which maximizes interoperability with that registry). A free-text label is acceptable when none fits.</p>
+<pre><code class="language-json">&quot;applicationCategory&quot;: &quot;Command-line tool&quot;
+</code></pre>
+<pre><code class="language-json">&quot;applicationCategory&quot;: [&quot;Library&quot;, &quot;Web API&quot;]
+</code></pre>
+<h3 id="operations-schemafeaturelist">Operations: <code>schema:featureList</code></h3>
+<p>What your software does. EDAM operation URLs are preferred because they enable semantic search in bio.tools and ELIXIR infrastructure. Plain-text descriptions are acceptable when no suitable EDAM term exists.</p>
+<pre><code class="language-json">&quot;schema:featureList&quot;: [
+  &quot;http://edamontology.org/operation_0000&quot;,
+  &quot;Dimensionality reduction of high-dimensional omics data&quot;
+]
+</code></pre>
+<p>To find EDAM terms:</p>
+<ol>
+<li>Browse at <a href="https://edamontology.github.io/edam-browser/">EDAM Browser</a></li>
+<li>Check what similar tools use in bio.tools</li>
+<li>Search the EDAM ontology at <a href="https://www.ebi.ac.uk/ols4/ontologies/edam">EBI OLS</a></li>
+</ol>
+<p>List terms that most closely describe the main function of your software. You can refine these if and when registering in bio.tools.</p>
+<h2 id="recommended-fields">Recommended fields</h2>
+<p>The fields below are not enforced by <abbr title="continuous integration">CI</abbr> but are strongly encouraged. Several are required by downstream registries.</p>
+<h3 id="other-identifiers-identifier-additional-values">Other identifiers: <code>identifier</code> (additional values)</h3>
+<pre><code class="language-json">&quot;identifier&quot;: [
+  &quot;https://doi.org/10.0000/example.mytool.1&quot;,
+  &quot;https://bio.tools/mytool&quot;
+]
+</code></pre>
+<h3 id="release-date-datepublished">Release date: <code>datePublished</code></h3>
+<p>Use <abbr title="International Organization for Standardization">ISO</abbr> 8601 date format (<code>YYYY-MM-DD</code>).</p>
+<pre><code class="language-json">&quot;datePublished&quot;: &quot;2026-06-01&quot;
+</code></pre>
+<h3 id="keywords-keywords">Keywords: <code>keywords</code></h3>
+<p>Plain-text keywords and non-URI terms for discovery: subject area, methods, and biological context such as organism, tissue, or disease. EDAM topics go in <code>applicationSubCategory</code> below.</p>
+<pre><code class="language-json">&quot;keywords&quot;: [
+  &quot;genomics&quot;,
+  &quot;variant calling&quot;,
+  &quot;Homo sapiens&quot;,
+  &quot;breast cancer&quot;
+]
+</code></pre>
+<h3 id="topics-applicationsubcategory">Topics: <code>applicationSubCategory</code></h3>
+<p>The subject areas the software addresses, describing the <em>domain</em> (unlike <code>applicationCategory</code>, the <em>kind</em> of software). EDAM topic URLs are preferred, but, as with operations, a plain-text label is acceptable when no suitable EDAM topic exists.</p>
+<pre><code class="language-json">&quot;applicationSubCategory&quot;: [
+  &quot;http://edamontology.org/topic_0000&quot;,
+  &quot;Clinical decision support&quot;
+]
+</code></pre>
+<h3 id="documentation-url-softwarehelp">Documentation URL: <code>softwareHelp</code></h3>
+<pre><code class="language-json">&quot;softwareHelp&quot;: { &quot;@type&quot;: &quot;CreativeWork&quot;, &quot;url&quot;: &quot;https://docs.example.com/mytool&quot; }
+</code></pre>
+<h3 id="issue-tracker-issuetracker">Issue tracker: <code>issueTracker</code></h3>
+<pre><code class="language-json">&quot;issueTracker&quot;: &quot;https://github.com/example/mytool/issues&quot;
+</code></pre>
+<h3 id="contact-persons-maintainer">Contact persons: <code>maintainer</code></h3>
+<p>Contact people responsible for the software. For why a project should have at least two, see <a href="../identity/#why-a-project-needs-at-least-two-maintainers">Why a project needs at least two maintainers</a>.</p>
+<pre><code class="language-json">&quot;maintainer&quot;: [
+  {
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;givenName&quot;: &quot;Jane&quot;,
+    &quot;familyName&quot;: &quot;Doe&quot;,
+    &quot;email&quot;: &quot;j.doe@example.com&quot;
+  },
+  {
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;givenName&quot;: &quot;John&quot;,
+    &quot;familyName&quot;: &quot;Smith&quot;,
+    &quot;email&quot;: &quot;j.smith@example.com&quot;
+  }
+]
+</code></pre>
+<h3 id="funding-funding">Funding: <code>funding</code></h3>
+<p>The funding source(s) as text, typically the grant or project code (see <a href="../identity/#funding-and-project-context">Funding and project context</a>).</p>
+<pre><code class="language-json">&quot;funding&quot;: [&quot;NWO-000000&quot;, &quot;ZonMw-000&quot;]
+</code></pre>
+<h3 id="publications-referencepublication">Publications: <code>referencePublication</code></h3>
+<pre><code class="language-json">&quot;referencePublication&quot;: [
+  { &quot;@type&quot;: &quot;ScholarlyArticle&quot;, &quot;@id&quot;: &quot;https://doi.org/10.0000/example.article.1&quot; },
+  { &quot;@type&quot;: &quot;ScholarlyArticle&quot;, &quot;@id&quot;: &quot;https://doi.org/10.0000/example.article.2&quot; }
+]
+</code></pre>
+<h3 id="support-status-developmentstatus">Support status: <code>developmentStatus</code></h3>
+<p>Use the <a href="https://www.repostatus.org/">repostatus.org</a> vocabulary.</p>
+<pre><code class="language-json">&quot;developmentStatus&quot;: &quot;active&quot;
+</code></pre>
+<h3 id="operating-systems-operatingsystem">Operating systems: <code>operatingSystem</code></h3>
+<pre><code class="language-json">&quot;operatingSystem&quot;: [&quot;Linux&quot;, &quot;macOS&quot;]
+</code></pre>
+<h3 id="dependencies-softwarerequirements">Dependencies: <code>softwareRequirements</code></h3>
+<p>A plain text or a <code>SoftwareSourceCode</code> (lets you add a version and the <code>provider</code>).</p>
+<pre><code class="language-json">&quot;softwareRequirements&quot;: [
+  {
+    &quot;@type&quot;: &quot;SoftwareSourceCode&quot;,
+    &quot;name&quot;: &quot;numpy&quot;,
+    &quot;version&quot;: &quot;&gt;=1.24&quot;,
+    &quot;provider&quot;: { &quot;@type&quot;: &quot;Organization&quot;, &quot;name&quot;: &quot;PyPI&quot;, &quot;url&quot;: &quot;https://pypi.org&quot; }
+  },
+  { &quot;@type&quot;: &quot;SoftwareSourceCode&quot;, &quot;name&quot;: &quot;pandas&quot;, &quot;version&quot;: &quot;&gt;=2.0&quot; },
+  &quot;matplotlib&quot;
+]
+</code></pre>
+<h3 id="supporting-data-supportingdata">Supporting data: <code>supportingData</code></h3>
+<p>Reference datasets the software depends on, or the data a model was trained on.</p>
+<pre><code class="language-json">&quot;supportingData&quot;: [
+  {
+    &quot;@type&quot;: &quot;DataFeed&quot;,
+    &quot;name&quot;: &quot;GRCh38 reference genome&quot;,
+    &quot;version&quot;: &quot;GRCh38.p14&quot;,
+    &quot;url&quot;: &quot;https://data.example.org/genomes/reference/&quot;
+  },
+  {
+    &quot;@type&quot;: &quot;DataFeed&quot;,
+    &quot;name&quot;: &quot;Training cohort (de-identified)&quot;,
+    &quot;version&quot;: &quot;v2.0&quot;,
+    &quot;url&quot;: &quot;https://doi.org/10.0000/example.dataset.1&quot;
+  }
+]
+</code></pre>
+<h3 id="container-and-environment-runtimeplatform">Container and environment: <code>runtimePlatform</code></h3>
+<pre><code class="language-json">&quot;runtimePlatform&quot;: [&quot;Docker&quot;, &quot;Conda&quot;, &quot;SURF HPC&quot;]
+</code></pre>
+<h3 id="training-materials-softwarehelp">Training materials: <code>softwareHelp</code></h3>
+<pre><code class="language-json">&quot;softwareHelp&quot;: [
+  { &quot;@type&quot;: &quot;CreativeWork&quot;, &quot;url&quot;: &quot;https://docs.example.com/mytool&quot; },
+  { &quot;@type&quot;: &quot;CreativeWork&quot;, &quot;url&quot;: &quot;https://example.org/training/mytool&quot; }
+]
+</code></pre>
+<h3 id="changelog-releasenotes">Changelog: <code>releaseNotes</code></h3>
+<p>A link to the changelog, or the notes themselves (<code>Text</code> or <code>URL</code>).</p>
+<pre><code class="language-json">&quot;releaseNotes&quot;: &quot;https://github.com/example/mytool/blob/main/CHANGELOG.md&quot;
+</code></pre>
+<pre><code class="language-json">&quot;releaseNotes&quot;: &quot;v2.1.0: added CRAM support; fixed an index race condition.&quot;
+</code></pre>
+<h3 id="continuous-integration-continuousintegration">Continuous integration: <code>continuousIntegration</code></h3>
+<pre><code class="language-json">&quot;continuousIntegration&quot;: &quot;https://github.com/example/mytool/actions&quot;
+</code></pre>
+<p>Where possible, run your tests in <abbr title="continuous integration">CI</abbr> (see <a href="../testing-quality/#continuous-integration">Continuous integration</a>).</p>
+<h3 id="information-without-a-dedicated-field">Information without a dedicated field</h3>
+<p><strong>EDAM-typed inputs and outputs</strong> have no CodeMeta or schema.org field (<code>fileFormat</code> describes a file's own media type, not what the tool consumes or produces). Define these in bio.tools if you register there (see <a href="#registering-your-software">Registering your software</a>).</p>
+<h2 id="when-to-update-the-metadata">When to update the metadata</h2>
+<p>Update <code>codemeta.json</code> and <code>CITATION.cff</code> when you:</p>
+<ul>
+<li>Create a new release (update <code>version</code>, <code>identifier</code>, <code>datePublished</code>)</li>
+<li>Add or change authors (update <code>author</code> in both files)</li>
+<li>Change the license</li>
+<li>Move the repository</li>
+<li>Change the software's primary function</li>
+</ul>
+<h2 id="validation">Validation</h2>
+<p>Two checks are planned for the template repository, to run on every push and pull request:</p>
+<ul>
+<li><strong>Schema validation</strong> — that <code>codemeta.json</code> conforms to the <abbr title="Leiden University Medical Center">LUMC</abbr> CodeMeta profile (<code>&lt;codemeta-schema-repo&gt;</code>) and that <code>CITATION.cff</code> is valid <abbr title="Citation File Format">CFF</abbr> 1.2.0.</li>
+<li><strong>Consistency</strong> — that the shared fields (name, version, authors) match between the two files.</li>
+</ul>
+<p>In the meantime you can validate locally with <code>codemetapy</code>, <code>cffconvert</code>, and a JSON Schema validator (see <a href="#tools">Tools</a>).</p>
+<h2 id="registering-your-software">Registering your software</h2>
+<p>For where to register and how to choose, see <a href="../sharing-licensing/#registries">Registries</a>. Two registries interact directly with your metadata files:</p>
+<ul>
+<li><strong><a href="https://bio.tools/">bio.tools</a></strong> — a popular registry for life-sciences tools. A documented CodeMeta–biotoolsSchema crosswalk means most fields map conceptually, though the <a href="https://github.com/bio-tools/biohackathon2025">bridge tool</a> currently registers from a GitHub repository rather than from <code>codemeta.json</code> (CodeMeta-based conversion may follow). After registering, add the bio.tools ID to <strong>both</strong> files — as an additional <code>identifier</code> in <code>codemeta.json</code>, and under <code>identifiers</code> (type <code>url</code>) in <code>CITATION.cff</code>.</li>
+<li><strong><a href="https://research-software-directory.org/">Research Software Directory</a></strong> — the national Dutch registry. It ingests <code>codemeta.json</code> from GitHub automatically, so a complete file is the main prerequisite.</li>
+</ul>
+<h2 id="tools">Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CodeMeta generator</td>
+<td>Interactive <code>codemeta.json</code> authoring</td>
+<td><a href="https://codemeta.github.io/create/">codemeta.github.io/create</a></td>
+</tr>
+<tr>
+<td>cffinit</td>
+<td>Interactive <code>CITATION.cff</code> authoring</td>
+<td><a href="https://citation-file-format.github.io/cff-initializer-javascript/">cffinit</a></td>
+</tr>
+<tr>
+<td>codemetapy</td>
+<td>Python library for generating and validating CodeMeta</td>
+<td><a href="https://github.com/proycon/codemetapy">proycon/codemetapy</a></td>
+</tr>
+<tr>
+<td>cffconvert</td>
+<td>Validation and format conversion for <code>CITATION.cff</code></td>
+<td><a href="https://github.com/citation-file-format/cffconvert">citation-file-format/cffconvert</a></td>
+</tr>
+<tr>
+<td>EDAM Browser</td>
+<td>Browse and search EDAM terms</td>
+<td><a href="https://edamontology.github.io/edam-browser/">edam-browser</a></td>
+</tr>
+<tr>
+<td>BioHackathon 2025 bridge</td>
+<td>CodeMeta-to-bio.tools registration</td>
+<td><a href="https://github.com/bio-tools/biohackathon2025">bio-tools/biohackathon2025</a></td>
+</tr>
+<tr>
+<td>Zenodo–GitHub integration</td>
+<td>Automatic <abbr title="Digital Object Identifier">DOI</abbr> minting for releases</td>
+<td><a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content">GitHub docs</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="further-reading">Further reading</h2>
+<ul>
+<li><a href="https://codemeta.github.io/user-guide/">CodeMeta user guide</a></li>
+<li><a href="https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md">CITATION.cff specification and schema guide</a></li>
+<li><a href="https://edamontology.org/page">EDAM ontology documentation</a></li>
+<li><a href="https://biotools.readthedocs.io/en/latest/curators_guide.html">bio.tools curator guide</a></li>
+<li><a href="https://www.repostatus.org/">Repostatus.org vocabulary</a></li>
+<li><a href="https://spdx.org/licenses/"><abbr title="Software Package Data Exchange">SPDX</abbr> license list</a></li>
+<li><a href="https://rdmkit.elixir-europe.org/metadata_management">RDMkit — documentation and metadata</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Research Software Guidelines by LUMC DCC, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>

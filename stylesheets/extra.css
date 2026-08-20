@@ -1,0 +1,6 @@
+/* Keep browser tooltip from title attribute, but remove the dotted underline. */
+abbr[title] {
+  text-decoration: none;
+  border-bottom: none;
+  cursor: help;
+}
