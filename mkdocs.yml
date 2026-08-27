@@ -1,5 +1,30 @@
 site_name: "Research Software Guidelines"
 docs_dir: docs
+nav:
+  - index.md
+  - "What is research software?":
+      - rs/definitions-examples.md
+      - rs/is-developing-rs.md
+  - "Software Management Plans":
+      - smp/smp-intro.md
+      - smp/sciwiz.md
+  - "Research Software best practices":
+      - best-practices/overview.md
+      - best-practices/identity.md
+      - best-practices/motivation-scope.md
+      - best-practices/risks.md
+      - best-practices/planning.md
+      - best-practices/sharing-licensing.md
+      - best-practices/metadata.md
+      - best-practices/documentation-community.md
+      - best-practices/interoperability.md
+      - best-practices/testing-quality.md
+      - best-practices/versioning-releases.md
+  - "Resources":
+      - resources/organizations.md
+      - resources/abbreviations.md
+      - resources/contacts.md
+  - about.md
 repo_url: https://github.com/LUMC-DCC/rs-guidelines
 repo_name: rs-guidelines
 theme:
@@ -27,16 +52,10 @@ theme:
 markdown_extensions:
   - abbr
 hooks:
-  - hooks/abbreviations.py
-  - hooks/organizations.py
-  - hooks/contacts.py
+  - hooks/content.py
   - hooks/permalinks.py
 plugins:
   - search
-  - awesome-pages:
-      filename: .pages
-      collapse_single_pages: true
-      strict: true
 site_url: https://lumc-dcc.github.io/rs-guidelines
 edit_uri: ""
 copyright: 'Research Software Guidelines by LUMC DCC, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>'

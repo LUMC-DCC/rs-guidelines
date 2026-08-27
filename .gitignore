@@ -15,6 +15,9 @@ venv/
 # Cache
 __pycache__/
 
+# Staged docs tree from tools/prepare.py
+build/
+
 # Distribution / packaging
 .Python
 env/

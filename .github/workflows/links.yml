@@ -19,10 +19,18 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: pip install .
+        run: pip install '.[dev]'
+
+      - name: Run tests
+        run: pytest tests/ -q
 
       - name: Build site
         run: mkdocs build --strict
+
+      # Keeps the generator-agnostic path (used for a future generator
+      # migration) working, so it cannot rot unnoticed.
+      - name: Check the pre-build path still runs
+        run: python tools/prepare.py --out build/docs --strict
 
       - name: Check links in the built site
         uses: lycheeverse/lychee-action@v2
