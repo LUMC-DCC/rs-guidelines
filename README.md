@@ -11,7 +11,7 @@ a navigable, practical guide to managing and developing research software, by th
 git clone https://github.com/LUMC-DCC/rs-guidelines.git
 cd rs-guidelines
 pip install -e .
-rs-serve   # live preview, usually at http://127.0.0.1:8000
+rs-serve   # live preview, usually at http://127.0.0.1:8000/rs-guidelines/
 ```
 
 ## Contributing

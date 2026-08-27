@@ -6,15 +6,23 @@ on:
       - main
 
 permissions:
-  contents: write  # needed to push to gh-pages
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -22,9 +30,24 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: |
-          pip install .
+        run: pip install .
 
-      - name: Deploy with MkDocs
+      - name: Stage docs
+        run: python tools/prepare.py --out build/docs --strict
+
+      - name: Build site
+        run: zensical build --strict
+
+      - name: Generate /go/ redirects
         run: |
-          mkdocs gh-deploy --force
+          python tools/permalinks.py --site-dir site \
+            --site-url https://lumc-dcc.github.io/rs-guidelines --strict
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

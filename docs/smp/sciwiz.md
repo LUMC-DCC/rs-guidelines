@@ -10,8 +10,8 @@ interactive online form. You can log in, create a project, and step through the 
 The short walkthrough below shows the basic workflow in SciWiz:
 
 <video controls preload="metadata" width="100%" style="max-width:100%; border-radius:4px;">
-  <source src="../../assets/sciwiz-workflow.mp4" type="video/mp4">
-  Your browser does not support embedded video — <a href="../../assets/sciwiz-workflow.mp4">download the walkthrough</a> instead.
+  <source src="../assets/sciwiz-workflow.mp4" type="video/mp4">
+  Your browser does not support embedded video — <a href="../assets/sciwiz-workflow.mp4">download the walkthrough</a> instead.
 </video>
 
 1. Access [SciWiz](https://sciwiz.lumc.nl/).

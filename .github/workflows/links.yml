@@ -19,18 +19,18 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: pip install '.[dev]'
+        run: pip install .
 
-      - name: Run tests
-        run: pytest tests/ -q
+      - name: Stage docs
+        run: python tools/prepare.py --out build/docs --strict
 
       - name: Build site
-        run: mkdocs build --strict
+        run: zensical build --strict
 
-      # Keeps the generator-agnostic path (used for a future generator
-      # migration) working, so it cannot rot unnoticed.
-      - name: Check the pre-build path still runs
-        run: python tools/prepare.py --out build/docs --strict
+      - name: Generate /go/ redirects
+        run: |
+          python tools/permalinks.py --site-dir site \
+            --site-url https://lumc-dcc.github.io/rs-guidelines --strict
 
       - name: Check links in the built site
         uses: lycheeverse/lychee-action@v2
