@@ -39,8 +39,8 @@ Within this context, it applies to a broad range of research software: from smal
 
 This guide assumes that you have a basic understanding of software development and research practices.
 Additionally, it is helpful if you are familiar with Git.
-If you are not familiar with Git, you can enroll in the [LUMC's Git course](https://git.lumc.nl/courses/gitcourse) (internal).
-You can find more training on our [LUMC FAIR Research Software Training website](https://lumc-dcc.github.io/research_software_training/).
+If you are not familiar with Git, you can enroll in the {{git-course}} (internal).
+You can find more training on our {{training}}.
 
 ## Guide organization & usage
 

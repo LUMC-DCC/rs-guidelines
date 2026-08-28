@@ -7,7 +7,9 @@ For example, we are often asked questions such as how to choose a license, why a
 This guide collects that advice in one navigable place, so that it is available to everyone at the LUMC and other institutions.
 
 It is designed to be used alongside our other resources: [SciWiz](smp/sciwiz.md), the LUMC instance of the tool that provides the Software Management Plan (SMP) writing wizard and export functionalities,
-and the [LUMC FAIR Research Software Training website](https://lumc-dcc.github.io/research_software_training/).
+the {{training}},
+and {{rs-stewardship}} (internal),
+which is the entry point for research software support at the LUMC and links back to this guide.
 
 This guide is a *living document*.
 Research software practices change, tools come and go, and these pages are updated as they do.
@@ -19,7 +21,7 @@ They were written by Mariia Steeghs-Turchina and Anna Niehues.
 
 The source code lives at [github.com/LUMC-DCC/rs-guidelines](https://github.com/LUMC-DCC/rs-guidelines).
 Corrections, additions, and suggestions are welcome: open an issue or a pull request there.
-For questions about these guidelines, contact us at {{dcc-email}}. For research support at the LUMC more broadly, the central point of contact is the {{rsd}}.
+For questions about these guidelines, contact the {{dcc}}. For research support at the LUMC more broadly, the central point of contact is the {{rsd}}.
 
 ## Reusing this guide
 

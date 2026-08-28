@@ -19,7 +19,9 @@ Common categories:
 - **Cloud compute or storage** - AWS, Azure, GCP, SURF cloud;
 - **Specialized lab instruments** that the software controls, reads from, or feeds.
 
-Where a project stores data, the storage location must follow the LUMC Data Stewardship storage SOP (internal). Commercial cloud (AWS, Azure, GCP) is generally not permitted for personal or patient data; use approved institutional storage for such data.
+Where a project stores data, the storage location must follow the {{storage-rules}} (internal). Commercial cloud (AWS, Azure, GCP) is generally not permitted for personal or patient data; use approved institutional storage for such data.
+
+Be aware that the LUMC's {{general-storage}} (internal) is broader than the research-specific rules and the two do not fully agree - the general page permits SharePoint, which is *not* advised for personal research data. For research data, follow the research storage rules, and check with {{data-stewardship}} when the two appear to conflict.
 
 This is *not* the place for GitHub or GitLab hosting, package registries, or documentation hosting, those belong in [Sharing & licensing](sharing-licensing.md) and [Documentation & community](documentation-community.md), unless you are using paid tiers with explicit capacity or contract implications.
 
@@ -36,13 +38,13 @@ External services are the people, contracts, and paid tiers outside your immedia
 
 Examples:
 
-- **IT&DI** support and infrastructure tickets;
+- **IT&DI** support and infrastructure tickets, raised through the {{itdi}};
 - **{{rsd}}** - the central point for research support, including FAIR and data-management questions;
 - **External RSE review** or audit;
 - **Penetration testing** (for Level C with a network face);
 - **Paid CI minutes** on GitHub or GitLab when free tiers are exhausted;
 - **Commercial APIs** (OpenAI, Anthropic, mapping services, payment processors);
-- **Legal or intellectual property (IP) support**;
+- **Legal or intellectual property (IP) support** - {{technology-transfer}} for patents and commercialization, {{regulatory}} for medical-device questions;
 - **Vendor support contracts** for instruments or proprietary software.
 
 Quantify where you can. *"Need RSE support"* is not enough. *"~5 days of external RSE support across the project; ~10 hours/year of IT&DI support; €1,200/year for CI minutes once we move to a self-hosted runner"* is.
