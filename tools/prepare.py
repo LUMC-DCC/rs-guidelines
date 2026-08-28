@@ -1,15 +1,14 @@
 """
 Stage a copy of docs/ with all reference-data transforms already applied.
 
-MkDocs applies these transforms in-process through `hooks/content.py`. A
-generator without a hook API (Zensical, for one) instead builds from the
-staged tree this script writes:
+The site generator never reads `docs/` directly, it builds from the staged
+tree this script writes:
 
-    python tools/prepare.py --out build/docs
-    <generator> build          # pointed at build/docs
-    python tools/permalinks.py --site-dir site --site-url <url> --strict
+    python tools/prepare.py    # writes the docs_dir from zensical.toml
+    <generator> build
+    python tools/permalinks.py --strict
 
-Both paths call the same `tools/refdata.py`, so they cannot drift.
+Both paths call the same `tools/refdata.py`.
 """
 
 from __future__ import annotations
@@ -21,6 +20,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+from tools import config  # noqa: E402
 from tools.refdata import DOCS, RefData, transform_page  # noqa: E402
 
 
@@ -45,7 +45,10 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     parser.add_argument("--docs", type=Path, default=DOCS, help="source docs/")
     parser.add_argument(
-        "--out", type=Path, required=True, help="staging directory to write"
+        "--out",
+        type=Path,
+        default=config.path("docs_dir"),
+        help="staging directory to write (default: docs_dir from zensical.toml)",
     )
     parser.add_argument(
         "--strict", action="store_true", help="exit non-zero on any warning"

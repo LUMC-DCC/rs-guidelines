@@ -1,5 +1,5 @@
 """
-Single-sourced reference data transforms, independent of any site generator.
+Single-sourced reference data transforms.
 
 Three transforms turn source Markdown into what the reader sees:
 
@@ -7,10 +7,6 @@ Three transforms turn source Markdown into what the reader sees:
   abbreviations table, which the `abbr` Markdown extension renders as tooltips;
 * organizations - regroup the flat organizations table into `##` sections;
 * contacts - expand `{{token}}` references and hide the Token column.
-
-Nothing here imports MkDocs. The site generator only needs to call
-`transform_page` for every page (see `hooks/content.py` for the MkDocs
-adapter, `tools/prepare.py` for generators without a hook API).
 """
 
 from __future__ import annotations

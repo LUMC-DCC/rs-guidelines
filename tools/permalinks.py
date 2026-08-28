@@ -2,25 +2,23 @@
 Generate stable /go/<slug>/ redirect URLs from permalinks.yml.
 
 The SMP (and anyone deep-linking into the guide) links to `<site>/go/<slug>/`,
-which redirects to the current location of a best-practices section. When the
-guide moves, only the `target` in permalinks.yml changes; the outside link
-never does.
-
-Every target is validated against the freshly built site: if a page or anchor
-no longer exists, a warning is returned, which fails the strict build (the
-PR/CI gate) while leaving a local preview usable.
-
-Nothing here imports MkDocs - it only needs a directory of built HTML and the
-site URL, which any generator produces. See `hooks/permalinks.py` for the
-MkDocs adapter.
+which redirects to the current locatio. When the guide changes, only the `target`
+in permalinks.yml changes.
 """
 
 from __future__ import annotations
 
 import re
+import sys
 from pathlib import Path
 
 import yaml
+
+# Run as a script (`python tools/permalinks.py`), so the repo root is not on
+# the path by default; add it to reach the `tools` package.
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from tools import config  # noqa: E402
 
 REGISTRY = Path(__file__).parent.parent / "permalinks.yml"
 
@@ -90,10 +88,14 @@ def main() -> int:
 
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[1])
     parser.add_argument(
-        "--site-dir", default="site", help="directory of the built site"
+        "--site-dir",
+        default=config.path("site_dir"),
+        help="directory of the built site (default: site_dir from zensical.toml)",
     )
     parser.add_argument(
-        "--site-url", default="/", help="absolute base URL of the site"
+        "--site-url",
+        default=config.get("site_url"),
+        help="absolute base URL (default: site_url from zensical.toml)",
     )
     parser.add_argument("--registry", default=REGISTRY, help="permalinks.yml")
     parser.add_argument(

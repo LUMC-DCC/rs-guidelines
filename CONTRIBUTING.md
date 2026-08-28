@@ -21,24 +21,32 @@ and [Project identity & people](docs/best-practices/identity.md).
 ```bash
 git clone https://github.com/LUMC-DCC/rs-guidelines.git
 cd rs-guidelines
-pip install -e .
+make install
 ```
 
-Preview the site locally with live reload (usually at http://127.0.0.1:8000):
+`make` on its own lists every available task.
+
+Dependencies are managed with [Poetry](https://python-poetry.org/); `poetry.lock`
+pins the exact versions CI uses, so install from it rather than upgrading
+packages ad hoc. To change a dependency, edit `pyproject.toml`, run
+`poetry lock`, and commit the updated lock file.
+
+Preview the site locally (usually at http://127.0.0.1:8000/rs-guidelines/):
 
 ```bash
-rs-serve
+make serve
 ```
 
-`rs-serve` stages `docs/` into `build/docs`, starts the Zensical dev server,
-and restages on every edit, so live reload works while you write. Before
-opening a PR, confirm a clean strict build:
+Zensical serves the **staged** copy in `build/docs`, not `docs/` itself. So
+after editing a page, run `make stage` in another shell to see the change -
+the server notices the restaged files and reloads on its own. Leave
+`make serve` running; only `make stage` needs repeating.
+
+Before opening a PR, confirm a clean strict build - this is the exact
+sequence CI runs:
 
 ```bash
-python tools/prepare.py --out build/docs --strict
-zensical build --strict
-python tools/permalinks.py --site-dir site \
-  --site-url https://lumc-dcc.github.io/rs-guidelines --strict
+make build
 ```
 
 ## How the site is built
@@ -101,7 +109,7 @@ fails if a target no longer resolves.
 1. Branch from `main` (`main` is the deployed branch, pushes to it publish the
    site via [`.github/workflows/gh-pages.yml`](.github/workflows/gh-pages.yml)).
 2. Make your change; keep one focused change per PR.
-3. Run the strict build above and confirm it passes.
+3. Run `make build` and confirm it passes.
 4. Open a pull request into `main`. The PR template's checklist covers the basics;
    CI runs a [link check](.github/workflows/links.yml) on the built site.
 5. A maintainer reviews and merges. Merging to `main` deploys automatically.
