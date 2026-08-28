@@ -37,5 +37,6 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.vscode/
 # Built site (uploaded as a Pages artifact by CI)
 site/

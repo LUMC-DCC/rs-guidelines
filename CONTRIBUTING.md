@@ -107,7 +107,7 @@ fails if a target no longer resolves.
 ## Making a change
 
 1. Branch from `main` (`main` is the deployed branch, pushes to it publish the
-   site via [`.github/workflows/gh-pages.yml`](.github/workflows/gh-pages.yml)).
+   site via [`.github/workflows/docs.yml`](.github/workflows/docs.yml)).
 2. Make your change; keep one focused change per PR.
 3. Run `make build` and confirm it passes.
 4. Open a pull request into `main`. The PR template's checklist covers the basics;
