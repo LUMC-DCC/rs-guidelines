@@ -6,23 +6,25 @@ on:
     - cron: "0 6 * * 1"  # weekly, Monday 06:00 UTC — link rot is gradual
   workflow_dispatch:
 
+# Supersede an earlier run on the same branch rather than queueing behind it.
+concurrency:
+  group: links-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   linkcheck:
+    name: Build and check links
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
+      - name: Set up build environment
+        uses: ./.github/actions/setup
 
-      - name: Install dependencies
-        run: pip install .
-
+      # Also the PR gate on the build itself: a failure here fails the job.
       - name: Build site
-        run: mkdocs build --strict
+        run: make build
 
       - name: Check links in the built site
         uses: lycheeverse/lychee-action@v2

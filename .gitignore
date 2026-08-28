@@ -11,9 +11,13 @@ misc/
 
 # virtualenv
 venv/
+.venv/
 
 # Cache
 __pycache__/
+
+# Staged docs tree from tools/prepare.py
+build/
 
 # Distribution / packaging
 .Python
@@ -33,3 +37,6 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.vscode/
+# Built site (uploaded as a Pages artifact by CI)
+site/

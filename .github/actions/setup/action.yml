@@ -1,0 +1,30 @@
+name: Set up build environment
+description: >
+  Install Poetry and the project's locked dependencies. Used by every
+  workflow so the Python version and install steps live in one place.
+
+inputs:
+  python-version:
+    description: >
+      Python version to build with. Defaults to the floor declared by
+      `requires-python` in pyproject.toml, so CI exercises the oldest
+      version the project claims to support.
+    required: false
+    default: '3.12'
+
+runs:
+  using: composite
+  steps:
+    - name: Install Poetry
+      shell: bash
+      run: pipx install poetry
+
+    - name: Set up Python
+      uses: actions/setup-python@v7
+      with:
+        python-version: ${{ inputs.python-version }}
+        cache: poetry
+
+    - name: Install dependencies
+      shell: bash
+      run: poetry install --no-interaction
