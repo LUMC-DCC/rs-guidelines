@@ -2,7 +2,7 @@
 
 Properly sharing research software involves more than just uploading it somewhere. It involves a series of small decisions: choosing a repository, creating a registry entry, assigning a persistent identifier, adding a citation file, and selecting a license. These decisions make your work findable, retrievable, citable, and legally reusable.
 
-LUMC supports the [Open Science](https://www.openscience.nl/en/what-is-open-science) principle of being **"as open as possible, as closed as necessary"**. In line with its [strategic](https://www.lumc.nl/en/about-lumc/maatschappelijke-rol/strategy-202428/) commitment to making research outputs such as datasets, code, and models broadly accessible, openness is the default.
+LUMC supports the [Open Science](https://www.openscience.nl/en/what-is-open-science) principle of being **"as open as possible, as closed as necessary"**. In line with the {{lumc-strategy}}, which commits to making research outputs such as datasets, code, and models broadly accessible, openness is the default.
 Choosing a closed-source approach can be appropriate in cases involving GDPR, intellectual property (IP), medical device regulations, or contractual obligations, but such restrictions require clear justification.
 
 ## Repository
@@ -115,7 +115,7 @@ Useful references:
 - [Free Software Foundation - Licensing & Compliance](https://www.fsf.org/licensing/) - FSF's licensing recommendations and FAQ.
 - [The Turing Way - Licensing chapter](https://book.the-turing-way.org/reproducible-research/licensing) - broader treatment with legal and ethical context.
 - [eScience Center - How to share software](https://esciencecenter-digital-skills.github.io/research-software-support/modules/licenses/how_to_share) - practical guide.
-- [LUMC data-publication license flowchart](https://www.albinusnet.nl/siteassets/weten-en-regelen/bestanden/onderzoek/20230131_flowchart_data-publication-licences.pdf) (internal) - a decision aid for licensing published *data* (e.g., Creative Commons); note that software uses different licenses.
+- {{license-flowchart}} (internal) - a decision aid for licensing published *data* (e.g., Creative Commons); note that software uses different licenses.
 
 The repository should contain a `LICENSE` file (the full license text) at the root. Most forges create one for you when you initialize the repository or run a "Choose a license" wizard.
 

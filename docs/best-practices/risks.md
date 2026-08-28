@@ -2,7 +2,7 @@
 
 Research software projects do not fail because nobody anticipated *every* failure mode. They fail because nobody anticipated the *obvious* ones in time to do anything about them. The goal of this chapter is risk awareness with proportionate mitigation, not a catalog of every conceivable thing that could go wrong.
 
-This chapter complements, it does **not** replace, the [LUMC Data Management Plan (DMP)](https://www.albinusnet.nl/en/products-and-services/research/data-stewardship/dmp/) (internal). Personal-data legal bases, consent, retention, Data Protection Impact Assessments (DPIAs), and storage policies belong in the DMP. The Risks chapter only flags that the software has a relationship with sensitive data and points to the right document.
+This chapter complements, it does **not** replace, the {{dmp}} (internal). Personal-data legal bases, consent, retention, Data Protection Impact Assessments (DPIAs), and storage policies belong in the DMP. The Risks chapter only flags that the software has a relationship with sensitive data and points to the right document.
 
 ## Personal and sensitive data
 
@@ -20,8 +20,8 @@ Synthetic or simulated data that only *resembles* personal data, with no link to
 
 Three things:
 
-1. **Make sure a DMP exists for the project.** Confirm with your division's privacy officer; see {{data-stewardship}}. Link the DMP in the Software Management Plan (SMP).
-2. **Document where the sensitive data lives, who has access, and how access is logged.** Even if the SMP itself stays high-level, your developer documentation should describe approved storage (Research Drive, sFTP, Vault, controlled-access HPC), the authentication path, and the access-review cadence.
+1. **Make sure a DMP exists for the project.** Confirm with your division's privacy officer; see {{data-stewardship}}. If you do not know who that is, ask {{privacy}}. The privacy team is heavily loaded and can take weeks to answer, so for routine questions go through {{rsd}} instead, which handles the simpler cases directly and escalates the rest. Link the DMP in the Software Management Plan (SMP).
+2. **Document where the sensitive data lives, who has access, and how access is logged.** Even if the SMP itself stays high-level, your developer documentation should describe approved storage (Research Drive, sFTP, Vault, controlled-access HPC), the authentication path, and the access-review cadence. What counts as approved is set by the {{storage-rules}}, not by convention in your group.
 3. **Decide and document the mitigation for the failure modes you can actually imagine.** Mitigations do not need to be elaborate. *"All access is via institutional SSO; access is reviewed annually; logs are written to `<X>` and retained for `<Y>` years; a suspected breach is reported through the LUMC data-breach procedure"* is a strong answer. Every LUMC employee is responsible for reporting a suspected data breach without delay, through the {{data-breach}}.
 
 ### What to do when the answer is *Yes, user-supplied data only*
@@ -59,6 +59,8 @@ For services and APIs, document a small number of things that matter most:
 
 The [OWASP Top Ten](https://owasp.org/www-project-top-ten/) is the canonical short list of common security risks in web applications and how to prevent them. If your software has a network face, read it.
 
+For institutional security questions, and for help with a SIA, contact {{security}}. Note that {{data-breach}} is for reporting an actual or suspected breach, not for security questions in general.
+
 > **In the SMP:** if the software is a service, expect the security follow-up to ask which measures you have in place. For libraries with no network face, "No" is the correct and sufficient answer.
 
 ## Compliance & regulatory considerations
@@ -75,7 +77,7 @@ Compliance is broader than legal regulation alone. This applies if the software 
 
 For each that applies, state which requirements it triggers, who is responsible for satisfying them, and where the corresponding documentation lives (often outside the SMP - in a DMP, an SOP, a contract, a quality-management system).
 
-If you are unsure whether a regime applies, ask early - {{legal}} can help disambiguate.
+If you are unsure whether a regime applies, ask early - {{regulatory}} can help disambiguate.
 
 > **In the SMP:** answer "Yes" if *any* regulatory or institutional regime applies. The follow-up asks you to tick the applicable regimes from a controlled list.
 
@@ -92,7 +94,7 @@ Four archetypes worth flagging explicitly:
 | **Abandoned upstream** | A critical library is no longer maintained | Fork and maintain; vendor the relevant code; reduce reliance; switch |
 | **Proprietary data format** | Input or output depends on closed-source tooling | Prefer open formats where possible; document the conversion path; keep a snapshot of the spec |
 
-On choosing sustainable, preferably open file and folder formats, see the LUMC [Folders, files and formats](https://www.albinusnet.nl/weten-en-regelen/onderzoek/data-stewardship/folders-files--formats/) (internal) page.
+On choosing sustainable, preferably open file and folder formats, see the LUMC {{file-formats}} (internal) page.
 
 Two more that come up in clinical contexts:
 

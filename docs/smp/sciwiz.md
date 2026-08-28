@@ -1,6 +1,6 @@
 # Software Management Plan in SciWiz
 
-[**SciWiz**](https://sciwiz.lumc.nl/) is the LUMC’s instance of the platform that provides the Software Management Plan (SMP) template as an
+**{{sciwiz}}** is the LUMC’s instance of the platform that provides the Software Management Plan (SMP) template as an
 interactive online form. You can log in, create a project, and step through the questions at your own pace. SciWiz provides a flexible approach to standardizing software management across LUMC, while also accommodating diverse project needs.
 
 > Note: SciWiz is currently only accessible via the LUMC network.
@@ -14,8 +14,7 @@ The short walkthrough below shows the basic workflow in SciWiz:
   Your browser does not support embedded video — <a href="../assets/sciwiz-workflow.mp4">download the walkthrough</a> instead.
 </video>
 
-1. Access [SciWiz](https://sciwiz.lumc.nl/).
-    - Go to [sciwiz.lumc.nl](https://sciwiz.lumc.nl/).
+1. Access {{sciwiz}}.
     - Log in or create an account using your LUMC email address.
 2. Create a new project
     - Once logged in, in the left-hand navigation bar, click **Projects**.
@@ -64,7 +63,7 @@ Do not answer with terms such as **"planned"** or **"not yet implemented"**. Ins
 The SMP is **not** a substitute for the regulatory documentation that must be produced for medical device or in vitro diagnostic software.
 While it can complement such documentation,it cannot replace the artifacts required for Software as a Medical Device (SaMD), in vitro diagnostic (IVD) software, clinical decision-support tools, or software developed under a formal quality-management system (ISO 13485, IEC 62304, ISO 14971, MDR, IVDR, etc.).
 
-If your software produces or influences a clinical recommendation, triages patients, is embedded in a regulated device, or is otherwise covered by a sectoral regime, flag this in the General chapter and contact {{legal}} early. For guidance on recognizing regulated software, see [Regulated software](../best-practices/identity.md#regulated-software). Treat the SMP as a high-level overview that complements, not replaces, your regulated documentation.
+If your software produces or influences a clinical recommendation, triages patients, is embedded in a regulated device, or is otherwise covered by a sectoral regime, flag this in the General chapter and contact {{regulatory}} early. For guidance on recognizing regulated software, see [Regulated software](../best-practices/identity.md#regulated-software). Treat the SMP as a high-level overview that complements, not replaces, your regulated documentation.
 
 ## A note on data: the SMP does not replace the DMP
 
