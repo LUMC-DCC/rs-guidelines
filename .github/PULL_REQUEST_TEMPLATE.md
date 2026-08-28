@@ -5,4 +5,4 @@
 ## Checklist
 
 - [ ] I checked the [CONTRIBUTING guidelines](../CONTRIBUTING.md)
-- [ ] `mkdocs build --strict` passes locally
+- [ ] `make build` passes locally
