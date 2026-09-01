@@ -152,6 +152,20 @@ References:
 
 > **In the SMP:** the question asks whether you check dependency-license compatibility, and how. Automated tooling is preferred; manual checks are acceptable for small projects but fragile.
 
+## Cost and access model
+
+Most research software is free of charge, and for anything produced under public funding that is the expected default. The question is still worth answering explicitly, because *free* and *open* are different claims and users need to know both.
+
+Three cases:
+
+- **Free of charge.** No payment, no registration wall. The norm, and needs no justification.
+- **Free with restrictions, or for a select group.** Access requires an account, a data-use agreement, a collaboration, or an institutional login. Legitimate - a tool bound to controlled data often cannot be otherwise - but write down *who* qualifies and *how* they request access, or the restriction becomes an unanswerable question for anyone outside.
+- **Commercial.** A licence fee, a subscription, or a paid support tier. Involve {{technology-transfer}} early: commercialization constrains licensing, and public disclosure before that conversation can foreclose options.
+
+Cost is independent of the licence. Open-source software can be sold, and free-of-charge software can be closed. Record both, and check they do not contradict each other: an Apache-2.0 tool that users must pay to obtain is possible, but it will surprise people unless you explain why.
+
+> **In the SMP:** the Cost question has three states, with a free-text follow-up for restricted and commercial access. Use the follow-up to say who can get access and how they ask for it.
+
 ## Publications
 
 If a methods paper, preprint, or application-note exists for your software, link it. Capture the **DOI** (preferred), and where applicable also **PMID** and **PMCID** for PubMed-indexed work. Note which version of the software the paper describes.

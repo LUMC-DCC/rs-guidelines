@@ -14,6 +14,16 @@ Documentation falls roughly into three layers, each for a different reader:
 
 These three layers overlap, but they answer different questions.
 
+## Project homepage
+
+The homepage is the URL you give when someone asks "where is it?". For most research software the repository itself is a perfectly good homepage: a strong README on GitHub or GitLab answers what it is, who it is for, how to install and run it, how to cite it, and under what licence.
+
+A dedicated site earns its place when the documentation outgrows a README, when the audience includes people who will never open a repository, or when the project needs an address that survives moving between hosts.
+
+What matters is that *some* address is public, stable, and findable, and that the same one is recorded in the SMP, in metadata files, and in published materials. A page reachable only from the LUMC network is not a homepage for external users.
+
+> **In the SMP:** the Homepage question is a three-state: a dedicated homepage, *the repository is the homepage*, or none. The middle answer is the most common one and fine levels A/B; "none" is a findability gap worth fixing.
+
 ## User documentation
 
 Every project, regardless of level, needs a `README` that answers, preferably, all the following:
@@ -118,6 +128,25 @@ Short changelog entries are fine. See also the [Versioning & releases](versionin
 
 > **In the SMP:** the Developer documentation block captures the documentation URL, the API-reference URL (if separate), `CONTRIBUTING`, `CODE_OF_CONDUCT`, and `CHANGELOG`. Each is a URL to the relevant file in the repository or documentation site.
 
+## Community files
+
+A small set of conventional files tells contributors and users how a project is run. GitHub and GitLab surface most of them automatically, which is why using the standard filenames matters.
+
+| File | Answers | Covered in |
+|---|---|---|
+| `CONTRIBUTING.md` | How do I propose a change? | [Contributing guidelines](#contributing-guidelines) |
+| `CODE_OF_CONDUCT.md` | What behaviour is expected? | [Code of conduct](#code-of-conduct) |
+| `CHANGELOG.md` | What changed between versions? | [Changelog](#changelog) |
+| `GOVERNANCE.md` | Who decides? | [Governance](#governance) |
+| `SECURITY.md` | How do I report a vulnerability, privately? | below |
+| `SUPPORT.md` | Where do I ask a question that is not a bug? | [Support contact](#support-contact) |
+
+`SECURITY.md` is the one most often missing, and the absence can be risky: whoever finds a vulnerability has no private channel and may simply disclose it publicly. It generally needs three things: an address to report to, an expected response time, and which versions still receive fixes. For software with a network face, or under NEN 7510 or MDR, treat it as required rather than optional. See [Security & access control](risks.md#security-access-control).
+
+Not every project needs all six. A Level A script needs none of them; a Level C service used outside the LUMC needs all of them.
+
+> **In the SMP:** the Community documentation question is a multi-select. Tick only what actually exists or planned in the repository.
+
 ## Bug reporting & feature requests
 
 Users and collaborators need a clear route to report bugs, request features, and ask support questions. For most projects, the right answer is the issue tracker on GitHub or GitLab, with [issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository) that prompt for the information you actually need.
@@ -143,6 +172,19 @@ A feature-request template asks:
 For Level B/C, define a small set of labels (`bug`, `enhancement`, `documentation`, `security`, `good first issue`, `wontfix`) and use them consistently. GitHub's [About issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) covers configuration; the same concepts apply to GitLab.
 
 > **In the SMP:** the Bug reporting question expects at least one concrete system or contact route, with a URL. "Email the maintainer" is acceptable for Level A; not enough for Level B/C.
+
+## Support contact
+
+A public support contact is the route for questions that are not bug reports: how do I use this for X, does it handle Y, is this even the right tool. Directing those to the issue tracker is fine, but only if you have said so somewhere.
+
+Whatever you choose should be **public, monitored, and durable**:
+
+- A shared mailbox or mailing list outlives any individual.
+- A personal address is acceptable for Level A and B projects, but becomes a continuity risk the moment that person leaves. See [Continuity & hand-over](planning.md#continuity-hand-over).
+
+Record the contact in the README, in `CITATION.cff`, and in the SMP - and make sure all three say the same thing.
+
+> **In the SMP:** the Public support contact is a free-text field. A shared address is a stronger answer than a personal one; if you give a personal address, consider pairing it with a named backup in the Contributors list.
 
 ## Governance
 
