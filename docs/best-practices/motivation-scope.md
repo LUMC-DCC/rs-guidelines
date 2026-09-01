@@ -26,6 +26,20 @@ Two or four sentences is usually enough. A useful template:
 
 > **In the Software Management Plan (SMP):** the Problem field expects 2–4 sentences that an expert from an adjacent sub-field could understand. Drop the jargon by one level from what you would write in a paper's abstract.
 
+## Short description
+
+One sentence saying what the software does. It appears in registries, in your repository header, in search results, and in the `description` field of `codemeta.json`, so it is often the only text a potential user reads before deciding whether to keep reading.
+
+Write it for someone outside your sub-field. A workable pattern is **what it does + on what input + to what end**:
+
+- *"A command-line tool that calls structural variants from long-read alignments and reports them in VCF."*
+- Not *"A pipeline for our cohort analysis."* - whose cohort, which analysis, what comes out?
+- Not *"Software for genomics."* - true of thousands of tools.
+
+Avoid the project acronym as the only content, avoid naming the funding programme, and avoid claims you would have to defend (*"the fastest"*, *"state-of-the-art"*).
+
+> **In the SMP:** the Short description is a single-line field, distinct from the longer Problem answer. If you find yourself writing three sentences, the second and third belong in Problem.
+
 ## Purpose categories
 
 The Purpose field is a controlled vocabulary: a multi-select list with categories such as *data analysis*, *pipeline / workflow*, *library / framework*, *visualization*, *clinical decision support*, *simulation*, *infrastructure / utility*, *interface / wrapper*, and so on.

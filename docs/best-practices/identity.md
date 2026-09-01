@@ -22,6 +22,22 @@ If the project might in the future be renamed (this happens), keep the *name* an
 
 > **In the Software Management Plan (SMP):** the Title field should contain the final public name as it would appear in publications or presentations.
 
+## Keywords and discovery terms
+
+Keywords are how people and machines find software they did not already know existed. A good keyword set answers three things: what field is this, what method does it implement, and what biological or clinical context does it apply to.
+
+Prefer controlled terms where they exist. [EDAM](https://edamontology.org/page) topics are the standard vocabulary in the life sciences and are what registries such as bio.tools index on. Free-text keywords are fine alongside them, for terms EDAM does not cover: a cohort name, a local platform, an emerging method.
+
+Three rules of thumb:
+
+- **Be specific.** *"Genomics"* alone rarely distinguishes anything. *"Variant calling"*, *"long-read sequencing"*, or *"Alzheimer's disease"* can be a better fit.
+- **Cover more than the method.** Include the domain and, where relevant, the organism, tissue, or disease.
+- **Use the words your users would search for**, not only the ones your field prefers in print.
+
+Keywords also belong in `codemeta.json` - as `keywords` for free text, and `applicationSubCategory` for EDAM topics. See [Software metadata](metadata.md).
+
+> **In the SMP:** the Keywords list offers an EDAM topic lookup and accepts free text for terms outside the ontology. Five to ten well-chosen terms are more useful than thirty generic ones.
+
 ## Authors vs. maintainers
 
 In research software, two roles get conflated and then confused. The SMP separates them deliberately.

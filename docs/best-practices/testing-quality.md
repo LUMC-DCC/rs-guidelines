@@ -117,6 +117,20 @@ For Level B and C, enforce formatting and linting in **CI** or via **pre-commit 
 
 > **In the SMP:** the Code quality standards question is binary, with a follow-up listing the tools. Whether checks run in CI or as pre-commit hooks is a separate follow-up. "Yes" means *something is automated*; if quality is enforced only by manual review and discipline, "No" is the better answer.
 
+## Code review
+
+Code review is the cheapest defect-detection method available, and the main way knowledge about a codebase spreads beyond the person who wrote it. For research software the second effect usually matters more than the first: a project where exactly one person has ever read the code has a continuity problem regardless of how good that code is.
+
+Record **who reviews, when, and against what**:
+
+- **Who.** A second maintainer, a group member, an external RSE. For single-maintainer projects, an honest *"no review; changes are self-merged"* is better than implying a process that does not exist.
+- **When.** Every pull request, only for changes touching analysis logic, or before each release. Pick the level you will actually sustain.
+- **Against what.** Does it do what the pull request claims, are there tests, does it pass CI, is it documented? A three-line checklist in `CONTRIBUTING.md` beats an unwritten standard.
+
+Review is not a substitute for CI, and CI is not a substitute for review. CI checks that the rules you automated still hold; review catches what no linter can - a wrong statistical choice, a misread specification, an assumption that only holds for your cohort.
+
+> **In the SMP:** Code review is a free-text field. Describe the process you have, not the one you aspire to. *"Self-merged, with a second reader before releases"* is a real and useful answer.
+
 ## Cross-platform / environment testing
 
 State which platforms are supported *and tested*. The distinction in [Interoperability](interoperability.md) applies here too:

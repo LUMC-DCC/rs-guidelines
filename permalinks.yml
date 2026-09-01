@@ -12,12 +12,14 @@
 # === Project identity & people (best-practices/identity.md) ===
 - slug: title
   target: best-practices/identity.md#software-title
-- slug: authors-maintainers
+- slug: roles
   target: best-practices/identity.md#authors-vs-maintainers
 - slug: funding
   target: best-practices/identity.md#funding-and-project-context
 - slug: regulated-software
   target: best-practices/identity.md#regulated-software
+- slug: keywords
+  target: best-practices/identity.md#keywords-and-discovery-terms
 
 
 # === Motivation & scope (best-practices/motivation-scope.md) ===
@@ -25,6 +27,8 @@
   target: best-practices/motivation-scope.md#the-problem
 - slug: purpose
   target: best-practices/motivation-scope.md#purpose-categories
+- slug: short-description
+  target: best-practices/motivation-scope.md#short-description
 - slug: audience
   target: best-practices/motivation-scope.md#audience
 - slug: related-software
@@ -148,3 +152,15 @@
   target: smp/sciwiz.md#management-levels
 - slug: sciwiz
   target: smp/sciwiz.md
+
+# === Added for SMP questions that previously had no guidance ===
+- slug: homepage
+  target: best-practices/documentation-community.md#project-homepage
+- slug: community-files
+  target: best-practices/documentation-community.md#community-files
+- slug: support-contact
+  target: best-practices/documentation-community.md#support-contact
+- slug: code-review
+  target: best-practices/testing-quality.md#code-review
+- slug: cost
+  target: best-practices/sharing-licensing.md#cost-and-access-model
