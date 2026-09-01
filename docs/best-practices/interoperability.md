@@ -31,18 +31,19 @@ Rust >=1.78 - performance-critical parser, exposed through Python bindings
 
 > **In the Software Management Plan (SMP):** the Programming languages list captures language, version constraint, and role.
 
-## Input and output data formats
+## Data formats
 
 Listing formats is the easy part. The harder part is describing what your tool expects *within* those formats, because the format itself often does not capture all necessary structure or assumptions.
 CSV, JSON, XML, HDF5, and Parquet are *containers*, what makes data interoperable is the **schema** inside.
 
-For each input and output format, capture:
+For each format the software reads or writes, capture:
 
 - **Format name.** Prefer controlled **EDAM Format** terms where available (the SMP integrates with [EDAM](https://edamontology.org/) - start typing and pick from the dropdown). Common entries: `BAM`, `FASTQ`, `VCF`, `DICOM`, `NIfTI`, `BIDS`, `TSV`, `JSON`, `Parquet`, `NetCDF`. Alternatively, you can choose a machine-readable [IANA media type](https://www.iana.org/assignments/media-types/) (MIME type, e.g., `text/csv`, `application/json`).
 - **Format version / profile** if it matters: `VCF >=4.2`, `DICOM SR`, `BIDS 1.8`.
+- **Openness.** Whether the format is an open, documented standard, or something closer to bespoke or proprietary - see [below](#open-documented-bespoke-proprietary).
 - **Schema or expected columns/fields**, especially for generic containers. For a CSV, "columns: `subject_id, age_at_scan, group`" is the actual contract. Link to a schema file if one exists (JSON Schema, XSD, BIDS specification).
 - **Constraints** that matter for interoperability - e.g., "only ASCII filenames", "no compressed inputs", "must be sorted by chromosome".
-- **A sample or example file URL**, ideally checked into the repository under `examples/` or `tests/data/`.
+- **An example file URL**, ideally checked into the repository under `examples/` or `tests/data/`. This is a *format exemplar*: a small file someone can compare their own data against. The fixture that reproduces a known-good test run is a different thing, recorded under [Sample data and parameters](testing-quality.md#sample-data-and-parameters-for-tests).
 
 **Never commit real patient data, even as a test fixture.** Use synthetic or thoroughly de-identified data, and have it reviewed before committing if in any doubt.
 
@@ -50,7 +51,26 @@ For each input and output format, capture:
 
 EDAM is excellent for common bioinformatics formats and operations and increasingly used in clinical-data contexts. If your input is something exotic (a custom binary log from a piece of lab equipment, or a project-internal TSV layout), there will be no EDAM term. In that case, use a clear descriptive name and provide the schema. Do not force-fit an EDAM term that does not really apply.
 
-> **In the SMP:** Input and Output format lists each capture format name (EDAM where possible), version constraint, schema or constraints, and a sample-file URL. Skip the section entirely if the software does not consume or emit external data.
+### Open, documented, bespoke, proprietary
+
+A format is **open** when its specification is public and implementable without asking anyone's permission: VCF, NIfTI, Parquet, or CSV accompanied by a schema. It is **proprietary** when reading it requires closed-source tooling or a licence - most instrument vendor formats, and anything whose specification sits behind an NDA.
+
+Between the two sits the **bespoke** format: yours, undocumented, and readable only by your own code. Bespoke is not the same as proprietary - nothing stops someone reverse-engineering it - but in practice it fails for the same reason. No other tool can consume it, and before long neither can you, once the person who designed it has moved on.
+
+Where a format sits determines how much interoperability work you have already done for a downstream user:
+
+| Format | What it costs someone else |
+|---|---|
+| Open standard | Nothing. Their existing tools already read it. |
+| Bespoke, documented | A parser - which they can at least write. |
+| Bespoke, undocumented | Reverse engineering, or asking you. |
+| Proprietary | A licence, or a conversion step through vendor software. |
+
+At the **boundaries** of your software - what it accepts from the world and hands back to it - prefer open formats. *Inside* a pipeline a bespoke intermediate is perfectly fine and often faster, because it never leaves the pipeline. Where a proprietary format is unavoidable, and for instrument output it usually is, **document the conversion path**: which tool converts it, into what open format, and whether anything is lost on the way.
+
+> **In the SMP:** each format in the Data formats list carries an *Open format* question - *Yes*, *Partially*, or *Proprietary / undocumented*. "Partially" covers the middle cases: a bespoke format you have documented, or an open standard used with vendor extensions.
+
+> **In the SMP:** the Data formats list captures, for each format, its name (EDAM where possible), version constraint, whether it is an open standard, schema or constraints, and an example-file URL. The list does not itself say which formats are read and which are written - that is recorded per operation in the [Functions](#functions-operations) list, where each function names its own inputs and outputs from this list. Skip the section entirely if the software does not consume or emit external data.
 
 ## Functions / operations
 
@@ -64,7 +84,7 @@ For tools that expose multiple operations (a CLI with several subcommands, an AP
 
 This is the same metadata that tools like [bio.tools](https://bio.tools/) and Galaxy use to describe what software does.
 
-> **In the SMP:** the Functions list is only needed when the software exposes one or multiple distinct operations.
+> **In the SMP:** the Functions list is only needed when the software exposes one or multiple distinct operations. It is also where input and output are distinguished: each function selects its inputs and outputs from the Data formats list above. If you skip this list, the plan records *which* formats the software handles but not *which way* they flow.
 
 ## APIs and interfaces
 

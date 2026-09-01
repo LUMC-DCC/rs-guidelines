@@ -114,7 +114,7 @@ Common patterns:
 
 A reasonable rule of thumb: a developer can `pip install` a library; a clinician should not have to. Match the packaging to who the user actually is.
 
-> **In the SMP:** the Software packaging question is binary. The follow-up captures *distribution channels* as a free-text field; list each channel where the software is or will be available.
+> **In the SMP:** the Software packaging question is a three-state: *Yes*, *Installable from source only*, *No*. Pick the middle option when there is no package or image to install but the build-from-source route is documented and actually works - that is a real answer, not a failure. The follow-up captures *distribution channels* as a free-text field; list each channel where the software is or will be available.
 
 ## Containerization
 

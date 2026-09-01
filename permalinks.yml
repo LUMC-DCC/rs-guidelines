@@ -110,7 +110,9 @@
 - slug: programming-languages
   target: best-practices/interoperability.md#programming-languages
 - slug: data-formats
-  target: best-practices/interoperability.md#input-and-output-data-formats
+  target: best-practices/interoperability.md#data-formats
+- slug: open-formats
+  target: best-practices/interoperability.md#open-documented-bespoke-proprietary
 - slug: functions
   target: best-practices/interoperability.md#functions-operations
 - slug: interfaces
@@ -162,5 +164,9 @@
   target: best-practices/documentation-community.md#support-contact
 - slug: code-review
   target: best-practices/testing-quality.md#code-review
+- slug: sample-data
+  target: best-practices/testing-quality.md#sample-data-and-parameters-for-tests
+- slug: metadata-files
+  target: best-practices/metadata.md#other-metadata-files
 - slug: cost
   target: best-practices/sharing-licensing.md#cost-and-access-model

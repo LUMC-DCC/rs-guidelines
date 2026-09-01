@@ -12,6 +12,8 @@ Tests and quality checks are how you (and a future maintainer) know that the sof
 
 Start where you are. Add the next level when the project becomes the next level, usually, when a second person starts depending on it.
 
+> **In the SMP:** the Testing question asks whether the project has tests, not whether they are automated. Documented, repeatable manual checks count as *Yes* at Level A. The follow-ups on test frameworks and continuous integration only apply to automated suites - leave them blank if yours are manual.
+
 ## Test types
 
 Different test types catch different bugs. A useful taxonomy:
@@ -74,7 +76,7 @@ For multi-platform projects, run a CI **matrix**: same tests, different combinat
 
 **Continuous deployment (CD)** is the natural extension: on a tagged release, automatically publish the package, push the container image, and deploy the documentation. CD is a Level B/C investment; for Level A, manual releases are fine.
 
-> **In the SMP:** the Continuous integration question is a three-state: *Yes*, *Partially*, *No*. "Partially" is the honest answer for projects where tests run in CI but, say, only on Linux and only on one Python version.
+> **In the SMP:** the Automated testing question is a three-state: *Yes*, *Partially*, *No*. "Partially" is the honest answer for projects where tests run in CI but, say, only on Linux and only on one Python version. This question is about **tests**; whether your formatters and linters are also enforced automatically is asked separately, under [Code quality standards](#code-quality-standards).
 
 ## Project / dependency management tools
 
@@ -115,7 +117,7 @@ The classic Python style guide is [PEP 8](https://peps.python.org/pep-0008/) (or
 
 For Level B and C, enforce formatting and linting in **CI** or via **pre-commit hooks** (using [`pre-commit`](https://pre-commit.com/)) rather than relying on memory. The point is automation: a contributor's formatting mistake is caught at commit time, not after the maintainer finishes reviewing a PR.
 
-> **In the SMP:** the Code quality standards question is binary, with a follow-up listing the tools. Whether checks run in CI or as pre-commit hooks is a separate follow-up. "Yes" means *something is automated*; if quality is enforced only by manual review and discipline, "No" is the better answer.
+> **In the SMP:** the Code quality standards question is binary, with a follow-up listing the tools. Whether those checks are actually enforced - in CI, as a pre-commit hook, or both - is the separate *Automated enforcement of code quality* follow-up. "Yes" means *something is automated*; if quality is enforced only by manual review and discipline, "No" is the better answer.
 
 ## Code review
 
@@ -142,7 +144,19 @@ If a CI matrix tests Linux + macOS but not Windows, and you have Windows users, 
 
 ## Sample data and parameters for tests
 
-For tests to be reproducible, they need stable input. Sample data and parameter sets should live in the repository under `tests/data/` (or `examples/`) and be small enough to commit safely. For larger fixtures, use [Git LFS](https://git-lfs.github.com/) or fetch them at test-time from a documented location (Zenodo, S3, an institutional bucket). See data formats in [Interoperability](interoperability.md).
+For tests to be reproducible, they need stable input. Sample data and parameter sets should live in the repository under `tests/data/` (or `examples/`) and be small enough to commit safely. For larger fixtures, use [Git LFS](https://git-lfs.github.com/) or fetch them at test-time from a documented location (Zenodo, S3, an institutional bucket). See [Data formats](interoperability.md#data-formats) in Interoperability.
+
+Three properties make a fixture useful rather than merely present:
+
+- **Small and fast.** A fixture that takes ten minutes to process will stop being run. Cut a representative slice - one chromosome, one subject, one plate - rather than shipping a whole cohort.
+- **Never real personal data.** Test fixtures are committed, copied, and forked. Use synthetic or fully de-identified data; if the software handles patient data, the fixture must not. See [Personal and sensitive data](risks.md#personal-and-sensitive-data).
+- **Documented provenance.** Say where the fixture came from and what makes it a valid example. A file called `test_input.csv` with no explanation is a maintenance liability the moment its author leaves.
+
+Record the parameter sets too, not just the data. A pipeline that only reproduces with the right config is not reproducible from the data alone.
+
+This is a different thing from the example file recorded against each entry in the Data formats list. That one is a *format exemplar*, showing what a valid file looks like; this one is a *fixture*, reproducing a specific known-good run.
+
+> **In the SMP:** the Sample data & parameters field asks where the fixtures live and what they cover. A path plus one line on provenance is enough - *"`tests/data/`: synthetic 3-subject cohort generated by `scripts/make_fixture.py`, seed 42"*.
 
 ## Further reading
 

@@ -2,7 +2,7 @@
 
 Structured metadata makes your software findable, citable, and reusable. This page explains which metadata files belong in a research software repository, why they matter, and how to create, check, and maintain them. The field-by-field reference lives in the {{codemeta-profile}}, so that this page and the profile cannot drift apart.
 
-This page focuses on the metadata *files* themselves. For the surrounding decisions, see the guidance on choosing a [repository](sharing-licensing.md#repository) and [license](sharing-licensing.md#software-license), minting [persistent identifiers](sharing-licensing.md#persistent-identifiers), picking [registries](sharing-licensing.md#registries), and recording [programming languages](interoperability.md#programming-languages) and [data formats](interoperability.md#input-and-output-data-formats).
+This page focuses on the metadata *files* themselves. For the surrounding decisions, see the guidance on choosing a [repository](sharing-licensing.md#repository) and [license](sharing-licensing.md#software-license), minting [persistent identifiers](sharing-licensing.md#persistent-identifiers), picking [registries](sharing-licensing.md#registries), and recording [programming languages](interoperability.md#programming-languages) and [data formats](interoperability.md#data-formats).
 
 ## Quick start
 
@@ -58,6 +58,10 @@ A further fifteen are recommended, covering release dates, keywords and topics, 
 For what each field means, which values are accepted, and how they are constrained, see the {{codemeta-profile}}. A few of the underlying decisions are covered elsewhere in this guide: [software title](identity.md#software-title), [software license](sharing-licensing.md#software-license), [persistent identifiers](sharing-licensing.md#persistent-identifiers), and [functions and operations](interoperability.md#functions-operations).
 
 Note that EDAM-typed **inputs and outputs** have no CodeMeta or schema.org field. If you need them recorded, define them in bio.tools (see [Registering your software](#registering-your-software)).
+
+### Other metadata files
+
+Some projects carry additional machine-readable metadata alongside the two above: `.zenodo.json` for deposit-specific fields, `biotools.json` for a bio.tools entry, `Dockerfile` labels, or a registry-specific descriptor. These are fine to keep, but they are **secondary**: `codemeta.json` stays the record everything else is derived from, and any duplicated field must agree with it. Record which file follows which standard, and against what schema it validates, so a later maintainer knows whether a value is authoritative or a copy.
 
 ## When to update
 
