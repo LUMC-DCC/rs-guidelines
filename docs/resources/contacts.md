@@ -23,6 +23,7 @@ who to ask, what to use, and which rules apply.
 | Resource | Token | What it is |
 |---|---|---|
 | [SciWiz](https://sciwiz.lumc.nl/) | `{{sciwiz}}` | The LUMC instance of the SMP wizard. Only reachable from the LUMC network. |
+| [rs-metadata](https://lumc-dcc.github.io/rs-metadata/) | `{{rs-metadata}}` | Creates and validates `codemeta.json` and `CITATION.cff` against the LUMC CodeMeta profile. |
 | [LUMC FAIR Research Software Training website](https://lumc-dcc.github.io/research_software_training/) | `{{training}}` | Training material on FAIR research software. |
 | [LUMC's Git course](https://git.lumc.nl/courses/gitcourse) | `{{git-course}}` | Introductory Git training for LUMC staff. |
 
@@ -35,4 +36,7 @@ who to ask, what to use, and which rules apply.
 | [LUMC Data Management Plan (DMP)](https://www.albinusnet.nl/en/products-and-services/research/data-stewardship/dmp/) | `{{dmp}}` | Information on DMP, procedures, and templates. |
 | [Folders, files and formats](https://www.albinusnet.nl/weten-en-regelen/onderzoek/data-stewardship/folders-files--formats/) | `{{file-formats}}` | Guidance on sustainable file and folder formats. |
 | [LUMC data-publication license flowchart](https://www.albinusnet.nl/siteassets/weten-en-regelen/bestanden/onderzoek/20230131_flowchart_data-publication-licences.pdf) | `{{license-flowchart}}` | A decision aid for licensing published *data*. Software uses different licenses. |
+| [LUMC CodeMeta profile](https://lumc-dcc.github.io/rs-metadata/using/profile.html) | `{{codemeta-profile}}` | Which software metadata fields are mandatory at the LUMC, and what constraints apply. |
+| [worked `codemeta.json` examples](https://github.com/LUMC-DCC/rs-metadata/tree/main/examples) | `{{codemeta-examples}}` | Filled-in metadata files, from minimal to complete, plus a deliberately invalid one. |
+| [how the metadata standard was chosen](https://lumc-dcc.github.io/rs-metadata/background.html) | `{{metadata-standards-choice}}` | The rubric and scores behind selecting CodeMeta over the alternatives. |
 | [LUMC strategy 2024-2028](https://www.lumc.nl/en/about-lumc/maatschappelijke-rol/strategy-202428/) | `{{lumc-strategy}}` | The institutional commitment to open research outputs. |

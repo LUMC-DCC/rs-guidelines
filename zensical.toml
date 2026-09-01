@@ -76,3 +76,6 @@ toggle.name = "Switch to system preference"
 
 [project.markdown_extensions]
 abbr = {}
+# MkDocs enabled fenced_code by default and Zensical does not, so it must be
+# declared explicitly - without it every ``` block degrades to inline code.
+fenced_code = {}
