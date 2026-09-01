@@ -12,7 +12,7 @@ Tests and quality checks are how you (and a future maintainer) know that the sof
 
 Start where you are. Add the next level when the project becomes the next level, usually, when a second person starts depending on it.
 
-> **In the SMP:** the Testing question asks whether the project has tests, not whether they are automated. Documented, repeatable manual checks count as *Yes* at Level A. The follow-ups on test frameworks and continuous integration only apply to automated suites - leave them blank if yours are manual.
+> **In the SMP:** the Testing question asks whether the project has tests. Documented, repeatable manual checks count as *Yes* at Level A. The follow-ups on test frameworks and continuous integration only apply to automated suites, leave them blank if yours are manual.
 
 ## Test types
 
