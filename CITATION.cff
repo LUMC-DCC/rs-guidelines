@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: Research Software Guidelines
+message: "If you use this software, please cite it using the metadata in this file."
+type: software
+abstract: >-
+  This guide focuses on the role of research software in supporting reproducible and
+  reusable research outcomes. Within this context, it applies to a broad range of
+  research software: from small, single-use scripts to more complex applications
+  integral to research outcomes.
+authors:
+  - family-names: Steeghs-Turchina
+    given-names: Mariia
+    affiliation: Leiden University Medical Center
+    orcid: https://orcid.org/0000-0002-0852-4752
+  - family-names: Niehues
+    given-names: Anna
+    affiliation: Leiden University Medical Center
+    orcid: https://orcid.org/0000-0002-9839-5439
+version: "1.0.0"
+repository-code: https://github.com/LUMC-DCC/rs-guidelines
+url: https://lumc-dcc.github.io/rs-guidelines/
+license: CC-BY-4.0
